@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block title %}AI Citizen Assistant — Grounded Personal Document &amp; Scheme Intelligence{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="relative overflow-hidden bg-gradient-to-br from-civic-navy via-slate-900 to-civic-navyLight text-white py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7 space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 border border-orange-400/40 text-orange-200 text-xs font-semibold tracking-wide">
+        <span>IILM University Capstone (BT-90)</span>
+        <span>•</span>
+        <span>IEEE RAG Architecture</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+        Understand Your Personal Documents &amp; Government Schemes with <span class="text-orange-400">Zero Hallucination</span>
+      </h1>
+      <p class="text-slate-200 text-base sm:text-lg max-w-2xl leading-relaxed">
+        Upload your marksheets, resume, certificates, and official Indian scholarship or scheme PDFs.
+        Get a structured 7-section profile summary, strictly grounded Q&amp;A with exact <strong>(filename, page)</strong> citations,
+        and a deterministic Available vs. Missing document checklist.
+      </p>
+      <div class="flex flex-wrap gap-3 pt-2">
+        <a href="{{ url_for('pages.workspace') }}"
+           class="px-6 py-3 rounded-xl bg-civic-saffron hover:bg-orange-600 text-white font-semibold shadow-lg shadow-orange-500/25 transition">
+          Open Document Workspace &rarr;
+        </a>
+        <a href="{{ url_for('pages.eligibility') }}"
+           class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/25 text-white font-semibold transition">
+          Check Scheme Eligibility
+        </a>
+        <a href="{{ url_for('pages.schemes') }}"
+           class="px-5 py-3 rounded-xl text-slate-200 hover:text-white underline underline-offset-4 font-medium">
+          Browse Scheme Library
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-slate-900/70 backdrop-blur border border-slate-700 rounded-2xl p-6 shadow-2xl space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+          <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Grounded Answer Preview</span>
+          <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300">ChromaDB + Gemini</span>
+        </div>
+        <div class="space-y-3 text-sm">
+          <div class="bg-slate-800/80 rounded-xl p-3 border border-slate-700">
+            <p class="text-xs text-slate-400 mb-1">Citizen Query</p>
+            <p class="font-medium text-white">"Am I eligible for the NSP Post-Matric Scholarship and which documents am I missing?"</p>
+          </div>
+          <div class="bg-emerald-950/50 rounded-xl p-3 border border-emerald-700/50 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-emerald-300">Rule-Based Verdict</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-semibold">DOCUMENTS MISSING</span>
+            </div>
+            <ul class="text-xs text-slate-200 space-y-1">
+              <li>&#9989; <strong>Available:</strong> Academic Marksheet <span class="text-slate-400">(marksheet.pdf, p.1)</span></li>
+              <li>&#9989; <strong>Available:</strong> Income Certificate <span class="text-slate-400">(income_cert.pdf, p.1)</span></li>
+              <li>&#10060; <strong>Missing:</strong> Caste / Category Certificate, Bank Passbook</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works (4 Steps) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+  <div class="text-center max-w-2xl mx-auto mb-10">
+    <h2 class="text-2xl sm:text-3xl font-bold text-civic-navy dark:text-white">How It Works in 4 Simple Steps</h2>
+    <p class="mt-2 text-slate-600 dark:text-slate-400 text-sm sm:text-base">Faithful to the BT-90 IEEE Retrieval-Augmented Generation pipeline, enhanced with table extraction, OCR fallback, and deterministic eligibility rules.</p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {% set steps = [
+      ('1', 'Upload Your PDFs', 'Drag & drop marksheets, resumes, certificates, and scheme PDFs in memory. Multi-file magic-byte & size checks protect every upload.'),
+      ('2', 'Chunk & Local Embed', 'Pages are parsed with pypdf + pdfplumber tables (+ OCR fallback), split into 500-char chunks (overlap 50), and embedded locally with all-MiniLM-L6-v2.'),
+      ('3', 'Isolated Vector Search', 'Each session receives its own isolated ChromaDB collection paired with BM25 hybrid reciprocal rank fusion for high-recall retrieval.'),
+      ('4', 'Cited & Verified Output', 'Analyze 7 structured profile sections, ask bilingual EN/HI questions with (filename, page) citations, or verify scheme eligibility deterministically.')
+    ] %}
+    {% for num, title, desc in steps %}
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+      <div class="w-10 h-10 rounded-xl bg-civic-navy dark:bg-civic-saffron text-white font-bold flex items-center justify-center mb-4">{{ num }}</div>
+      <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">{{ title }}</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{{ desc }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Key Features -->
+<section class="bg-slate-100/80 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800 py-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl sm:text-3xl font-bold text-civic-navy dark:text-white mb-8">Key Capabilities</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-bold text-base text-civic-navy dark:text-orange-400 mb-2">7-Section Document Intelligence</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Extracts Personal Info, Education, Skills, Certifications, Projects, Achievements, and Important Dates—flagging missing sections honestly.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-bold text-base text-civic-navy dark:text-orange-400 mb-2">Deterministic Scheme Rules</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Separates Python rule-based numeric/document verification (marks %, income ceiling, age, required files) from the AI explanation.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-bold text-base text-civic-navy dark:text-orange-400 mb-2">Bilingual &amp; Grounded</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Supports English and Hindi queries, streams cited answers in real time (SSE), and refuses ungrounded guesses with a fixed fallback.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy Callout & CTA -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+  <div class="bg-white dark:bg-slate-900 border-l-4 border-civic-green rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div class="space-y-2 max-w-2xl">
+      <h2 class="text-xl font-bold text-slate-900 dark:text-white">Privacy-by-Design Architecture</h2>
+      <p class="text-sm text-slate-600 dark:text-slate-400">
+        Uploaded PDFs and vector chunks stay strictly in ephemeral per-session memory—never written to disk or SQLite logs.
+        Only retrieved context chunks and your question are transmitted to the hosted Gemini API during generation (Paper Section III-I).
+        You can wipe your session instantly at any time with <strong>Delete My Data Now</strong>.
+      </p>
+    </div>
+    <div class="flex flex-wrap gap-3 shrink-0">
+      <a href="{{ url_for('pages.privacy') }}" class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Read Privacy Policy</a>
+      <a href="{{ url_for('pages.workspace') }}" class="px-5 py-2.5 rounded-xl bg-civic-green hover:bg-emerald-700 text-white text-sm font-semibold shadow">Start Now &rarr;</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

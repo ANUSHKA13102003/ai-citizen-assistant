@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}AI Citizen Assistant — Personal Document & Scheme Intelligence{% endblock %}</title>
+  <meta name="description" content="Upload personal documents and Indian government scheme PDFs to get grounded summaries, file+page citations, and deterministic scheme eligibility checklists.">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/favicon.svg') }}">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            civic: {
+              navy: '#0F2942',
+              navyLight: '#1B3F63',
+              saffron: '#F97316',
+              green: '#15803D',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+  {% block head_extra %}{% endblock %}
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-civic-saffron text-white px-3 py-1.5 rounded z-50">Skip to content</a>
+  <div class="tricolor-bar w-full"></div>
+
+  <!-- Primary Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="{{ url_for('pages.index') }}" class="flex items-center gap-2.5 group">
+          <img src="{{ url_for('static', filename='img/favicon.svg') }}" alt="Logo" class="w-8 h-8 rounded-lg shadow-sm">
+          <div>
+            <span class="font-bold text-base sm:text-lg tracking-tight text-civic-navy dark:text-white group-hover:text-civic-saffron transition">AI Citizen Assistant</span>
+            <span class="hidden sm:block text-[11px] text-slate-500 dark:text-slate-400 leading-none">RAG Document &amp; Scheme Intelligence</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-1 text-sm font-medium" aria-label="Main navigation">
+          {% set nav_items = [
+            ('home', 'Home', url_for('pages.index')),
+            ('workspace', 'Workspace', url_for('pages.workspace')),
+            ('eligibility', 'Eligibility', url_for('pages.eligibility')),
+            ('schemes', 'Scheme Library', url_for('pages.schemes')),
+            ('analytics', 'Analytics', url_for('pages.analytics')),
+            ('evaluation', 'Evaluation', url_for('pages.evaluation')),
+            ('about', 'Research', url_for('pages.about')),
+            ('privacy', 'Privacy', url_for('pages.privacy'))
+          ] %}
+          {% for key, label, href in nav_items %}
+          <a href="{{ href }}"
+             class="px-3 py-2 rounded-lg transition {{ 'bg-civic-navy text-white dark:bg-civic-saffron' if active_page == key else 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
+            {{ label }}
+          </a>
+          {% endfor %}
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <label for="global-lang-select" class="sr-only">Language preference</label>
+          <select id="global-lang-select" title="Response Language"
+                  class="text-xs font-medium rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-2.5 py-1.5 text-slate-700 dark:text-slate-200">
+            <option value="auto">Auto (EN / हिं)</option>
+            <option value="en">English</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+          </select>
+
+          <button id="theme-toggle-btn" type="button" aria-label="Toggle dark mode"
+                  class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+            <svg id="icon-sun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg id="icon-moon" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+
+          <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false"
+                  class="lg:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden lg:hidden pb-3 pt-2 border-t border-slate-200 dark:border-slate-800">
+        <div class="grid grid-cols-2 gap-1.5 text-sm font-medium">
+          {% for key, label, href in nav_items %}
+          <a href="{{ href }}"
+             class="px-3 py-2 rounded-lg {{ 'bg-civic-navy text-white dark:bg-civic-saffron' if active_page == key else 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800' }}">
+            {{ label }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="toast-container" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 max-w-sm"></div>
+
+  <main id="main-content" class="flex-1">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600 dark:text-slate-400">
+      <div>
+        <strong class="text-slate-800 dark:text-slate-200">AI Citizen Assistant</strong> — IILM University Capstone (BT-90) • Harshit, Roshni, Shazeb &amp; Anushka • Supervised by Mr. Hilal Ahmad Shah
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="{{ url_for('pages.privacy') }}" class="hover:text-civic-saffron underline">Privacy &amp; Gemini API Notice</a>
+        <a href="{{ url_for('pages.about') }}" class="hover:text-civic-saffron underline">IEEE Paper</a>
+        <a href="/healthz" class="hover:text-civic-saffron underline">System Health</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

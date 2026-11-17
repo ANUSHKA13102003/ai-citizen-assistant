@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}Evaluation Results (Table IV) — AI Citizen Assistant{% endblock %}
+
+{% block head_extra %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+  <div>
+    <h1 class="text-2xl sm:text-3xl font-bold text-civic-navy dark:text-white">Evaluation Harness Results (Paper Table IV)</h1>
+    <p class="text-sm text-slate-600 dark:text-slate-400">
+      Measured over <code>eval/questions.json</code> comparing the paper's baseline configuration (pure vector, <code>k=min(20,N)</code>) against Hybrid Retrieval (BM25 + Vector RRF).
+    </p>
+  </div>
+
+  {% if eval_data %}
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
+      <p class="text-xs text-slate-500">Benchmark Questions</p>
+      <p class="text-2xl font-extrabold text-civic-navy dark:text-white mt-1">{{ eval_data.dataset_size }}</p>
+    </div>
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
+      <p class="text-xs text-slate-500">Eval Mode</p>
+      <p class="text-lg font-bold text-civic-saffron mt-1">{{ eval_data.evaluation_mode }}</p>
+    </div>
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
+      <p class="text-xs text-slate-500">Hybrid Hit@k</p>
+      <p class="text-2xl font-extrabold text-civic-green mt-1">{{ eval_data.hybrid.hit_at_k }}%</p>
+    </div>
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
+      <p class="text-xs text-slate-500">Hybrid MRR</p>
+      <p class="text-2xl font-extrabold text-civic-navy dark:text-white mt-1">{{ eval_data.hybrid.mrr }}</p>
+    </div>
+  </div>
+
+  {% if eval_data.note %}
+  <div class="rounded-xl bg-blue-50 dark:bg-slate-900 border border-blue-200 dark:border-slate-700 p-4 text-xs text-slate-700 dark:text-slate-300">
+    <strong>Measurement Note:</strong> {{ eval_data.note }}
+  </div>
+  {% endif %}
+
+  <!-- Table IV Comparison -->
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
+    <h2 class="font-bold text-lg mb-4 text-slate-900 dark:text-white">Table IV — Baseline vs. Hybrid Retrieval &amp; Deterministic Rules</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-left">
+        <thead class="text-xs uppercase text-slate-500 border-b border-slate-200 dark:border-slate-800">
+          <tr>
+            <th class="py-2.5 pr-4">Metric</th>
+            <th class="py-2.5 pr-4">Paper Baseline (Vector k=min(20,N))</th>
+            <th class="py-2.5 pr-4">Hybrid (BM25 + Vector RRF)</th>
+            <th class="py-2.5">Delta</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+          {% for row in eval_data.comparison_rows %}
+          <tr>
+            <td class="py-3 pr-4 font-semibold">{{ row.metric }}</td>
+            <td class="py-3 pr-4">{{ row.baseline }}</td>
+            <td class="py-3 pr-4 font-bold text-civic-green">{{ row.hybrid }}</td>
+            <td class="py-3 text-xs font-mono">{{ row.delta }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Chart -->
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
+    <h2 class="font-bold text-base mb-4 text-slate-900 dark:text-white">Visual Metric Comparison</h2>
+    <div class="h-72 relative">
+      <canvas id="eval-chart"></canvas>
+    </div>
+  </div>
+  {% else %}
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-10 text-center text-slate-500">
+    Evaluation has not been run yet. Execute <code>python -m eval.run_eval</code> to generate <code>eval/results.json</code>.
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% if eval_data %}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const rows = {{ eval_data.comparison_rows | tojson }};
+  const numericRows = rows.filter((r) => r.baseline_num !== null && r.hybrid_num !== null);
+  new Chart(document.getElementById("eval-chart"), {
+    type: "bar",
+    data: {
+      labels: numericRows.map((r) => r.metric),
+      datasets: [
+        { label: "Paper Baseline (%)", data: numericRows.map((r) => r.baseline_num), backgroundColor: "#0F2942" },
+        { label: "Hybrid BM25+RRF (%)", data: numericRows.map((r) => r.hybrid_num), backgroundColor: "#F97316" }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: { y: { beginAtZero: true, max: 100 } }
+    }
+  });
+});
+</script>
+{% endif %}
+{% endblock %}

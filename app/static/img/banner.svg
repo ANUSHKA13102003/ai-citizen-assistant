@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B1F33"/>
+      <stop offset="55%" stop-color="#0F2942"/>
+      <stop offset="100%" stop-color="#13385B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#F97316"/>
+  <rect x="0" y="314" width="1200" height="6" fill="#16A34A"/>
+  <circle cx="1060" cy="160" r="115" fill="#1E3A5F" opacity="0.45"/>
+  <circle cx="1060" cy="160" r="75" stroke="#F97316" stroke-width="3" stroke-dasharray="8 6" opacity="0.75"/>
+  <path d="M1060 98L1110 116V154C1110 186 1088 212 1060 222C1032 212 1010 186 1010 154V116L1060 98Z" fill="#0F2942" stroke="#F8FAFC" stroke-width="3"/>
+  <path d="M1044 158L1056 170L1078 145" stroke="#22C55E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="72" y="54" width="230" height="30" rx="15" fill="#F97316" fill-opacity="0.18" stroke="#F97316" stroke-opacity="0.5"/>
+  <text x="90" y="74" fill="#FDBA74" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">IILM UNIVERSITY • CAPSTONE BT-90</text>
+  <text x="72" y="142" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="800">AI Citizen Assistant</text>
+  <text x="72" y="184" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="20">Retrieval-Augmented Generation &amp; Personal Document Intelligence</text>
+  <text x="72" y="242" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="15">Grounded File+Page Citations  •  Deterministic Scheme Eligibility  •  Bilingual EN / HI  •  Privacy-First</text>
+</svg>

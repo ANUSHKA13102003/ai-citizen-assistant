@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Server Error (500) — AI Citizen Assistant{% endblock %}
+{% block content %}
+<div class="max-w-xl mx-auto px-4 py-20 text-center space-y-4">
+  <p class="text-5xl font-extrabold text-rose-600">500</p>
+  <h1 class="text-2xl font-bold text-civic-navy dark:text-white">Something Went Wrong</h1>
+  <p class="text-sm text-slate-600 dark:text-slate-400">An unexpected server error occurred. Please try again or return to the Workspace.</p>
+  <a href="{{ url_for('pages.index') }}" class="inline-block px-5 py-2.5 rounded-xl bg-civic-navy text-white text-sm font-semibold">Return Home</a>
+</div>
+{% endblock %}

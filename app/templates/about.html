@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Research &amp; Architecture — AI Citizen Assistant{% endblock %}
+
+{% block head_extra %}
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+  <div class="space-y-2">
+    <span class="text-xs font-bold uppercase tracking-wider text-civic-saffron">IILM University • Capstone BT-90 • IEEE Research Paper</span>
+    <h1 class="text-2xl sm:text-3xl font-bold text-civic-navy dark:text-white">
+      AI Citizen Assistant: Retrieval-Augmented Generation &amp; Personal Document Intelligence
+    </h1>
+  </div>
+
+  <!-- Abstract -->
+  <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-3">
+    <h2 class="font-bold text-lg text-slate-900 dark:text-white">Abstract</h2>
+    <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+      Indian citizens frequently interact with complex personal records—marksheets, resumes, income/caste certificates—alongside multi-page public scholarship and welfare scheme guidelines. General-purpose chatbots often hallucinate eligibility criteria or lose track of file provenance.
+      <strong>AI Citizen Assistant</strong> implements a privacy-conscious Retrieval-Augmented Generation (RAG) pipeline: PDFs are parsed page by page with <code>pypdf</code> (extended with <code>pdfplumber</code> tables and optional <code>Tesseract</code> OCR), segmented via LangChain's <code>RecursiveCharacterTextSplitter</code> (500 characters, 50 overlap) with <code>(filename, page)</code> metadata, embedded locally using <code>all-MiniLM-L6-v2</code> (384-d), and indexed inside isolated per-session ChromaDB collections (<code>citizen_documents</code>).
+      Mode 1 generates a standardized 7-section profile summary, while Mode 2 answers grounded queries over the last 6 conversation turns with exact file+page citations, a fixed refusal fallback, and a deterministic Python scheme eligibility engine.
+    </p>
+  </section>
+
+  <!-- Architecture Diagram -->
+  <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-4">
+    <h2 class="font-bold text-lg text-slate-900 dark:text-white">System Architecture</h2>
+    <div class="overflow-x-auto">
+      <div class="mermaid">
+flowchart LR
+  U[Citizen Browser] --> F[Flask Blueprints + CSRF + Limiter]
+  F --> P[In-Memory PDF Extractor: pypdf + pdfplumber + OCR]
+  P --> C[RecursiveCharacterTextSplitter 500/50]
+  C --> E[Local Embedder: all-MiniLM-L6-v2 384-d]
+  E --> V[(Per-Session ChromaDB + BM25 Index)]
+  V --> R[Hybrid RRF / Baseline Top-k Retrieval]
+  R --> G[Google Gemini SDK google-genai]
+  P --> D[Deterministic Python Eligibility Rules]
+  F --> S[(SQLite: Metadata &amp; Metrics Only)]
+      </div>
+    </div>
+  </section>
+
+  <!-- Team & Credits -->
+  <section class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-3">
+      <h2 class="font-bold text-lg text-slate-900 dark:text-white">Capstone Research Team</h2>
+      <ul class="text-sm text-slate-700 dark:text-slate-300 space-y-1.5">
+        <li><strong>Authors:</strong> Harshit, Roshni, Shazeb, Anushka</li>
+        <li><strong>Project Supervisor:</strong> Mr. Hilal Ahmad Shah</li>
+        <li><strong>Institution:</strong> IILM University (Capstone BT-90)</li>
+      </ul>
+    </div>
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-3">
+      <h2 class="font-bold text-lg text-slate-900 dark:text-white">Limitations &amp; Future Work</h2>
+      <ul class="text-sm text-slate-700 dark:text-slate-300 list-disc ml-5 space-y-1">
+        <li>Scanned regional-language PDFs require Tesseract language packs installed in the runtime environment.</li>
+        <li>Live generative reasoning transmits retrieved snippets to the hosted Gemini API; future deployments may integrate on-premise quantized models.</li>
+        <li>Complex multi-condition state-specific domicile rules can be expanded via declarative YAML rule packs.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const isDark = document.documentElement.classList.contains("dark");
+  mermaid.initialize({ startOnLoad: true, theme: isDark ? "dark" : "default" });
+});
+</script>
+{% endblock %}

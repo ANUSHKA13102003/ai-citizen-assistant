@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% block title %}Document Workspace — AI Citizen Assistant{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+  <!-- Header bar -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div>
+      <h1 class="text-2xl font-bold text-civic-navy dark:text-white">Citizen Document Workspace</h1>
+      <p class="text-sm text-slate-600 dark:text-slate-400">Upload your PDFs, inspect extracted pages, chat with citations, or generate a 7-section summary.</p>
+    </div>
+    <div class="flex flex-wrap items-center gap-2">
+      <label for="retrieval-mode-select" class="text-xs font-medium text-slate-600 dark:text-slate-400">Retrieval:</label>
+      <select id="retrieval-mode-select" class="text-xs rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-2.5 py-1.5">
+        <option value="hybrid" {{ 'selected' if retrieval_mode == 'hybrid' else '' }}>Hybrid (BM25 + Vector RRF)</option>
+        <option value="baseline" {{ 'selected' if retrieval_mode == 'baseline' else '' }}>Paper Baseline (Vector k=min(20,N))</option>
+      </select>
+      <button id="load-demo-btn" type="button"
+              class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-civic-navy text-white hover:bg-civic-navyLight transition">
+        Load Sample Docs
+      </button>
+      <button id="clear-data-btn" type="button"
+              class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-rose-600 hover:bg-rose-700 text-white transition">
+        Delete My Data Now
+      </button>
+    </div>
+  </div>
+
+  {% if not gemini_configured %}
+  <div class="rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700 px-4 py-3 text-xs text-amber-900 dark:text-amber-200">
+    <strong>Notice:</strong> <code>GEMINI_API_KEY</code> is not set in <code>.env</code>. Document upload, chunking, vector retrieval, and deterministic Scheme Eligibility checks work offline; live Gemini chat &amp; 7-section summarization require a Gemini API key.
+  </div>
+  {% endif %}
+
+  <!-- Privacy Consent Gate -->
+  <div id="consent-banner" class="{{ 'hidden' if consent_given else '' }} rounded-2xl bg-blue-50 dark:bg-slate-900 border border-blue-200 dark:border-slate-700 p-5 shadow-sm">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div class="space-y-1">
+        <h2 class="text-sm font-bold text-civic-navy dark:text-white">Privacy Consent Required Before Upload (Paper Section III-I)</h2>
+        <p class="text-xs text-slate-700 dark:text-slate-300">
+          Your PDFs are processed in memory and stored only in an isolated session ChromaDB collection (never written to disk).
+          When you ask a question or run summarization, retrieved text chunks and your query are sent to the hosted Google Gemini API.
+        </p>
+        <label class="inline-flex items-center gap-2 pt-2 cursor-pointer text-xs font-medium text-slate-800 dark:text-slate-200">
+          <input id="consent-checkbox" type="checkbox" class="rounded border-slate-300 text-civic-saffron focus:ring-civic-saffron">
+          <span>I understand and consent to in-memory processing and Gemini API transmission. (<a href="{{ url_for('pages.privacy') }}" class="underline text-civic-saffron">Privacy Policy</a>)</span>
+        </label>
+      </div>
+      <button id="consent-accept-btn" type="button"
+              class="px-4 py-2 rounded-xl bg-civic-green hover:bg-emerald-700 text-white text-xs font-semibold shrink-0 disabled:opacity-50" disabled>
+        Confirm &amp; Unlock Upload
+      </button>
+    </div>
+  </div>
+
+  <div class="grid lg:grid-cols-12 gap-6">
+    <!-- Left Column: Upload & Document List -->
+    <aside class="lg:col-span-4 space-y-4">
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm space-y-4">
+        <h2 class="font-bold text-base text-slate-900 dark:text-white">1. Upload PDF Documents</h2>
+
+        <div id="drop-zone" tabindex="0" role="button" aria-label="Upload PDF files"
+             class="border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-xl p-6 text-center cursor-pointer hover:border-civic-saffron transition bg-slate-50 dark:bg-slate-950/60">
+          <input id="pdf-file-input" type="file" accept=".pdf,application/pdf" multiple class="hidden">
+          <svg class="w-10 h-10 mx-auto text-slate-400 mb-2" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16V4m0 0l-4 4m4-4l4 4M4 16.5A2.5 2.5 0 006.5 19h11a2.5 2.5 0 002.5-2.5"/></svg>
+          <p class="text-sm font-semibold text-slate-700 dark:text-slate-200">Drag &amp; drop PDFs here</p>
+          <p class="text-xs text-slate-500 mt-1">or click to browse (max 10 files, 15 MB each)</p>
+        </div>
+
+        <div id="upload-progress-wrap" class="hidden space-y-1.5">
+          <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400">
+            <span>Extracting &amp; embedding locally...</span>
+            <span id="upload-progress-pct">40%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div id="upload-progress-bar" class="h-full bg-civic-saffron transition-all duration-300" style="width: 40%"></div>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Session Files</h3>
+            <span id="chunk-count-badge" class="text-[11px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">0 chunks</span>
+          </div>
+          <ul id="uploaded-files-list" class="space-y-2 text-xs">
+            {% if initial_docs %}
+              {% for doc in initial_docs %}
+              <li class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 flex items-center justify-between gap-2">
+                <span class="font-medium truncate" title="{{ doc.filename }}">{{ doc.filename }}</span>
+                <span class="shrink-0 text-[11px] text-slate-500">{{ doc.extracted_pages }}/{{ doc.total_pages }} pg</span>
+              </li>
+              {% endfor %}
+            {% else %}
+              <li class="text-slate-400 italic py-2">No documents uploaded yet.</li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Column: Tabs (Chat & Document Summary) -->
+    <section class="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm flex flex-col min-h-[600px]">
+      <!-- Tabs header -->
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-5 pt-3">
+        <div class="flex gap-2" role="tablist">
+          <button id="tab-chat-btn" type="button" role="tab" aria-selected="true"
+                  class="px-4 py-2.5 text-sm font-semibold border-b-2 border-civic-saffron text-civic-navy dark:text-white">
+            Grounded Chat
+          </button>
+          <button id="tab-summary-btn" type="button" role="tab" aria-selected="false"
+                  class="px-4 py-2.5 text-sm font-semibold border-b-2 border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200">
+            Document Summary (7 Sections)
+          </button>
+        </div>
+        <span class="hidden sm:inline text-xs text-slate-400">History window: last 6 messages</span>
+      </div>
+
+      <!-- Chat Panel -->
+      <div id="panel-chat" class="flex-1 flex flex-col p-5 gap-4">
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs text-slate-500 self-center">Suggested:</span>
+          {% set prompts = [
+            "What is my CGPA or percentage and university name?",
+            "Am I eligible for the uploaded scholarship? List available vs missing documents.",
+            "List my technical skills and certifications.",
+            "What is my passport number?"
+          ] %}
+          {% for p in prompts %}
+          <button type="button" class="suggested-prompt text-xs px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-orange-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition">
+            {{ p }}
+          </button>
+          {% endfor %}
+        </div>
+
+        <div id="chat-messages" class="flex-1 overflow-y-auto space-y-4 max-h-[420px] pr-1">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-sm text-slate-600 dark:text-slate-300">
+            Upload your PDFs (or click <strong>Load Sample Docs</strong>) and ask any question. Every answer cites distinct <strong>(filename, page)</strong> sources and falls back safely if information is missing.
+          </div>
+        </div>
+
+        <div id="typing-indicator" class="hidden items-center gap-2 text-xs text-slate-500 px-2">
+          <span>Assistant is searching &amp; grounding response</span>
+          <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
+        </div>
+
+        <form id="chat-form" class="flex gap-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+          <label for="chat-input" class="sr-only">Ask a question about your documents</label>
+          <input id="chat-input" type="text" autocomplete="off"
+                 placeholder="Ask about your marksheet, resume, deadlines, or scheme documents (EN / हिन्दी)..."
+                 class="flex-1 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-2.5 text-sm">
+          <button id="chat-send-btn" type="submit"
+                  class="px-5 py-2.5 rounded-xl bg-civic-saffron hover:bg-orange-600 text-white text-sm font-semibold transition shrink-0">
+            Send
+          </button>
+        </form>
+      </div>
+
+      <!-- Summary Panel -->
+      <div id="panel-summary" class="hidden flex-1 flex-col p-5 gap-4">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <p class="text-xs text-slate-600 dark:text-slate-400">Mode 1 sends all chunks to extract 7 standardized sections, marking absent fields explicitly.</p>
+          <div class="flex flex-wrap gap-2">
+            <button id="run-analyze-btn" type="button"
+                    class="px-4 py-2 rounded-xl bg-civic-navy hover:bg-civic-navyLight text-white text-xs font-semibold transition">
+              Analyze My Documents
+            </button>
+            <button id="export-summary-md" type="button" disabled
+                    class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-xs font-semibold disabled:opacity-40">
+              Export Markdown
+            </button>
+            <button id="export-summary-pdf" type="button" disabled
+                    class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-xs font-semibold disabled:opacity-40">
+              Export PDF
+            </button>
+          </div>
+        </div>
+
+        <div id="summary-skeleton" class="hidden grid sm:grid-cols-2 gap-4">
+          {% for _ in range(4) %}
+          <div class="h-28 rounded-xl skeleton"></div>
+          {% endfor %}
+        </div>
+
+        <div id="summary-cards" class="grid sm:grid-cols-2 gap-4">
+          <div class="sm:col-span-2 text-sm text-slate-500 italic py-8 text-center">
+            Click <strong>Analyze My Documents</strong> after uploading PDFs to populate the 7 structured sections.
+          </div>
+        </div>
+        <div id="summary-sources" class="hidden flex flex-wrap gap-1.5 pt-2 border-t border-slate-200 dark:border-slate-800"></div>
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  window.__INITIAL_CONSENT__ = {{ 'true' if consent_given else 'false' }};
+  window.__INITIAL_DOCS__ = {{ initial_docs | tojson }};
+  window.__INITIAL_SUMMARY__ = {{ initial_summary | tojson }};
+</script>
+<script src="{{ url_for('static', filename='js/workspace.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Privacy &amp; Data Policy — AI Citizen Assistant{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6">
+  <h1 class="text-2xl sm:text-3xl font-bold text-civic-navy dark:text-white">Privacy, Consent &amp; Data Governance</h1>
+
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-4 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+    <h2 class="font-bold text-base text-slate-900 dark:text-white">1. External LLM Transmission Disclosure (Paper Section III-I)</h2>
+    <p>
+      While PDF text extraction, chunking, and <code>all-MiniLM-L6-v2</code> vector embeddings run locally on the application server,
+      generating natural-language summaries (Mode 1), grounded Q&amp;A responses (Mode 2), and advisory eligibility explanations sends
+      your retrieved text chunks and question to the hosted <strong>Google Gemini API</strong>. Explicit consent is required before your first document upload.
+    </p>
+
+    <h2 class="font-bold text-base text-slate-900 dark:text-white">2. Zero Document Storage on Disk or Database</h2>
+    <p>
+      Uploaded PDF bytes, extracted page text, and ChromaDB embeddings reside strictly in ephemeral RAM scoped to your isolated session ID.
+      Our SQLite database logs only aggregate operational counts, question categories, latency measurements, and thumbs up/down feedback—never file contents or raw personal data.
+    </p>
+
+    <h2 class="font-bold text-base text-slate-900 dark:text-white">3. Session Auto-Expiry &amp; Instant Deletion</h2>
+    <p>
+      Sessions automatically expire after 60 minutes of inactivity (configurable via <code>SESSION_TTL_MINUTES</code>), purging the corresponding ChromaDB collection.
+      You may also click <strong>Delete My Data Now</strong> inside the Workspace at any moment to immediately erase your vectors, extracted text, and conversation history.
+    </p>
+  </div>
+</div>
+{% endblock %}

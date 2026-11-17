@@ -1,0 +1,89 @@
+/* Custom styles complementing Tailwind CSS for civic-portal polish */
+
+:root {
+  --civic-navy: #0f2942;
+  --civic-saffron: #f97316;
+  --civic-green: #15803d;
+}
+
+.tricolor-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #ff9933 0%, #ff9933 33.3%, #ffffff 33.3%, #ffffff 66.6%, #138808 66.6%, #138808 100%);
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.dark .skeleton {
+  background-color: #1e293b;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  animation: shimmer 1.4s infinite;
+}
+
+.dark .skeleton::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: currentColor;
+  display: inline-block;
+  animation: bounceDot 1.2s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes bounceDot {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.45;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.prose-chat p {
+  margin-bottom: 0.5rem;
+}
+
+.prose-chat ul, .prose-chat ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+
+/* Focus ring for keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Scheme Library — AI Citizen Assistant{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+    <div>
+      <h1 class="text-2xl sm:text-3xl font-bold text-civic-navy dark:text-white">Indian Public Scheme &amp; Scholarship Library</h1>
+      <p class="text-sm text-slate-600 dark:text-slate-400">Searchable collection of official &amp; sample scheme guideline PDFs stored in <code>data/samples/</code> with provenance recorded.</p>
+    </div>
+
+    <form method="get" action="{{ url_for('pages.schemes') }}" class="flex flex-wrap gap-2">
+      <label for="scheme-search" class="sr-only">Search schemes</label>
+      <input id="scheme-search" name="q" type="text" value="{{ current_query }}" placeholder="Search NSP, PM-KISAN, income..."
+             class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3.5 py-2 text-sm">
+      <select name="category" class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm">
+        <option value="all">All Categories</option>
+        {% for c in categories %}
+        <option value="{{ c }}" {{ 'selected' if current_category == c else '' }}>{{ c }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit" class="px-4 py-2 rounded-xl bg-civic-navy text-white text-sm font-semibold hover:bg-civic-navyLight">Search</button>
+    </form>
+  </div>
+
+  {% if schemes %}
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for s in schemes %}
+    <article class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm flex flex-col justify-between gap-4">
+      <div class="space-y-2.5">
+        <div class="flex items-center justify-between gap-2">
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-orange-100 dark:bg-orange-950/50 text-orange-800 dark:text-orange-300">{{ s.category }}</span>
+          <span class="px-2 py-0.5 rounded text-[10px] font-semibold {{ 'bg-emerald-100 text-emerald-800' if s.source_type == 'official_download' else 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300' }}">
+            {{ 'Official PDF' if s.source_type == 'official_download' else 'Synthetic Reference PDF' }}
+          </span>
+        </div>
+        <h2 class="font-bold text-lg text-slate-900 dark:text-white">{{ s.title }}</h2>
+        <p class="text-xs text-slate-500">{{ s.ministry }}</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{{ s.summary }}</p>
+        {% if s.source_url %}
+        <p class="text-xs text-slate-500 truncate">Source: <a href="{{ s.source_url }}" target="_blank" rel="noopener noreferrer" class="underline hover:text-civic-saffron">{{ s.source_url }}</a></p>
+        {% endif %}
+      </div>
+
+      <div class="flex flex-wrap gap-2 pt-3 border-t border-slate-100 dark:border-slate-800">
+        <a href="{{ url_for('pages.eligibility', scheme=s.id) }}"
+           class="flex-1 text-center px-3 py-2 rounded-xl bg-civic-saffron hover:bg-orange-600 text-white text-xs font-semibold transition">
+          Check Eligibility
+        </a>
+        {% if s.available_on_disk %}
+        <a href="{{ url_for('pages.download_scheme', scheme_id=s.id) }}"
+           class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">
+          Download PDF
+        </a>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-10 text-center text-slate-500">
+    No matching schemes found. Try clearing your search filter.
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
