@@ -1,0 +1,83 @@
+{
+  "dataset_size": 62,
+  "evaluation_mode": "Retrieval + Deterministic Rules",
+  "note": "Measured retrieval (Hit@k, MRR, source coverage) and deterministic Available/Missing scheme accuracy across 62 benchmark questions. Live Gemini generation metrics require GEMINI_API_KEY in .env and were not fabricated.",
+  "baseline": {
+    "hit_at_k": 100.0,
+    "mrr": 0.83,
+    "avg_retrieval_ms": 43.3,
+    "available_missing_accuracy": 100.0,
+    "grounding_rate": null,
+    "citation_accuracy": 100.0,
+    "not_found_rate": null,
+    "followup_resolution_rate": null
+  },
+  "hybrid": {
+    "hit_at_k": 100.0,
+    "mrr": 0.881,
+    "avg_retrieval_ms": 41.25,
+    "available_missing_accuracy": 100.0,
+    "grounding_rate": null,
+    "citation_accuracy": 100.0,
+    "not_found_rate": null,
+    "followup_resolution_rate": null
+  },
+  "comparison_rows": [
+    {
+      "metric": "Retrieval Hit@k",
+      "baseline": "100.0%",
+      "hybrid": "100.0%",
+      "baseline_num": 100.0,
+      "hybrid_num": 100.0,
+      "delta": "0.0%"
+    },
+    {
+      "metric": "Retrieval MRR",
+      "baseline": "0.83",
+      "hybrid": "0.881",
+      "baseline_num": 83.0,
+      "hybrid_num": 88.1,
+      "delta": "+0.051"
+    },
+    {
+      "metric": "Available / Missing Accuracy",
+      "baseline": "100.0%",
+      "hybrid": "100.0%",
+      "baseline_num": 100.0,
+      "hybrid_num": 100.0,
+      "delta": "0.0%"
+    },
+    {
+      "metric": "Citation Source Coverage / Accuracy",
+      "baseline": "100.0%",
+      "hybrid": "100.0%",
+      "baseline_num": 100.0,
+      "hybrid_num": 100.0,
+      "delta": "0.0%"
+    },
+    {
+      "metric": "Grounding Rate (LLM)",
+      "baseline": "N/A (requires GEMINI_API_KEY)",
+      "hybrid": "N/A (requires GEMINI_API_KEY)",
+      "baseline_num": null,
+      "hybrid_num": null,
+      "delta": "\u2014"
+    },
+    {
+      "metric": "Correct 'Not Found' Rate (LLM)",
+      "baseline": "N/A (requires GEMINI_API_KEY)",
+      "hybrid": "N/A (requires GEMINI_API_KEY)",
+      "baseline_num": null,
+      "hybrid_num": null,
+      "delta": "\u2014"
+    },
+    {
+      "metric": "Follow-up Resolution Rate (LLM)",
+      "baseline": "N/A (requires GEMINI_API_KEY)",
+      "hybrid": "N/A (requires GEMINI_API_KEY)",
+      "baseline_num": null,
+      "hybrid_num": null,
+      "delta": "\u2014"
+    }
+  ]
+}

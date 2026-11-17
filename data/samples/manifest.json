@@ -1,0 +1,89 @@
+{
+  "schemes": [
+    {
+      "id": "nsp_post_matric",
+      "title": "NSP Central Sector / Post-Matric Scholarship Scheme",
+      "ministry": "Ministry of Education & Ministry of Social Justice, Govt. of India",
+      "category": "Scholarship",
+      "filename": "scheme_nsp_post_matric.pdf",
+      "source_url": "https://scholarships.gov.in/public/schemeGuidelines/CSSS_Guidelines.pdf",
+      "source_type": "synthetic_reference",
+      "summary": "Merit-cum-means scholarship for Indian students pursuing post-matric or higher education with family income ceiling and minimum marks criteria.",
+      "tags": [
+        "nsp",
+        "scholarship",
+        "post-matric",
+        "students",
+        "education"
+      ]
+    },
+    {
+      "id": "pm_kisan",
+      "title": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+      "ministry": "Ministry of Agriculture & Farmers Welfare, Govt. of India",
+      "category": "Agriculture",
+      "filename": "scheme_pm_kisan.pdf",
+      "source_url": "https://pmkisan.gov.in/Documents/PMKisanSamanNidhi.pdf",
+      "source_type": "synthetic_reference",
+      "summary": "Income support of Rs. 6,000 per year in three equal installments to eligible landholding farmer families across India.",
+      "tags": [
+        "pm-kisan",
+        "farmer",
+        "agriculture",
+        "dbt",
+        "land"
+      ]
+    },
+    {
+      "id": "aicte_pragati",
+      "title": "AICTE Pragati Scholarship Scheme for Technical Education",
+      "ministry": "All India Council for Technical Education (AICTE)",
+      "category": "Scholarship",
+      "filename": "scheme_aicte_pragati.pdf",
+      "source_url": "https://www.aicte-india.org/sites/default/files/Pragati_Guidelines.pdf",
+      "source_type": "synthetic_reference",
+      "summary": "Scholarship supporting students admitted to AICTE-approved technical degree/diploma institutions with family income below Rs. 8,00,000.",
+      "tags": [
+        "aicte",
+        "pragati",
+        "engineering",
+        "diploma",
+        "degree"
+      ]
+    },
+    {
+      "id": "pm_yasasvi",
+      "title": "PM-YASASVI Top Class College Education Scholarship",
+      "ministry": "Ministry of Social Justice & Empowerment, Govt. of India",
+      "category": "Scholarship",
+      "filename": "scheme_pm_yasasvi.pdf",
+      "source_url": "https://socialjustice.gov.in/writereaddata/UploadFile/PMYASASVI_Guidelines.pdf",
+      "source_type": "synthetic_reference",
+      "summary": "Financial assistance covering tuition and living allowance for OBC, EBC, and DNT students in notified top-class institutions.",
+      "tags": [
+        "yasasvi",
+        "obc",
+        "ebc",
+        "dnt",
+        "college"
+      ]
+    },
+    {
+      "id": "ayushman_pmjay",
+      "title": "Ayushman Bharat PM-JAY Citizen Health Assurance",
+      "ministry": "National Health Authority (NHA), Govt. of India",
+      "category": "Healthcare",
+      "filename": "scheme_ayushman_pmjay.pdf",
+      "source_url": "https://nha.gov.in/img/resources/PM-JAY-Guidelines.pdf",
+      "source_type": "synthetic_reference",
+      "summary": "Cashless secondary and tertiary hospitalization cover up to Rs. 5,00,000 per eligible family per year across empanelled hospitals.",
+      "tags": [
+        "health",
+        "ayushman",
+        "pmjay",
+        "hospital",
+        "insurance"
+      ]
+    }
+  ]
+}
