@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: ai-citizen-assistant
+    runtime: docker
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: EMBEDDINGS_BACKEND
+        value: gemini
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
+      - key: DAILY_GEMINI_CAP
+        value: "500"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ADMIN_KEY
+        generateValue: true
