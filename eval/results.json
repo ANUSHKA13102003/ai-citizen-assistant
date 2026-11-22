@@ -1,0 +1,84 @@
+{
+  "dataset_size": 105,
+  "document_count": 32,
+  "evaluation_mode": "Live Gemini (gemini-3.1-flash-lite)",
+  "note": "Measured across 105 labelled questions over 32 fictional documents with distractors using live Gemini (gemini-3.1-flash-lite) with 4-second request spacing.",
+  "baseline": {
+    "hit_at_k": 76.5,
+    "mrr": 0.58,
+    "avg_retrieval_ms": 41.45,
+    "available_missing_accuracy": 100.0,
+    "grounding_rate": 72.7,
+    "citation_accuracy": 97.7,
+    "not_found_rate": 75.0,
+    "followup_resolution_rate": 25.0
+  },
+  "hybrid": {
+    "hit_at_k": 88.2,
+    "mrr": 0.679,
+    "avg_retrieval_ms": 51.33,
+    "available_missing_accuracy": 100.0,
+    "grounding_rate": 100.0,
+    "citation_accuracy": 100.0,
+    "not_found_rate": 95.0,
+    "followup_resolution_rate": 100.0
+  },
+  "comparison_rows": [
+    {
+      "metric": "Search Hit Rate (Top-5)",
+      "baseline": "76.5%",
+      "hybrid": "88.2%",
+      "baseline_num": 76.5,
+      "hybrid_num": 88.2,
+      "delta": "+11.7%"
+    },
+    {
+      "metric": "Mean Reciprocal Rank (MRR)",
+      "baseline": "0.58",
+      "hybrid": "0.679",
+      "baseline_num": 58.0,
+      "hybrid_num": 67.9,
+      "delta": "+0.099"
+    },
+    {
+      "metric": "Available / Missing Checklist Accuracy",
+      "baseline": "100.0%",
+      "hybrid": "100.0%",
+      "baseline_num": 100.0,
+      "hybrid_num": 100.0,
+      "delta": "0.0%"
+    },
+    {
+      "metric": "Page Citation Accuracy",
+      "baseline": "97.7%",
+      "hybrid": "100.0%",
+      "baseline_num": 97.7,
+      "hybrid_num": 100.0,
+      "delta": "+2.3%"
+    },
+    {
+      "metric": "Grounded Answer Accuracy",
+      "baseline": "72.7%",
+      "hybrid": "100.0%",
+      "baseline_num": 72.7,
+      "hybrid_num": 100.0,
+      "delta": "+27.3%"
+    },
+    {
+      "metric": "Missing-Fact Refusal ('Not Found') Rate",
+      "baseline": "75.0%",
+      "hybrid": "95.0%",
+      "baseline_num": 75.0,
+      "hybrid_num": 95.0,
+      "delta": "+20.0%"
+    },
+    {
+      "metric": "Multi-Turn Follow-up Accuracy",
+      "baseline": "25.0%",
+      "hybrid": "100.0%",
+      "baseline_num": 25.0,
+      "hybrid_num": 100.0,
+      "delta": "+75.0%"
+    }
+  ]
+}
