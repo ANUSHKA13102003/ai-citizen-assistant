@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css', v=build_id) }}">
   <script>
     (function () {
       var theme = localStorage.getItem("citizen_theme");
@@ -118,6 +118,7 @@
         <a href="{{ url_for('pages.privacy') }}">{{ t.nav.privacy }}</a>
         <a href="{{ url_for('pages.help_page') }}">{{ t.nav.help }}</a>
         <button type="button" id="footerClearDataBtn" class="link-quiet">{{ t.footer.clear_data }}</button>
+        <span class="muted" style="font-size:0.84rem;" data-testid="build-stamp">{{ build_stamp }}</span>
       </div>
     </div>
   </footer>
@@ -138,7 +139,7 @@
     window.APP_LANG = {{ lang | tojson }};
     window.APP_I18N = {{ t | tojson }};
   </script>
-  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/app.js', v=build_id) }}"></script>
   {% block scripts %}{% endblock %}
 </body>
 </html>

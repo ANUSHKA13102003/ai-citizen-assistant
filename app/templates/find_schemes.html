@@ -75,5 +75,5 @@
 </script>
 {% endblock %}
 {% block scripts %}
-<script src="{{ url_for('static', filename='js/find_schemes.js') }}"></script>
+<script src="{{ url_for('static', filename='js/find_schemes.js', v=build_id) }}"></script>
 {% endblock %}

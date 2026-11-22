@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import logging
 import os
+import subprocess
+from pathlib import Path
 
 from flask import Flask, jsonify, render_template, request, session
 from flask_wtf.csrf import CSRFError
@@ -19,6 +21,25 @@ logging.basicConfig(
     level=os.getenv("LOG_LEVEL", "INFO"),
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
+
+
+def _get_build_id() -> str:
+    try:
+        sha = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"],
+            cwd=str(Path(__file__).resolve().parent.parent),
+            stderr=subprocess.DEVNULL,
+            text=True,
+            timeout=2,
+        ).strip()
+        if sha:
+            return sha
+    except Exception:
+        pass
+    return os.getenv("RENDER_GIT_COMMIT", "local")[:7] or "local"
+
+
+_BUILD_ID = _get_build_id()
 
 
 def create_app(config_name: str | None = None) -> Flask:
@@ -51,7 +72,12 @@ def create_app(config_name: str | None = None) -> Flask:
         if q_lang:
             session["lang"] = normalize_lang(q_lang)
         lang = normalize_lang(session.get("lang", "en"))
-        return {"lang": lang, "t": load_locale(lang)}
+        return {
+            "lang": lang,
+            "t": load_locale(lang),
+            "build_id": _BUILD_ID,
+            "build_stamp": f"v1.0.0 · {_BUILD_ID}",
+        }
 
     @app.after_request
     def apply_security_headers(response):
@@ -61,6 +87,9 @@ def create_app(config_name: str | None = None) -> Flask:
         response.headers.setdefault(
             "Permissions-Policy", "geolocation=(), microphone=(self), camera=(self)"
         )
+        if response.content_type and "text/html" in response.content_type:
+            response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+            response.headers["Pragma"] = "no-cache"
         return response
 
     @app.errorhandler(CSRFError)
