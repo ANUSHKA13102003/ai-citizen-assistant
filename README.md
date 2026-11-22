@@ -1,113 +1,92 @@
 # AI Citizen Assistant
 
-**Find the Indian government welfare schemes you qualify for — free, private, and bilingual (English & हिन्दी).**
+A free bilingual (English & हिन्दी) web helper that lets Indian citizens check government scheme eligibility, inspect their documents, and get grounded guidance in under 2 minutes.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Deploy%20on%20Render-0D5C53?style=for-the-badge)](https://ai-citizen-assistant.onrender.com)
-[![Tests](https://img.shields.io/badge/Tests-20%20Passing-146C43?style=for-the-badge)](#accuracy--evaluation)
-[![License: MIT](https://img.shields.io/badge/License-MIT-D96B18?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-0D5C53?style=flat-square)](https://ai-citizen-assistant.onrender.com)
+[![CI](https://github.com/ANUSHKA13102003/ai-citizen-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/ANUSHKA13102003/ai-citizen-assistant/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-D96B18?style=flat-square)](LICENSE)
 
-![AI Citizen Assistant Walkthrough](docs/demo.gif)
+![AI Citizen Assistant Demo](docs/demo.gif)
 
-## What It Does & Who It Helps
+## The problem
 
-- **Guided Scheme Finder (under 2 minutes):** Helps students, farmers, women, workers/artisans, small business owners, senior citizens, and persons with disability match against **35 HTTP-verified Central & Uttar Pradesh schemes** without needing any Aadhaar or ID number.
-- **Document Intelligence & Checklist:** Reads uploaded PDFs or phone photos (marksheets, income/caste/domicile certificates), auto-fills extracted details with clickable *"See where"* page citations, and builds a downloadable PDF document checklist.
-- **Sahayak Bilingual Assistant:** Answers questions in **English, हिन्दी, or Hinglish** grounded in your uploaded documents and verified scheme rules, with voice input, read-aloud, and direct `.gov.in` links.
+Millions of eligible citizens miss scholarships, pensions, and welfare benefits because official guidelines are scattered across long PDFs and portals in dense legal language. First-time applicants on mobile phones need to know *which* schemes fit them, *which* documents they need, and *where* to apply without guesswork.
 
----
+## What it does
 
-## Quick Start (3 Commands)
+- **2-Minute Scheme Finder:** Matches age, state, income, category, and occupation against 35 HTTP-verified Central and Uttar Pradesh schemes with a *Check your answers* review step.
+- **Document Checker & Checklist:** Reads uploaded PDFs or phone photos (marksheets, income/caste/domicile certificates), auto-fills details with page citations, and exports a missing-document PDF checklist.
+- **Sahayak Bilingual Assistant:** Answers questions in English, हिन्दी, or Hinglish using verified scheme data and optional Gemini Flash AI with automatic fallback so visitors never see key or quota errors.
 
-```bash
-git clone https://github.com/ANUSHKA13102003/ai-citizen-assistant.git && cd ai-citizen-assistant
-python -m venv .venv && .\.venv\Scripts\pip install -r requirements-dev.txt
-copy .env.example .env && .\.venv\Scripts\python run.py
-```
+## Try it in 30 seconds
 
-Open `http://127.0.0.1:7860` (set `GEMINI_API_KEY` in `.env` for live Sahayak AI chat; the Scheme Finder and document extraction work offline without a key).
+Open the live app at **https://ai-citizen-assistant.onrender.com** (or run locally):
 
----
+1. Click **Check what you qualify for**, pick a profile, review **Check your answers**, and view matched schemes.
+2. Open **My Documents**, load the demo documents, and see auto-filled marks/income with page citations.
+3. Open **Ask Sahayak**, switch to **हिन्दी**, and ask *"UP Post Matric Scholarship ke liye kya documents chahiye?"*
 
-## Architecture
+## How it works
 
 ```mermaid
 flowchart LR
-    U[Citizen Browser\nEnglish / हिन्दी] --> W[Flask + Waitress/Gunicorn\n512 MB Production Mode]
-    W --> E[Deterministic Rules Engine\n35 Verified Schemes]
-    W --> D[PDF / Image OCR Extractor\n+ PII Redactor]
-    D -->|Redacted Text <= 60k| G[Gemini Flash SDK\n2x Backoff + Fallback]
-    D -->|> 60k Chars| R[Hybrid BM25 + Embeddings]
-    R --> G
+    U[Citizen Browser] --> F[Flask + Waitress / Gunicorn]
+    F --> R[Deterministic Rules Engine<br/>35 Verified Schemes]
+    F --> D[PDF / OCR Extractor<br/>+ PII Redactor]
+    D --> C{Gemini Available?}
+    C -- Yes --> G[Gemini Flash<br/>Timeout + Failover]
+    C -- No / Quota --> V[Verified Data Engine<br/>24h Cache + Explainers]
 ```
 
----
+## Built with
 
-## Tech Stack
-
-| Layer | Technology |
+| Layer | Stack |
 | :--- | :--- |
-| **Backend** | Python 3.11+, Flask 3.1, Waitress (local), Gunicorn (Docker/Render) |
-| **AI & Retrieval** | `google-genai` (Gemini Flash with 2x backoff + fallback), `rank-bm25`, Gemini embeddings (`EMBEDDINGS_BACKEND=gemini` in prod; `all-MiniLM-L6-v2` + ChromaDB in local `eval/`) |
-| **Document Parsing** | `pypdf`, `pdfplumber`, `PyMuPDF`, `pytesseract` (English + Hindi OCR), `reportlab` (PDF checklists) |
-| **Frontend** | Server-rendered Jinja2, bilingual `en.json` / `hi.json` i18n, handwritten CSS design system (`#FBF7F0` / `#0D5C53` / `#D96B18`) |
-| **Testing** | `pytest` (20 tests), Playwright E2E (`1920x1080`, `1440x900`, `390x844`), `ruff` |
+| **Backend** | Python 3.11, Flask 3.1, Waitress (local), Gunicorn (production) |
+| **AI & Retrieval** | `google-genai` (Gemini Flash), `rank-bm25`, Gemini embeddings, verified-data fallback |
+| **Documents & OCR** | `pypdf`, `pdfplumber`, `PyMuPDF`, `pytesseract` (EN/HI), `reportlab` |
+| **Frontend & Tests** | Jinja2, `en.json` / `hi.json` i18n, `pytest`, Playwright E2E, `ruff` |
 
----
+## Run locally
 
-## Project Structure
-
-```text
-app/
-  i18n/               # Full UI English & Hindi translations (en.json, hi.json)
-  routes/             # Page routes (pages.py) & JSON/SSE APIs (api.py)
-  services/           # Rules engine, doc_intel, PII redactor, Gemini client, RAG, OCR
-  static/             # Handwritten CSS, accessible JS controllers, SVG assets
-  templates/          # Mobile-first bilingual Jinja2 templates
-data/schemes/         # 35 HTTP-200 verified bilingual Central & UP schemes
-docs/                 # Demo walkthrough GIF
-eval/                 # 105-question retrieval benchmark & 40-conversation Sahayak review
-tests/                # Unit, integration, auto-fill, and Playwright E2E tests
-Dockerfile            # Production slim image (tesseract + poppler, < 260 MB RSS)
-render.yaml           # One-click Render Blueprint (free tier Docker)
+**Windows (PowerShell):**
+```powershell
+git clone https://github.com/ANUSHKA13102003/ai-citizen-assistant.git; cd ai-citizen-assistant
+python -m venv .venv; .\.venv\Scripts\pip install -r requirements-dev.txt
+copy .env.example .env
+.\scripts\run_dev.ps1
 ```
 
----
+**Linux / macOS:**
+```bash
+git clone https://github.com/ANUSHKA13102003/ai-citizen-assistant.git && cd ai-citizen-assistant
+python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
+cp .env.example .env
+.venv/bin/python run.py
+```
 
-## Accuracy & Evaluation
+## Privacy and safety
 
-Measured on **105 labelled questions across 32 fictional documents** (`eval/results.json`) and **40 live bilingual Sahayak conversations** (`eval/chat_review.md`):
+- **Personal numbers hidden before AI:** Aadhaar-like 12-digit numbers, PAN, bank accounts, phone numbers, and emails are redacted before any text is sent to Gemini.
+- **Nothing stored:** Uploaded documents stay only in ephemeral session memory and are cleared when the session ends or when you click **Clear my data**.
+- **Official-site links:** Every scheme links directly to its verified `.gov.in` / official portal, and Sahayak reminds citizens never to pay middlemen or share OTPs.
 
-| Metric | Baseline (Vector Only) | Current (Hybrid + Full-Text) |
-| :--- | :---: | :---: |
-| **Search Hit Rate (Top-5)** | 76.5% | **88.2%** |
-| **Mean Reciprocal Rank (MRR)** | 0.580 | **0.679** |
-| **Grounding Rate** | 72.7% | **100.0%** |
-| **Citation Accuracy** | 97.7% | **100.0%** |
-| **Follow-up Resolution** | 25.0% | **100.0%** |
-| **40-Conversation Live Eval** | — | **40 / 40 Passed** |
+## Quality
 
-Production memory footprint with `EMBEDDINGS_BACKEND=gemini` (5 uploaded PDFs, wizard match, 10 chat turns): **259.5 MB peak RSS** (fits comfortably within Render's 512 MB free tier).
-
----
-
-## Privacy & Safety Notes
-
-- **Automatic PII Redaction:** 12-digit Aadhaar-like numbers, PAN, bank account numbers, phone numbers, and email addresses are stripped before any text is sent to Gemini.
-- **In-Memory Only:** Uploaded documents are never saved to a permanent database or disk store; citizens can clear all session data in one click.
-- **Anti-Fraud Guardrails:** Independent helper, not a government website. Every scheme links directly to its verified `.gov.in` / official portal, and Sahayak warns users never to pay middlemen or share OTPs.
-
----
+| Check | Result |
+| :--- | :--- |
+| **Automated Suite (`pytest`)** | 27 passed (unit, auto-fill, chaos resilience, Playwright E2E) |
+| **Official Link Check** | 23 / 23 scheme & portal URLs returned HTTP 200 |
+| **Chat Evaluation** | 40 / 40 live eval + 40 / 40 verified-data mode; 100% grounding (`eval/results.json`) |
+| **Memory Footprint** | 259.5 MB peak RSS (fits Render 512 MB free tier) |
 
 ## Roadmap
 
-- Add state-specific scheme coverage for Bihar, Madhya Pradesh, Rajasthan, and Maharashtra.
-- Add offline-installable PWA manifest for low-connectivity rural use.
+- Expand state-level scheme libraries for Bihar, Madhya Pradesh, Rajasthan, and Maharashtra.
+- Add offline-installable PWA support for low-connectivity rural areas.
+- Add WhatsApp / Telegram bot adapter using the same verified rules and explainer engine.
+- Support regional voice output in additional Indian languages.
 
----
+## Project background
 
-<details>
-<summary>Project background</summary>
-
-Originated as an academic retrieval-augmented generation study on Indian citizen document intelligence (BT-90 capstone at IILM University), then redesigned into a standalone bilingual public-facing welfare assistant.
-
-</details>
+Originated as **BT-90 Capstone Project** (*AI-Powered Intelligent Citizen Assistant using Retrieval-Augmented Generation and Personal Document Intelligence*) at **IILM University** (accompanied by an IEEE research paper), and evolved into an open-source, production-ready public welfare assistant.
