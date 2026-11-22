@@ -237,6 +237,25 @@
                 ui.citations.appendChild(chip);
               });
             }
+            if (parsed.scheme_cards && parsed.scheme_cards.length) {
+              var cardsWrap = document.createElement("div");
+              cardsWrap.className = "grid";
+              cardsWrap.style.marginTop = "10px";
+              parsed.scheme_cards.forEach(function (sc) {
+                var c = document.createElement("div");
+                c.className = "card-soft";
+                c.style.padding = "12px 14px";
+                c.innerHTML =
+                  "<strong>" + sc.name + "</strong>" +
+                  '<div style="color:var(--primary);font-weight:700;margin:4px 0;">' + sc.benefit + "</div>" +
+                  '<div class="btn-row" style="margin-top:8px;">' +
+                  '<a href="/schemes/' + encodeURIComponent(sc.slug || sc.id) + '" class="btn btn-secondary btn-sm">Details</a>' +
+                  '<a href="' + sc.official_url + '" target="_blank" rel="noopener noreferrer" class="btn btn-cta btn-sm">Official website</a>' +
+                  "</div>";
+                cardsWrap.appendChild(c);
+              });
+              ui.div.insertBefore(cardsWrap, ui.actions);
+            }
             addActionButtons(ui, finalTxt, parsed.query_log_id, q);
             renderFollowups(parsed.followups || []);
           }

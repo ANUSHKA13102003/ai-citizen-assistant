@@ -1,0 +1,1912 @@
+{
+  "explainers": {
+    "csss-college-scholarship": {
+      "id": "csss-college-scholarship",
+      "slug": "csss-college-scholarship",
+      "official_url": "https://scholarships.gov.in",
+      "summary": "This scholarship provides ₹12,000 yearly for graduation and ₹20,000 for post-graduation to students with 80th percentile in Class 12 and income under ₹4.5 lakh. Apply at https://scholarships.gov.in.",
+      "summary_hi": "यह छात्रवृत्ति 12वीं में 80वें परसेंटाइल और ₹4.5 लाख से कम आय वाले छात्रों को स्नातक के लिए ₹12,000 और स्नातकोत्तर के लिए ₹20,000 देती है। https://scholarships.gov.in पर आवेदन करें।",
+      "who": "Students above the 80th percentile in Class 12 who study a regular degree course, with family income up to ₹4.5 lakh a year.",
+      "who_hi": "कक्षा 12 में 80 पर्सेंटाइल से ऊपर वाले छात्र जो नियमित डिग्री कोर्स कर रहे हैं और जिनकी पारिवारिक आय ₹4.5 लाख सालाना तक है।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (scholarships.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply every year on the National Scholarship Portal."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (scholarships.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: हर साल राष्ट्रीय छात्रवृत्ति पोर्टल पर आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does Central Sector Scholarship for College and University Students provide?",
+          "a": "₹12,000 a year for graduation (first 3 years) and ₹20,000 a year for post-graduation.",
+          "q_hi": "कॉलेज और विश्वविद्यालय छात्रों के लिए केंद्रीय छात्रवृत्ति से क्या लाभ मिलता है?",
+          "a_hi": "स्नातक में ₹12,000 सालाना और स्नातकोत्तर में ₹20,000 सालाना।"
+        },
+        {
+          "q": "Who can apply for Central Sector Scholarship for College and University Students?",
+          "a": "Students above the 80th percentile in Class 12 who study a regular degree course, with family income up to ₹4.5 lakh a year.",
+          "q_hi": "कॉलेज और विश्वविद्यालय छात्रों के लिए केंद्रीय छात्रवृत्ति के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "कक्षा 12 में 80 पर्सेंटाइल से ऊपर वाले छात्र जो नियमित डिग्री कोर्स कर रहे हैं और जिनकी पारिवारिक आय ₹4.5 लाख सालाना तक है।"
+        },
+        {
+          "q": "Which documents are needed for Central Sector Scholarship for College and University Students?",
+          "a": "Keep these ready: Aadhaar Card, Income Certificate, Academic Marksheet / Transcript, Bank Passbook / Account Details, Bonafide / Admission Proof.",
+          "q_hi": "कॉलेज और विश्वविद्यालय छात्रों के लिए केंद्रीय छात्रवृत्ति के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Income Certificate, Academic Marksheet / Transcript, Bank Passbook / Account Details, Bonafide / Admission Proof।"
+        },
+        {
+          "q": "Where do I apply for Central Sector Scholarship for College and University Students?",
+          "a": "Apply only on the official portal (https://scholarships.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "कॉलेज और विश्वविद्यालय छात्रों के लिए केंद्रीय छात्रवृत्ति के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://scholarships.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for Central Sector Scholarship for College and University Students?",
+          "a": "Check the official site (https://scholarships.gov.in) for current dates and deadlines.",
+          "q_hi": "कॉलेज और विश्वविद्यालय छात्रों के लिए केंद्रीय छात्रवृत्ति की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://scholarships.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "post-matric-scholarship-sc": {
+      "id": "post-matric-scholarship-sc",
+      "slug": "post-matric-scholarship-sc",
+      "official_url": "https://scholarships.gov.in",
+      "summary": "This scheme provides course fees and a monthly allowance to Scheduled Caste students studying after Class 10 with family income up to ₹2.5 lakh. https://scholarships.gov.in",
+      "summary_hi": "यह योजना 10वीं के बाद पढ़ने वाले अनुसूचित जाति के छात्रों को फीस और मासिक भत्ता देती है, जिनकी पारिवारिक आय ₹2.5 लाख तक है। https://scholarships.gov.in",
+      "who": "Scheduled Caste students studying after Class 10, with family income up to ₹2.5 lakh a year.",
+      "who_hi": "कक्षा 10 के बाद पढ़ रहे अनुसूचित जाति के छात्र, जिनकी पारिवारिक आय ₹2.5 लाख सालाना तक है।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (scholarships.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply on the National Scholarship Portal or your state portal."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (scholarships.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: राष्ट्रीय छात्रवृत्ति पोर्टल या अपने राज्य के पोर्टल पर आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does Post-Matric Scholarship for Scheduled Caste Students provide?",
+          "a": "Course fees paid plus a monthly allowance for study costs.",
+          "q_hi": "अनुसूचित जाति छात्रों के लिए पोस्ट-मैट्रिक छात्रवृत्ति से क्या लाभ मिलता है?",
+          "a_hi": "कोर्स फीस की भरपाई और पढ़ाई के खर्च के लिए मासिक भत्ता।"
+        },
+        {
+          "q": "Who can apply for Post-Matric Scholarship for Scheduled Caste Students?",
+          "a": "Scheduled Caste students studying after Class 10, with family income up to ₹2.5 lakh a year.",
+          "q_hi": "अनुसूचित जाति छात्रों के लिए पोस्ट-मैट्रिक छात्रवृत्ति के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "कक्षा 10 के बाद पढ़ रहे अनुसूचित जाति के छात्र, जिनकी पारिवारिक आय ₹2.5 लाख सालाना तक है।"
+        },
+        {
+          "q": "Which documents are needed for Post-Matric Scholarship for Scheduled Caste Students?",
+          "a": "Keep these ready: Aadhaar Card, Caste / Category Certificate, Income Certificate, Academic Marksheet / Transcript, Bank Passbook / Account Details, Bonafide / Admission Proof, Fee Receipt.",
+          "q_hi": "अनुसूचित जाति छात्रों के लिए पोस्ट-मैट्रिक छात्रवृत्ति के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Caste / Category Certificate, Income Certificate, Academic Marksheet / Transcript, Bank Passbook / Account Details, Bonafide / Admission Proof, Fee Receipt।"
+        },
+        {
+          "q": "Where do I apply for Post-Matric Scholarship for Scheduled Caste Students?",
+          "a": "Apply only on the official portal (https://scholarships.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "अनुसूचित जाति छात्रों के लिए पोस्ट-मैट्रिक छात्रवृत्ति के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://scholarships.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for Post-Matric Scholarship for Scheduled Caste Students?",
+          "a": "Check the official site (https://scholarships.gov.in) for current dates and deadlines.",
+          "q_hi": "अनुसूचित जाति छात्रों के लिए पोस्ट-मैट्रिक छात्रवृत्ति की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://scholarships.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-yasasvi-scholarship": {
+      "id": "pm-yasasvi-scholarship",
+      "slug": "pm-yasasvi-scholarship",
+      "official_url": "https://scholarships.gov.in",
+      "summary": "This scholarship provides yearly financial aid to OBC, EBC, and DNT students from Class 9 onwards with family income under ₹2.5 lakh. Apply at https://scholarships.gov.in.",
+      "summary_hi": "यह छात्रवृत्ति कक्षा 9 और उससे ऊपर के OBC, EBC और DNT छात्रों को ₹2.5 लाख से कम आय पर मिलती है। https://scholarships.gov.in पर आवेदन करें।",
+      "who": "OBC, EBC and DNT students from Class 9 onwards, with family income up to ₹2.5 lakh a year.",
+      "who_hi": "कक्षा 9 से आगे पढ़ रहे ओबीसी, ईबीसी और डीएनटी छात्र, जिनकी पारिवारिक आय ₹2.5 लाख सालाना तक है।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (scholarships.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply on the National Scholarship Portal."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (scholarships.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: राष्ट्रीय छात्रवृत्ति पोर्टल पर आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM YASASVI Scholarship for OBC, EBC and DNT Students provide?",
+          "a": "A yearly scholarship for school and college study; amount depends on the class or course.",
+          "q_hi": "ओबीसी, ईबीसी और डीएनटी छात्रों के लिए पीएम यशस्वी छात्रवृत्ति से क्या लाभ मिलता है?",
+          "a_hi": "स्कूल और कॉलेज की पढ़ाई के लिए सालाना छात्रवृत्ति; राशि कक्षा या कोर्स पर निर्भर है।"
+        },
+        {
+          "q": "Who can apply for PM YASASVI Scholarship for OBC, EBC and DNT Students?",
+          "a": "OBC, EBC and DNT students from Class 9 onwards, with family income up to ₹2.5 lakh a year.",
+          "q_hi": "ओबीसी, ईबीसी और डीएनटी छात्रों के लिए पीएम यशस्वी छात्रवृत्ति के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "कक्षा 9 से आगे पढ़ रहे ओबीसी, ईबीसी और डीएनटी छात्र, जिनकी पारिवारिक आय ₹2.5 लाख सालाना तक है।"
+        },
+        {
+          "q": "Which documents are needed for PM YASASVI Scholarship for OBC, EBC and DNT Students?",
+          "a": "Keep these ready: Aadhaar Card, Caste / Category Certificate, Income Certificate, Academic Marksheet / Transcript, Bank Passbook / Account Details, Bonafide / Admission Proof.",
+          "q_hi": "ओबीसी, ईबीसी और डीएनटी छात्रों के लिए पीएम यशस्वी छात्रवृत्ति के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Caste / Category Certificate, Income Certificate, Academic Marksheet / Transcript, Bank Passbook / Account Details, Bonafide / Admission Proof।"
+        },
+        {
+          "q": "Where do I apply for PM YASASVI Scholarship for OBC, EBC and DNT Students?",
+          "a": "Apply only on the official portal (https://scholarships.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "ओबीसी, ईबीसी और डीएनटी छात्रों के लिए पीएम यशस्वी छात्रवृत्ति के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://scholarships.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM YASASVI Scholarship for OBC, EBC and DNT Students?",
+          "a": "Check the official site (https://scholarships.gov.in) for current dates and deadlines.",
+          "q_hi": "ओबीसी, ईबीसी और डीएनटी छात्रों के लिए पीएम यशस्वी छात्रवृत्ति की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://scholarships.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "aicte-pragati-scholarship": {
+      "id": "aicte-pragati-scholarship",
+      "slug": "aicte-pragati-scholarship",
+      "official_url": "https://scholarships.gov.in",
+      "summary": "This scholarship provides ₹50,000 yearly to girls in AICTE-approved technical courses with family income up to ₹8 lakh. Apply at https://scholarships.gov.in.",
+      "summary_hi": "यह छात्रवृत्ति तकनीकी शिक्षा प्राप्त कर रही लड़कियों को ₹50,000 सालाना देती है, जिनकी पारिवारिक आय ₹8 लाख तक है। आवेदन https://scholarships.gov.in पर करें।",
+      "who": "Girls admitted to an AICTE-approved degree or diploma course, with family income up to ₹8 lakh a year (up to 2 girls per family).",
+      "who_hi": "एआईसीटीई से मान्य डिग्री या डिप्लोमा में प्रवेश लेने वाली लड़कियां, जिनके परिवार की आय ₹8 लाख सालाना तक है (परिवार में अधिकतम 2 लड़कियां)।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (scholarships.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply on the National Scholarship Portal under AICTE schemes."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (scholarships.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: राष्ट्रीय छात्रवृत्ति पोर्टल पर एआईसीटीई योजनाओं के अंतर्गत आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does AICTE Pragati Scholarship for Girls in Technical Education provide?",
+          "a": "₹50,000 a year for every year of study.",
+          "q_hi": "तकनीकी शिक्षा में लड़कियों के लिए एआईसीटीई प्रगति छात्रवृत्ति से क्या लाभ मिलता है?",
+          "a_hi": "पढ़ाई के हर साल के लिए ₹50,000 सालाना।"
+        },
+        {
+          "q": "Who can apply for AICTE Pragati Scholarship for Girls in Technical Education?",
+          "a": "Girls admitted to an AICTE-approved degree or diploma course, with family income up to ₹8 lakh a year (up to 2 girls per family).",
+          "q_hi": "तकनीकी शिक्षा में लड़कियों के लिए एआईसीटीई प्रगति छात्रवृत्ति के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "एआईसीटीई से मान्य डिग्री या डिप्लोमा में प्रवेश लेने वाली लड़कियां, जिनके परिवार की आय ₹8 लाख सालाना तक है (परिवार में अधिकतम 2 लड़कियां)।"
+        },
+        {
+          "q": "Which documents are needed for AICTE Pragati Scholarship for Girls in Technical Education?",
+          "a": "Keep these ready: Aadhaar Card, Income Certificate, Academic Marksheet / Transcript, Bonafide / Admission Proof, Fee Receipt, Bank Passbook / Account Details.",
+          "q_hi": "तकनीकी शिक्षा में लड़कियों के लिए एआईसीटीई प्रगति छात्रवृत्ति के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Income Certificate, Academic Marksheet / Transcript, Bonafide / Admission Proof, Fee Receipt, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for AICTE Pragati Scholarship for Girls in Technical Education?",
+          "a": "Apply only on the official portal (https://scholarships.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "तकनीकी शिक्षा में लड़कियों के लिए एआईसीटीई प्रगति छात्रवृत्ति के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://scholarships.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for AICTE Pragati Scholarship for Girls in Technical Education?",
+          "a": "Check the official site (https://scholarships.gov.in) for current dates and deadlines.",
+          "q_hi": "तकनीकी शिक्षा में लड़कियों के लिए एआईसीटीई प्रगति छात्रवृत्ति की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://scholarships.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "aicte-saksham-scholarship": {
+      "id": "aicte-saksham-scholarship",
+      "slug": "aicte-saksham-scholarship",
+      "official_url": "https://scholarships.gov.in",
+      "summary": "AICTE Saksham provides ₹50,000 yearly to students with 40% or more disability in approved courses with family income under ₹8 lakh. Apply at https://scholarships.gov.in.",
+      "summary_hi": "एआईसीटीई सक्षम योजना में 40% या अधिक दिव्यांगता और ₹8 लाख से कम आय वाले छात्रों को ₹50,000 सालाना मिलते हैं। आवेदन https://scholarships.gov.in पर करें।",
+      "who": "Students with 40% or more disability in an AICTE-approved degree or diploma course, with family income up to ₹8 lakh a year.",
+      "who_hi": "एआईसीटीई से मान्य डिग्री या डिप्लोमा में पढ़ने वाले 40% या अधिक दिव्यांगता वाले छात्र, जिनके परिवार की आय ₹8 लाख सालाना तक है।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (scholarships.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply on the National Scholarship Portal under AICTE schemes."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (scholarships.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: राष्ट्रीय छात्रवृत्ति पोर्टल पर एआईसीटीई योजनाओं के अंतर्गत आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does AICTE Saksham Scholarship for Students with Disabilities provide?",
+          "a": "₹50,000 a year for every year of study.",
+          "q_hi": "दिव्यांग छात्रों के लिए एआईसीटीई सक्षम छात्रवृत्ति से क्या लाभ मिलता है?",
+          "a_hi": "पढ़ाई के हर साल के लिए ₹50,000 सालाना।"
+        },
+        {
+          "q": "Who can apply for AICTE Saksham Scholarship for Students with Disabilities?",
+          "a": "Students with 40% or more disability in an AICTE-approved degree or diploma course, with family income up to ₹8 lakh a year.",
+          "q_hi": "दिव्यांग छात्रों के लिए एआईसीटीई सक्षम छात्रवृत्ति के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "एआईसीटीई से मान्य डिग्री या डिप्लोमा में पढ़ने वाले 40% या अधिक दिव्यांगता वाले छात्र, जिनके परिवार की आय ₹8 लाख सालाना तक है।"
+        },
+        {
+          "q": "Which documents are needed for AICTE Saksham Scholarship for Students with Disabilities?",
+          "a": "Keep these ready: Aadhaar Card, Disability Certificate (UDID), Income Certificate, Academic Marksheet / Transcript, Bonafide / Admission Proof, Fee Receipt, Bank Passbook / Account Details.",
+          "q_hi": "दिव्यांग छात्रों के लिए एआईसीटीई सक्षम छात्रवृत्ति के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Disability Certificate (UDID), Income Certificate, Academic Marksheet / Transcript, Bonafide / Admission Proof, Fee Receipt, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for AICTE Saksham Scholarship for Students with Disabilities?",
+          "a": "Apply only on the official portal (https://scholarships.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "दिव्यांग छात्रों के लिए एआईसीटीई सक्षम छात्रवृत्ति के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://scholarships.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for AICTE Saksham Scholarship for Students with Disabilities?",
+          "a": "Check the official site (https://scholarships.gov.in) for current dates and deadlines.",
+          "q_hi": "दिव्यांग छात्रों के लिए एआईसीटीई सक्षम छात्रवृत्ति की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://scholarships.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "nmmss-scholarship": {
+      "id": "nmmss-scholarship",
+      "slug": "nmmss-scholarship",
+      "official_url": "https://scholarships.gov.in",
+      "summary": "This scholarship provides ₹12,000 yearly to bright students in classes 9 to 12 from government or aided schools. Apply at https://scholarships.gov.in.",
+      "summary_hi": "यह छात्रवृत्ति सरकारी या सहायता प्राप्त स्कूलों के कक्षा 9 से 12 के मेधावी छात्रों को ₹12,000 सालाना देती है। https://scholarships.gov.in पर आवेदन करें।",
+      "who": "Bright students of Class 9 to 12 in government or aided schools, with family income up to ₹3.5 lakh a year, selected through a state test.",
+      "who_hi": "सरकारी या सहायता प्राप्त स्कूलों में कक्षा 9 से 12 के मेधावी छात्र, जिनके परिवार की आय ₹3.5 लाख सालाना तक है और जो राज्य परीक्षा से चुने गए हों।",
+      "steps": [
+        "Check with your school or college scholarship desk and gather the required documents.",
+        "Register on scholarships.gov.in and complete the online scholarship form.",
+        "Upload documents and submit a printed copy to your institution for verification.",
+        "After verification, the scholarship is sent directly to your bank account.",
+        "Note: Your school tells you about the state selection test."
+      ],
+      "steps_hi": [
+        "अपने स्कूल या कॉलेज की छात्रवृत्ति डेस्क से बात करें और दस्तावेज़ तैयार रखें।",
+        "scholarships.gov.in पोर्टल पर छात्र पंजीकरण कर ऑनलाइन फ़ॉर्म भरें।",
+        "दस्तावेज़ अपलोड करके प्रिंट-आउट अपने संस्थान में सत्यापन के लिए जमा करें।",
+        "सत्यापन के बाद छात्रवृत्ति सीधे आधार-लिंक्ड बैंक खाते में आएगी।",
+        "विशेष ध्यान: राज्य चयन परीक्षा की जानकारी आपका स्कूल देगा।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does National Means-cum-Merit Scholarship (Class 9 to 12) provide?",
+          "a": "₹12,000 a year (₹1,000 a month) to help you stay in school.",
+          "q_hi": "राष्ट्रीय साधन-सह-मेधा छात्रवृत्ति (कक्षा 9 से 12) से क्या लाभ मिलता है?",
+          "a_hi": "स्कूल में बने रहने के लिए ₹12,000 सालाना (₹1,000 प्रति माह)।"
+        },
+        {
+          "q": "Who can apply for National Means-cum-Merit Scholarship (Class 9 to 12)?",
+          "a": "Bright students of Class 9 to 12 in government or aided schools, with family income up to ₹3.5 lakh a year, selected through a state test.",
+          "q_hi": "राष्ट्रीय साधन-सह-मेधा छात्रवृत्ति (कक्षा 9 से 12) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "सरकारी या सहायता प्राप्त स्कूलों में कक्षा 9 से 12 के मेधावी छात्र, जिनके परिवार की आय ₹3.5 लाख सालाना तक है और जो राज्य परीक्षा से चुने गए हों।"
+        },
+        {
+          "q": "Which documents are needed for National Means-cum-Merit Scholarship (Class 9 to 12)?",
+          "a": "Keep these ready: Aadhaar Card, Income Certificate, Academic Marksheet / Transcript, Bank Passbook / Account Details, Bonafide / Admission Proof.",
+          "q_hi": "राष्ट्रीय साधन-सह-मेधा छात्रवृत्ति (कक्षा 9 से 12) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Income Certificate, Academic Marksheet / Transcript, Bank Passbook / Account Details, Bonafide / Admission Proof।"
+        },
+        {
+          "q": "Where do I apply for National Means-cum-Merit Scholarship (Class 9 to 12)?",
+          "a": "Apply only on the official portal (https://scholarships.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "राष्ट्रीय साधन-सह-मेधा छात्रवृत्ति (कक्षा 9 से 12) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://scholarships.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for National Means-cum-Merit Scholarship (Class 9 to 12)?",
+          "a": "Check the official site (https://scholarships.gov.in) for current dates and deadlines.",
+          "q_hi": "राष्ट्रीय साधन-सह-मेधा छात्रवृत्ति (कक्षा 9 से 12) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://scholarships.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "up-scholarship-post-matric": {
+      "id": "up-scholarship-post-matric",
+      "slug": "up-scholarship-post-matric",
+      "official_url": "https://up.gov.in",
+      "summary": "Uttar Pradesh students in Class 11 and above can get scholarship money and fee reimbursement directly in their bank account. Apply at https://up.gov.in.",
+      "summary_hi": "उत्तर प्रदेश के कक्षा 11 और उससे ऊपर के छात्र छात्रवृत्ति और शुल्क प्रतिपूर्ति सीधे अपने बैंक खाते में पा सकते हैं। https://up.gov.in पर आवेदन करें।",
+      "who": "Uttar Pradesh students studying in Class 11, 12, degree, diploma or technical courses, with a low family income as per the official limit.",
+      "who_hi": "उत्तर प्रदेश के छात्र जो कक्षा 11, 12, डिग्री, डिप्लोमा या तकनीकी कोर्स में पढ़ रहे हैं और जिनकी पारिवारिक आय सरकारी सीमा के भीतर है।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (scholarship.up.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Income limit differs by category; confirm on the portal."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (scholarship.up.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: आय सीमा श्रेणी के अनुसार अलग है; पोर्टल पर पुष्टि करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does UP Scholarship and Fee Reimbursement (Class 11 and above) provide?",
+          "a": "Scholarship money and course fee reimbursement sent to your bank account.",
+          "q_hi": "यूपी छात्रवृत्ति एवं शुल्क प्रतिपूर्ति (कक्षा 11 और ऊपर) से क्या लाभ मिलता है?",
+          "a_hi": "छात्रवृत्ति की राशि और कोर्स फीस की प्रतिपूर्ति सीधे आपके बैंक खाते में।"
+        },
+        {
+          "q": "Who can apply for UP Scholarship and Fee Reimbursement (Class 11 and above)?",
+          "a": "Uttar Pradesh students studying in Class 11, 12, degree, diploma or technical courses, with a low family income as per the official limit.",
+          "q_hi": "यूपी छात्रवृत्ति एवं शुल्क प्रतिपूर्ति (कक्षा 11 और ऊपर) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "उत्तर प्रदेश के छात्र जो कक्षा 11, 12, डिग्री, डिप्लोमा या तकनीकी कोर्स में पढ़ रहे हैं और जिनकी पारिवारिक आय सरकारी सीमा के भीतर है।"
+        },
+        {
+          "q": "Which documents are needed for UP Scholarship and Fee Reimbursement (Class 11 and above)?",
+          "a": "Keep these ready: Aadhaar Card, Income Certificate, Domicile / Residence Certificate, Caste / Category Certificate, Academic Marksheet / Transcript, Fee Receipt, Bank Passbook / Account Details, Bonafide / Admission Proof.",
+          "q_hi": "यूपी छात्रवृत्ति एवं शुल्क प्रतिपूर्ति (कक्षा 11 और ऊपर) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Income Certificate, Domicile / Residence Certificate, Caste / Category Certificate, Academic Marksheet / Transcript, Fee Receipt, Bank Passbook / Account Details, Bonafide / Admission Proof।"
+        },
+        {
+          "q": "Where do I apply for UP Scholarship and Fee Reimbursement (Class 11 and above)?",
+          "a": "Apply only on the official portal (https://up.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "यूपी छात्रवृत्ति एवं शुल्क प्रतिपूर्ति (कक्षा 11 और ऊपर) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://up.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for UP Scholarship and Fee Reimbursement (Class 11 and above)?",
+          "a": "Check the official site (https://up.gov.in) for current dates and deadlines.",
+          "q_hi": "यूपी छात्रवृत्ति एवं शुल्क प्रतिपूर्ति (कक्षा 11 और ऊपर) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://up.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "up-scholarship-pre-matric": {
+      "id": "up-scholarship-pre-matric",
+      "slug": "up-scholarship-pre-matric",
+      "official_url": "https://up.gov.in",
+      "summary": "Uttar Pradesh students in Class 9 or 10 from low-income families receive a yearly scholarship directly in their bank account. Apply at https://up.gov.in.",
+      "summary_hi": "उत्तर प्रदेश के कक्षा 9 और 10 के कम आय वाले परिवारों के छात्र वार्षिक छात्रवृत्ति प्राप्त कर सकते हैं। आवेदन https://up.gov.in पर करें।",
+      "who": "Uttar Pradesh students in Class 9 or 10 from low-income families, as per the official limit.",
+      "who_hi": "कक्षा 9 या 10 में पढ़ने वाले उत्तर प्रदेश के छात्र, जिनके परिवार की आय सरकारी सीमा के भीतर है।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (scholarship.up.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Your school helps with the online form."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (scholarship.up.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: ऑनलाइन फॉर्म में आपका स्कूल मदद करता है।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does UP Pre-Matric Scholarship (Class 9 and 10) provide?",
+          "a": "A yearly scholarship sent to your bank account.",
+          "q_hi": "यूपी प्री-मैट्रिक छात्रवृत्ति (कक्षा 9 और 10) से क्या लाभ मिलता है?",
+          "a_hi": "आपके बैंक खाते में सालाना छात्रवृत्ति।"
+        },
+        {
+          "q": "Who can apply for UP Pre-Matric Scholarship (Class 9 and 10)?",
+          "a": "Uttar Pradesh students in Class 9 or 10 from low-income families, as per the official limit.",
+          "q_hi": "यूपी प्री-मैट्रिक छात्रवृत्ति (कक्षा 9 और 10) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "कक्षा 9 या 10 में पढ़ने वाले उत्तर प्रदेश के छात्र, जिनके परिवार की आय सरकारी सीमा के भीतर है।"
+        },
+        {
+          "q": "Which documents are needed for UP Pre-Matric Scholarship (Class 9 and 10)?",
+          "a": "Keep these ready: Aadhaar Card, Income Certificate, Domicile / Residence Certificate, Caste / Category Certificate, Academic Marksheet / Transcript, Bank Passbook / Account Details.",
+          "q_hi": "यूपी प्री-मैट्रिक छात्रवृत्ति (कक्षा 9 और 10) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Income Certificate, Domicile / Residence Certificate, Caste / Category Certificate, Academic Marksheet / Transcript, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for UP Pre-Matric Scholarship (Class 9 and 10)?",
+          "a": "Apply only on the official portal (https://up.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "यूपी प्री-मैट्रिक छात्रवृत्ति (कक्षा 9 और 10) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://up.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for UP Pre-Matric Scholarship (Class 9 and 10)?",
+          "a": "Check the official site (https://up.gov.in) for current dates and deadlines.",
+          "q_hi": "यूपी प्री-मैट्रिक छात्रवृत्ति (कक्षा 9 और 10) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://up.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-usp-interest-subsidy": {
+      "id": "pm-usp-interest-subsidy",
+      "slug": "pm-usp-interest-subsidy",
+      "official_url": "https://www.jansamarth.in",
+      "summary": "The government pays your education loan interest during your course and for one year after. Apply if family income is up to ₹4.5 lakh. https://www.jansamarth.in",
+      "summary_hi": "सरकार आपके कोर्स के दौरान और एक साल बाद तक शिक्षा ऋण का ब्याज भरती है। यदि पारिवारिक आय ₹4.5 लाख तक है, तो आवेदन करें। https://www.jansamarth.in",
+      "who": "Students taking a bank education loan for approved technical or professional courses, with family income up to ₹4.5 lakh a year.",
+      "who_hi": "मान्य तकनीकी या प्रोफेशनल कोर्स के लिए बैंक से शिक्षा ऋण लेने वाले छात्र, जिनके परिवार की आय ₹4.5 लाख सालाना तक है।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (vidyalakshmi.co.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply for the loan first; the subsidy is processed through your bank."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (vidyalakshmi.co.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: पहले ऋण के लिए आवेदन करें; सब्सिडी आपके बैंक के माध्यम से मिलती है।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does Interest Subsidy on Education Loans (PM-USP CSIS) provide?",
+          "a": "The government pays your loan interest during the course and one year after it.",
+          "q_hi": "शिक्षा ऋण पर ब्याज सब्सिडी (पीएम-यूएसपी सीएसआईएस) से क्या लाभ मिलता है?",
+          "a_hi": "कोर्स के दौरान और उसके एक साल बाद तक ऋण का ब्याज सरकार भरती है।"
+        },
+        {
+          "q": "Who can apply for Interest Subsidy on Education Loans (PM-USP CSIS)?",
+          "a": "Students taking a bank education loan for approved technical or professional courses, with family income up to ₹4.5 lakh a year.",
+          "q_hi": "शिक्षा ऋण पर ब्याज सब्सिडी (पीएम-यूएसपी सीएसआईएस) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "मान्य तकनीकी या प्रोफेशनल कोर्स के लिए बैंक से शिक्षा ऋण लेने वाले छात्र, जिनके परिवार की आय ₹4.5 लाख सालाना तक है।"
+        },
+        {
+          "q": "Which documents are needed for Interest Subsidy on Education Loans (PM-USP CSIS)?",
+          "a": "Keep these ready: Aadhaar Card, PAN Card, Income Certificate, Academic Marksheet / Transcript, Bonafide / Admission Proof, Fee Receipt, Bank Passbook / Account Details.",
+          "q_hi": "शिक्षा ऋण पर ब्याज सब्सिडी (पीएम-यूएसपी सीएसआईएस) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, PAN Card, Income Certificate, Academic Marksheet / Transcript, Bonafide / Admission Proof, Fee Receipt, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for Interest Subsidy on Education Loans (PM-USP CSIS)?",
+          "a": "Apply only on the official portal (https://www.jansamarth.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "शिक्षा ऋण पर ब्याज सब्सिडी (पीएम-यूएसपी सीएसआईएस) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://www.jansamarth.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for Interest Subsidy on Education Loans (PM-USP CSIS)?",
+          "a": "Check the official site (https://www.jansamarth.in) for current dates and deadlines.",
+          "q_hi": "शिक्षा ऋण पर ब्याज सब्सिडी (पीएम-यूएसपी सीएसआईएस) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://www.jansamarth.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-vidyalaxmi": {
+      "id": "pm-vidyalaxmi",
+      "slug": "pm-vidyalaxmi",
+      "official_url": "https://pmvidyalaxmi.co.in",
+      "summary": "The PM Vidyalaxmi scheme provides collateral-free education loans to students in top colleges. Families earning under ₹8 lakh get 3% interest support. Visit https://pmvidyalaxmi.co.in.",
+      "summary_hi": "पीएम विद्यालक्ष्मी योजना शीर्ष कॉलेजों के छात्रों को बिना गारंटी ऋण देती है। ₹8 लाख तक की आय वाले परिवारों को 3% ब्याज सहायता मिलती है। देखें https://pmvidyalaxmi.co.in।",
+      "who": "Students admitted to top-ranked higher education institutions. Families with income up to ₹8 lakh a year get extra interest help.",
+      "who_hi": "देश के शीर्ष उच्च शिक्षा संस्थानों में प्रवेश पाने वाले छात्र। ₹8 लाख सालाना तक की आय वाले परिवारों को ब्याज में अतिरिक्त मदद मिलती है।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (pmvidyalaxmi.co.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Interest help applies to family income up to ₹8 lakh; confirm on the portal."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (pmvidyalaxmi.co.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: ब्याज राहत ₹8 लाख तक की पारिवारिक आय पर लागू है; पोर्टल पर पुष्टि करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM Vidyalaxmi Education Loan Scheme provide?",
+          "a": "Loans without collateral or guarantor, with 3% interest help for eligible families.",
+          "q_hi": "पीएम विद्यालक्ष्मी शिक्षा ऋण योजना से क्या लाभ मिलता है?",
+          "a_hi": "बिना गारंटी और बिना जमानत ऋण, पात्र परिवारों को 3% ब्याज में राहत।"
+        },
+        {
+          "q": "Who can apply for PM Vidyalaxmi Education Loan Scheme?",
+          "a": "Students admitted to top-ranked higher education institutions. Families with income up to ₹8 lakh a year get extra interest help.",
+          "q_hi": "पीएम विद्यालक्ष्मी शिक्षा ऋण योजना के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "देश के शीर्ष उच्च शिक्षा संस्थानों में प्रवेश पाने वाले छात्र। ₹8 लाख सालाना तक की आय वाले परिवारों को ब्याज में अतिरिक्त मदद मिलती है।"
+        },
+        {
+          "q": "Which documents are needed for PM Vidyalaxmi Education Loan Scheme?",
+          "a": "Keep these ready: Aadhaar Card, PAN Card, Income Certificate, Academic Marksheet / Transcript, Bonafide / Admission Proof, Fee Receipt, Bank Passbook / Account Details.",
+          "q_hi": "पीएम विद्यालक्ष्मी शिक्षा ऋण योजना के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, PAN Card, Income Certificate, Academic Marksheet / Transcript, Bonafide / Admission Proof, Fee Receipt, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for PM Vidyalaxmi Education Loan Scheme?",
+          "a": "Apply only on the official portal (https://pmvidyalaxmi.co.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "पीएम विद्यालक्ष्मी शिक्षा ऋण योजना के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://pmvidyalaxmi.co.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM Vidyalaxmi Education Loan Scheme?",
+          "a": "Check the official site (https://pmvidyalaxmi.co.in) for current dates and deadlines.",
+          "q_hi": "पीएम विद्यालक्ष्मी शिक्षा ऋण योजना की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://pmvidyalaxmi.co.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-kisan": {
+      "id": "pm-kisan",
+      "slug": "pm-kisan",
+      "official_url": "https://agriwelfare.gov.in",
+      "summary": "PM-KISAN provides ₹6,000 annually in three ₹2,000 instalments to eligible farmer families. Apply at https://agriwelfare.gov.in using Aadhaar, land records, and bank details.",
+      "summary_hi": "पीएम-किसान योजना पात्र किसान परिवारों को तीन किस्तों में ₹6,000 सालाना देती है। आधार, जमीन के कागजात और बैंक खाते के साथ https://agriwelfare.gov.in पर आवेदन करें।",
+      "who": "Farmer families who own cultivable land. Income tax payers and government employees are not eligible.",
+      "who_hi": "ऐसे किसान परिवार जिनके पास खेती की जमीन है। आयकर दाता और सरकारी कर्मचारी पात्र नहीं हैं।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (pmkisan.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Register under 'Farmers Corner' or at a Common Service Centre. Complete e-KYC."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (pmkisan.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: 'फार्मर्स कॉर्नर' में या जन सेवा केंद्र पर पंजीकरण करें। ई-केवाईसी पूरी करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM-KISAN Samman Nidhi provide?",
+          "a": "₹6,000 a year in three instalments of ₹2,000, sent to your bank account.",
+          "q_hi": "पीएम-किसान सम्मान निधि से क्या लाभ मिलता है?",
+          "a_hi": "साल में ₹6,000, ₹2,000 की तीन किस्तों में, सीधे बैंक खाते में।"
+        },
+        {
+          "q": "Who can apply for PM-KISAN Samman Nidhi?",
+          "a": "Farmer families who own cultivable land. Income tax payers and government employees are not eligible.",
+          "q_hi": "पीएम-किसान सम्मान निधि के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "ऐसे किसान परिवार जिनके पास खेती की जमीन है। आयकर दाता और सरकारी कर्मचारी पात्र नहीं हैं।"
+        },
+        {
+          "q": "Which documents are needed for PM-KISAN Samman Nidhi?",
+          "a": "Keep these ready: Aadhaar Card, Land Ownership / Khatauni Record, Bank Passbook / Account Details.",
+          "q_hi": "पीएम-किसान सम्मान निधि के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Land Ownership / Khatauni Record, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for PM-KISAN Samman Nidhi?",
+          "a": "Apply only on the official portal (https://agriwelfare.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "पीएम-किसान सम्मान निधि के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://agriwelfare.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM-KISAN Samman Nidhi?",
+          "a": "Check the official site (https://agriwelfare.gov.in) for current dates and deadlines.",
+          "q_hi": "पीएम-किसान सम्मान निधि की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://agriwelfare.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-fasal-bima": {
+      "id": "pm-fasal-bima",
+      "slug": "pm-fasal-bima",
+      "official_url": "https://pmfby.gov.in",
+      "summary": "PM Fasal Bima Yojana provides insurance for crop damage from floods, drought, pests, or disease. Farmers pay low premiums. Visit https://pmfby.gov.in for details.",
+      "summary_hi": "प्रधानमंत्री फसल बीमा योजना बाढ़, सूखा, कीट या बीमारी से फसल खराब होने पर बीमा देती है। किसान कम प्रीमियम भरें। जानकारी के लिए https://pmfby.gov.in देखें।",
+      "who": "Farmers, including tenant farmers, who grow notified crops in notified areas.",
+      "who_hi": "अधिसूचित क्षेत्रों में अधिसूचित फसल उगाने वाले किसान, जिनमें बटाईदार किसान भी शामिल हैं।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (pmfby.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply before the last date for the season, at your bank, a CSC, or online."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (pmfby.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: सीजन की अंतिम तिथि से पहले बैंक, सीएससी या ऑनलाइन आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM Fasal Bima Yojana (Crop Insurance) provide?",
+          "a": "Insurance money if your crop is damaged by floods, drought, hail, pests or disease. You pay only 2% (kharif), 1.5% (rabi) or 5% (cash crops).",
+          "q_hi": "प्रधानमंत्री फसल बीमा योजना से क्या लाभ मिलता है?",
+          "a_hi": "बाढ़, सूखा, ओले, कीट या रोग से फसल खराब होने पर बीमा राशि। आप केवल 2% (खरीफ), 1.5% (रबी) या 5% (नकदी फसल) देते हैं।"
+        },
+        {
+          "q": "Who can apply for PM Fasal Bima Yojana (Crop Insurance)?",
+          "a": "Farmers, including tenant farmers, who grow notified crops in notified areas.",
+          "q_hi": "प्रधानमंत्री फसल बीमा योजना के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "अधिसूचित क्षेत्रों में अधिसूचित फसल उगाने वाले किसान, जिनमें बटाईदार किसान भी शामिल हैं।"
+        },
+        {
+          "q": "Which documents are needed for PM Fasal Bima Yojana (Crop Insurance)?",
+          "a": "Keep these ready: Aadhaar Card, Land Ownership / Khatauni Record, Bank Passbook / Account Details.",
+          "q_hi": "प्रधानमंत्री फसल बीमा योजना के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Land Ownership / Khatauni Record, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for PM Fasal Bima Yojana (Crop Insurance)?",
+          "a": "Apply only on the official portal (https://pmfby.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "प्रधानमंत्री फसल बीमा योजना के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://pmfby.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM Fasal Bima Yojana (Crop Insurance)?",
+          "a": "Check the official site (https://pmfby.gov.in) for current dates and deadlines.",
+          "q_hi": "प्रधानमंत्री फसल बीमा योजना की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://pmfby.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "kisan-credit-card": {
+      "id": "kisan-credit-card",
+      "slug": "kisan-credit-card",
+      "official_url": "https://agriwelfare.gov.in",
+      "summary": "The Kisan Credit Card provides low-interest farm loans up to ₹3 lakh at 7% for farmers and fishers. Visit https://agriwelfare.gov.in for details.",
+      "summary_hi": "किसान क्रेडिट कार्ड किसानों और मछुआरों को 7% ब्याज पर ₹3 लाख तक का ऋण देता है। अधिक जानकारी के लिए https://agriwelfare.gov.in पर जाएं।",
+      "who": "Farmers, tenant farmers, sharecroppers, and people in fishing or animal rearing who need low-cost farm credit.",
+      "who_hi": "किसान, बटाईदार, पट्टेदार तथा मछली पालन या पशुपालन करने वाले लोग जिन्हें सस्ता कृषि ऋण चाहिए।",
+      "steps": [
+        "Keep the required documents listed above ready.",
+        "Visit your nearest bank branch or Common Service Centre (CSC), or apply online via pmkisan.gov.in.",
+        "Submit the application form with copies of your documents and collect the acknowledgement receipt.",
+        "Once approved, the loan or subsidy is credited to your bank account.",
+        "Note: PM-KISAN farmers can use the KCC saturation drive at their bank."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी ज़रूरी दस्तावेज़ इकट्ठा करें।",
+        "नज़दीकी बैंक शाखा या जन सेवा केंद्र (CSC) जाएँ, या pmkisan.gov.in पर ऑनलाइन आवेदन करें।",
+        "आवेदन फ़ॉर्म भरें और दस्तावेज़ों की कॉपी जमा करें (बैंक/CSC से रसीद ज़रूर लें)।",
+        "स्वीकृति के बाद लाभ या ऋण सीधे आपके बैंक खाते में आएगा।",
+        "विशेष ध्यान: पीएम-किसान लाभार्थी अपने बैंक में केसीसी अभियान का लाभ ले सकते हैं।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does Kisan Credit Card (KCC) provide?",
+          "a": "Low-interest farm loans (up to ₹3 lakh at about 7%, lower if repaid on time).",
+          "q_hi": "किसान क्रेडिट कार्ड (केसीसी) से क्या लाभ मिलता है?",
+          "a_hi": "कम ब्याज पर कृषि ऋण (₹3 लाख तक लगभग 7% पर, समय पर चुकाने पर और कम)।"
+        },
+        {
+          "q": "Who can apply for Kisan Credit Card (KCC)?",
+          "a": "Farmers, tenant farmers, sharecroppers, and people in fishing or animal rearing who need low-cost farm credit.",
+          "q_hi": "किसान क्रेडिट कार्ड (केसीसी) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "किसान, बटाईदार, पट्टेदार तथा मछली पालन या पशुपालन करने वाले लोग जिन्हें सस्ता कृषि ऋण चाहिए।"
+        },
+        {
+          "q": "Which documents are needed for Kisan Credit Card (KCC)?",
+          "a": "Keep these ready: Aadhaar Card, Land Ownership / Khatauni Record, Passport Size Photograph, Bank Passbook / Account Details.",
+          "q_hi": "किसान क्रेडिट कार्ड (केसीसी) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Land Ownership / Khatauni Record, Passport Size Photograph, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for Kisan Credit Card (KCC)?",
+          "a": "Apply only on the official portal (https://agriwelfare.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "किसान क्रेडिट कार्ड (केसीसी) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://agriwelfare.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for Kisan Credit Card (KCC)?",
+          "a": "Check the official site (https://agriwelfare.gov.in) for current dates and deadlines.",
+          "q_hi": "किसान क्रेडिट कार्ड (केसीसी) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://agriwelfare.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-kisan-maandhan": {
+      "id": "pm-kisan-maandhan",
+      "slug": "pm-kisan-maandhan",
+      "official_url": "https://maandhan.in",
+      "summary": "Small and marginal farmers aged 18 to 40 can get a ₹3,000 monthly pension after age 60 by contributing ₹55 to ₹200. Visit https://maandhan.in.",
+      "summary_hi": "18 से 40 वर्ष के छोटे किसान ₹55 से ₹200 जमा करके 60 वर्ष की आयु के बाद ₹3,000 मासिक पेंशन पा सकते हैं। देखें https://maandhan.in।",
+      "who": "Small and marginal farmers aged 18 to 40 with up to 2 hectares of land.",
+      "who_hi": "18 से 40 वर्ष के छोटे और सीमांत किसान, जिनके पास अधिकतम 2 हेक्टेयर जमीन है।",
+      "steps": [
+        "Collect photocopies of the required documents and passport-size photos.",
+        "Visit your local block, tehsil, or district office or CSC (check details on maandhan.in).",
+        "Submit the form and keep your receipt number to track approval.",
+        "Note: Enrol at your nearest Common Service Centre."
+      ],
+      "steps_hi": [
+        "आवश्यक दस्तावेज़ों की फ़ोटोकॉपी और पासपोर्ट फ़ोटो तैयार रखें।",
+        "नज़दीकी सरकारी/तहसील/ब्लॉक कार्यालय या जन सेवा केंद्र जाएँ (maandhan.in पर जानकारी देखें)।",
+        "आवेदन जमा करें और रसीद नंबर प्राप्त करें।",
+        "विशेष ध्यान: नजदीकी जन सेवा केंद्र पर पंजीकरण करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM Kisan Maan-Dhan (Farmer Pension) provide?",
+          "a": "₹3,000 a month pension after age 60. You pay ₹55 to ₹200 a month and the government adds the same amount.",
+          "q_hi": "पीएम किसान मानधन (किसान पेंशन) से क्या लाभ मिलता है?",
+          "a_hi": "60 वर्ष के बाद ₹3,000 मासिक पेंशन। आप ₹55 से ₹200 प्रति माह जमा करते हैं और सरकार उतनी ही राशि जोड़ती है।"
+        },
+        {
+          "q": "Who can apply for PM Kisan Maan-Dhan (Farmer Pension)?",
+          "a": "Small and marginal farmers aged 18 to 40 with up to 2 hectares of land.",
+          "q_hi": "पीएम किसान मानधन (किसान पेंशन) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "18 से 40 वर्ष के छोटे और सीमांत किसान, जिनके पास अधिकतम 2 हेक्टेयर जमीन है।"
+        },
+        {
+          "q": "Which documents are needed for PM Kisan Maan-Dhan (Farmer Pension)?",
+          "a": "Keep these ready: Aadhaar Card, Land Ownership / Khatauni Record, Bank Passbook / Account Details.",
+          "q_hi": "पीएम किसान मानधन (किसान पेंशन) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Land Ownership / Khatauni Record, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for PM Kisan Maan-Dhan (Farmer Pension)?",
+          "a": "Apply only on the official portal (https://maandhan.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "पीएम किसान मानधन (किसान पेंशन) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://maandhan.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM Kisan Maan-Dhan (Farmer Pension)?",
+          "a": "Check the official site (https://maandhan.in) for current dates and deadlines.",
+          "q_hi": "पीएम किसान मानधन (किसान पेंशन) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://maandhan.in) पर देखें।"
+        }
+      ]
+    },
+    "soil-health-card": {
+      "id": "soil-health-card",
+      "slug": "soil-health-card",
+      "official_url": "https://soilhealth.dac.gov.in",
+      "summary": "The Soil Health Card Scheme provides free soil testing and crop-specific advice to all farmers to help reduce fertiliser costs. Visit https://soilhealth.dac.gov.in.",
+      "summary_hi": "मृदा स्वास्थ्य कार्ड योजना सभी किसानों को मुफ्त मिट्टी परीक्षण और खाद की सही मात्रा की सलाह देती है। अधिक जानकारी के लिए https://soilhealth.dac.gov.in देखें।",
+      "who": "All farmers. Your soil is tested and you get advice on the right amount of fertiliser.",
+      "who_hi": "सभी किसान। आपकी मिट्टी की जांच होती है और खाद की सही मात्रा की सलाह मिलती है।",
+      "steps": [
+        "Collect photocopies of the required documents and passport-size photos.",
+        "Visit your local block, tehsil, or district office or CSC (check details on soilhealth.dac.gov.in).",
+        "Submit the form and keep your receipt number to track approval.",
+        "Note: Contact your local agriculture office or Krishi Vigyan Kendra."
+      ],
+      "steps_hi": [
+        "आवश्यक दस्तावेज़ों की फ़ोटोकॉपी और पासपोर्ट फ़ोटो तैयार रखें।",
+        "नज़दीकी सरकारी/तहसील/ब्लॉक कार्यालय या जन सेवा केंद्र जाएँ (soilhealth.dac.gov.in पर जानकारी देखें)।",
+        "आवेदन जमा करें और रसीद नंबर प्राप्त करें।",
+        "विशेष ध्यान: अपने स्थानीय कृषि कार्यालय या कृषि विज्ञान केंद्र से संपर्क करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does Soil Health Card Scheme provide?",
+          "a": "Free soil testing and a card with crop-wise advice, which can lower your fertiliser cost.",
+          "q_hi": "मृदा स्वास्थ्य कार्ड योजना से क्या लाभ मिलता है?",
+          "a_hi": "मुफ्त मिट्टी जांच और फसल के अनुसार सलाह वाला कार्ड, जिससे खाद का खर्च घट सकता है।"
+        },
+        {
+          "q": "Who can apply for Soil Health Card Scheme?",
+          "a": "All farmers. Your soil is tested and you get advice on the right amount of fertiliser.",
+          "q_hi": "मृदा स्वास्थ्य कार्ड योजना के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "सभी किसान। आपकी मिट्टी की जांच होती है और खाद की सही मात्रा की सलाह मिलती है।"
+        },
+        {
+          "q": "Which documents are needed for Soil Health Card Scheme?",
+          "a": "Keep these ready: Land Ownership / Khatauni Record.",
+          "q_hi": "मृदा स्वास्थ्य कार्ड योजना के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Land Ownership / Khatauni Record।"
+        },
+        {
+          "q": "Where do I apply for Soil Health Card Scheme?",
+          "a": "Apply only on the official portal (https://soilhealth.dac.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "मृदा स्वास्थ्य कार्ड योजना के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://soilhealth.dac.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for Soil Health Card Scheme?",
+          "a": "Check the official site (https://soilhealth.dac.gov.in) for current dates and deadlines.",
+          "q_hi": "मृदा स्वास्थ्य कार्ड योजना की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://soilhealth.dac.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-kusum-solar-pump": {
+      "id": "pm-kusum-solar-pump",
+      "slug": "pm-kusum-solar-pump",
+      "official_url": "https://pmkusum.mnre.gov.in",
+      "summary": "The PM-KUSUM scheme provides 30% central and 30% state subsidy for solar irrigation pumps. Farmers pay the remaining cost. Visit https://pmkusum.mnre.gov.in to apply.",
+      "summary_hi": "पीएम-कुसुम योजना के तहत सोलर पंप पर 30% केंद्र और 30% राज्य सरकार सब्सिडी देती है। शेष राशि किसान को देनी होगी। https://pmkusum.mnre.gov.in पर आवेदन करें।",
+      "who": "Farmers who want a solar water pump for irrigation.",
+      "who_hi": "सिंचाई के लिए सोलर पंप लगवाना चाहने वाले किसान।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (pmkusum.mnre.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply through your state nodal agency; the process differs by state."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (pmkusum.mnre.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: अपने राज्य की नोडल एजेंसी के माध्यम से आवेदन करें; प्रक्रिया राज्य के अनुसार अलग है।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM-KUSUM Solar Pump Scheme provide?",
+          "a": "Government help of about 30% from the Centre and about 30% from the state on a solar pump; you pay the rest (a loan is possible).",
+          "q_hi": "पीएम-कुसुम सोलर पंप योजना से क्या लाभ मिलता है?",
+          "a_hi": "सोलर पंप पर केंद्र से लगभग 30% और राज्य से लगभग 30% सरकारी सहायता; बाकी आप देते हैं (ऋण संभव)।"
+        },
+        {
+          "q": "Who can apply for PM-KUSUM Solar Pump Scheme?",
+          "a": "Farmers who want a solar water pump for irrigation.",
+          "q_hi": "पीएम-कुसुम सोलर पंप योजना के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "सिंचाई के लिए सोलर पंप लगवाना चाहने वाले किसान।"
+        },
+        {
+          "q": "Which documents are needed for PM-KUSUM Solar Pump Scheme?",
+          "a": "Keep these ready: Aadhaar Card, Land Ownership / Khatauni Record, Bank Passbook / Account Details, Passport Size Photograph.",
+          "q_hi": "पीएम-कुसुम सोलर पंप योजना के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Land Ownership / Khatauni Record, Bank Passbook / Account Details, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for PM-KUSUM Solar Pump Scheme?",
+          "a": "Apply only on the official portal (https://pmkusum.mnre.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "पीएम-कुसुम सोलर पंप योजना के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://pmkusum.mnre.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM-KUSUM Solar Pump Scheme?",
+          "a": "Check the official site (https://pmkusum.mnre.gov.in) for current dates and deadlines.",
+          "q_hi": "पीएम-कुसुम सोलर पंप योजना की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://pmkusum.mnre.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "up-krishak-durghatna-kalyan": {
+      "id": "up-krishak-durghatna-kalyan",
+      "slug": "up-krishak-durghatna-kalyan",
+      "official_url": "https://up.gov.in",
+      "summary": "This Uttar Pradesh scheme provides up to ₹5 lakh to farmers aged 18 to 70 or their families in case of accidental death or disability. https://up.gov.in",
+      "summary_hi": "उत्तर प्रदेश की इस योजना में 18 से 70 वर्ष के किसानों या उनके परिवार को दुर्घटना में मृत्यु या विकलांगता पर ₹5 लाख तक मिलते हैं। https://up.gov.in",
+      "who": "Farmers of Uttar Pradesh aged 18 to 70, and their family members who work on the land.",
+      "who_hi": "उत्तर प्रदेश के 18 से 70 वर्ष के किसान और जमीन पर काम करने वाले उनके परिवार के सदस्य।",
+      "steps": [
+        "Collect photocopies of the required documents and passport-size photos.",
+        "Visit your local block, tehsil, or district office or CSC (check details on up.gov.in).",
+        "Submit the form and keep your receipt number to track approval.",
+        "Note: Apply at the Tehsil or District Magistrate office."
+      ],
+      "steps_hi": [
+        "आवश्यक दस्तावेज़ों की फ़ोटोकॉपी और पासपोर्ट फ़ोटो तैयार रखें।",
+        "नज़दीकी सरकारी/तहसील/ब्लॉक कार्यालय या जन सेवा केंद्र जाएँ (up.gov.in पर जानकारी देखें)।",
+        "आवेदन जमा करें और रसीद नंबर प्राप्त करें।",
+        "विशेष ध्यान: तहसील या जिलाधिकारी कार्यालय में आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does UP Mukhyamantri Krishak Durghatna Kalyan Yojana provide?",
+          "a": "Up to ₹5 lakh to the family if a farmer dies or is disabled in an accident.",
+          "q_hi": "मुख्यमंत्री कृषक दुर्घटना कल्याण योजना (उत्तर प्रदेश) से क्या लाभ मिलता है?",
+          "a_hi": "दुर्घटना में किसान की मृत्यु या विकलांगता पर परिवार को ₹5 लाख तक।"
+        },
+        {
+          "q": "Who can apply for UP Mukhyamantri Krishak Durghatna Kalyan Yojana?",
+          "a": "Farmers of Uttar Pradesh aged 18 to 70, and their family members who work on the land.",
+          "q_hi": "मुख्यमंत्री कृषक दुर्घटना कल्याण योजना (उत्तर प्रदेश) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "उत्तर प्रदेश के 18 से 70 वर्ष के किसान और जमीन पर काम करने वाले उनके परिवार के सदस्य।"
+        },
+        {
+          "q": "Which documents are needed for UP Mukhyamantri Krishak Durghatna Kalyan Yojana?",
+          "a": "Keep these ready: Aadhaar Card, Land Ownership / Khatauni Record, Domicile / Residence Certificate, Bank Passbook / Account Details.",
+          "q_hi": "मुख्यमंत्री कृषक दुर्घटना कल्याण योजना (उत्तर प्रदेश) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Land Ownership / Khatauni Record, Domicile / Residence Certificate, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for UP Mukhyamantri Krishak Durghatna Kalyan Yojana?",
+          "a": "Apply only on the official portal (https://up.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "मुख्यमंत्री कृषक दुर्घटना कल्याण योजना (उत्तर प्रदेश) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://up.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for UP Mukhyamantri Krishak Durghatna Kalyan Yojana?",
+          "a": "Check the official site (https://up.gov.in) for current dates and deadlines.",
+          "q_hi": "मुख्यमंत्री कृषक दुर्घटना कल्याण योजना (उत्तर प्रदेश) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://up.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "ayushman-bharat-pmjay": {
+      "id": "ayushman-bharat-pmjay",
+      "slug": "ayushman-bharat-pmjay",
+      "official_url": "https://beneficiary.nha.gov.in",
+      "summary": "Ayushman Bharat PM-JAY provides free treatment up to ₹5 lakh per family every year in listed hospitals for poor families. Visit https://beneficiary.nha.gov.in to check eligibility.",
+      "summary_hi": "आयुष्मान भारत पीएम-जय गरीब परिवारों को सूचीबद्ध अस्पतालों में प्रति वर्ष ₹5 लाख तक का मुफ्त इलाज देता है। पात्रता जांचने के लिए https://beneficiary.nha.gov.in पर जाएं।",
+      "who": "Poor and vulnerable families listed under SECC 2011 or similar state lists. Check your name on the official site.",
+      "who_hi": "एसईसीसी 2011 या समान राज्य सूचियों में शामिल गरीब और कमजोर परिवार। आधिकारिक साइट पर अपना नाम जांचें।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (beneficiary.nha.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Check eligibility on the official site or at a CSC, then make your Ayushman card."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (beneficiary.nha.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: आधिकारिक साइट या सीएससी पर पात्रता जांचें, फिर आयुष्मान कार्ड बनवाएं।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does Ayushman Bharat PM-JAY (Health Cover) provide?",
+          "a": "Free treatment up to ₹5 lakh per family per year in listed hospitals.",
+          "q_hi": "आयुष्मान भारत पीएम-जय (स्वास्थ्य बीमा) से क्या लाभ मिलता है?",
+          "a_hi": "सूचीबद्ध अस्पतालों में प्रति परिवार प्रति वर्ष ₹5 लाख तक मुफ्त इलाज।"
+        },
+        {
+          "q": "Who can apply for Ayushman Bharat PM-JAY (Health Cover)?",
+          "a": "Poor and vulnerable families listed under SECC 2011 or similar state lists. Check your name on the official site.",
+          "q_hi": "आयुष्मान भारत पीएम-जय (स्वास्थ्य बीमा) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "एसईसीसी 2011 या समान राज्य सूचियों में शामिल गरीब और कमजोर परिवार। आधिकारिक साइट पर अपना नाम जांचें।"
+        },
+        {
+          "q": "Which documents are needed for Ayushman Bharat PM-JAY (Health Cover)?",
+          "a": "Keep these ready: Aadhaar Card, Ration Card, Domicile / Residence Certificate.",
+          "q_hi": "आयुष्मान भारत पीएम-जय (स्वास्थ्य बीमा) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Ration Card, Domicile / Residence Certificate।"
+        },
+        {
+          "q": "Where do I apply for Ayushman Bharat PM-JAY (Health Cover)?",
+          "a": "Apply only on the official portal (https://beneficiary.nha.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "आयुष्मान भारत पीएम-जय (स्वास्थ्य बीमा) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://beneficiary.nha.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for Ayushman Bharat PM-JAY (Health Cover)?",
+          "a": "Check the official site (https://beneficiary.nha.gov.in) for current dates and deadlines.",
+          "q_hi": "आयुष्मान भारत पीएम-जय (स्वास्थ्य बीमा) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://beneficiary.nha.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "ayushman-vay-vandana": {
+      "id": "ayushman-vay-vandana",
+      "slug": "ayushman-vay-vandana",
+      "official_url": "https://beneficiary.nha.gov.in",
+      "summary": "Free treatment up to ₹5 lakh a year in listed hospitals for all Indian citizens aged 70 or above using Aadhaar. Visit https://beneficiary.nha.gov.in",
+      "summary_hi": "आधार कार्ड का उपयोग करके 70 वर्ष या उससे अधिक आयु के सभी भारतीय नागरिकों को सूचीबद्ध अस्पतालों में प्रति वर्ष ₹5 लाख तक का मुफ्त इलाज। देखें https://beneficiary.nha.gov.in",
+      "who": "Every Indian citizen aged 70 or above, whatever the income.",
+      "who_hi": "70 वर्ष या उससे अधिक आयु का हर भारतीय नागरिक, आय चाहे जो हो।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (beneficiary.nha.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Register on the Ayushman app or portal with e-KYC."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (beneficiary.nha.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: ई-केवाईसी के साथ आयुष्मान ऐप या पोर्टल पर पंजीकरण करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does Ayushman Vay Vandana Card (Age 70 and above) provide?",
+          "a": "Free treatment up to ₹5 lakh a year in listed hospitals.",
+          "q_hi": "आयुष्मान वय वंदना कार्ड (70 वर्ष और ऊपर) से क्या लाभ मिलता है?",
+          "a_hi": "सूचीबद्ध अस्पतालों में ₹5 लाख प्रति वर्ष तक मुफ्त इलाज।"
+        },
+        {
+          "q": "Who can apply for Ayushman Vay Vandana Card (Age 70 and above)?",
+          "a": "Every Indian citizen aged 70 or above, whatever the income.",
+          "q_hi": "आयुष्मान वय वंदना कार्ड (70 वर्ष और ऊपर) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "70 वर्ष या उससे अधिक आयु का हर भारतीय नागरिक, आय चाहे जो हो।"
+        },
+        {
+          "q": "Which documents are needed for Ayushman Vay Vandana Card (Age 70 and above)?",
+          "a": "Keep these ready: Aadhaar Card.",
+          "q_hi": "आयुष्मान वय वंदना कार्ड (70 वर्ष और ऊपर) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card।"
+        },
+        {
+          "q": "Where do I apply for Ayushman Vay Vandana Card (Age 70 and above)?",
+          "a": "Apply only on the official portal (https://beneficiary.nha.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "आयुष्मान वय वंदना कार्ड (70 वर्ष और ऊपर) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://beneficiary.nha.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for Ayushman Vay Vandana Card (Age 70 and above)?",
+          "a": "Check the official site (https://beneficiary.nha.gov.in) for current dates and deadlines.",
+          "q_hi": "आयुष्मान वय वंदना कार्ड (70 वर्ष और ऊपर) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://beneficiary.nha.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "adip-assistive-devices": {
+      "id": "adip-assistive-devices",
+      "slug": "adip-assistive-devices",
+      "official_url": "https://disabilityaffairs.gov.in",
+      "summary": "ADIP Scheme (Free Aids and Appliances) offers Free aids such as wheelchairs, hearing aids and artificial limbs.",
+      "summary_hi": "एडिप योजना (निःशुल्क सहायक उपकरण): व्हीलचेयर, श्रवण यंत्र और कृत्रिम अंग जैसे उपकरण निःशुल्क।",
+      "who": "Persons with 40% or more disability, with income up to ₹30,000 a month.",
+      "who_hi": "40% या अधिक दिव्यांगता वाले व्यक्ति, जिनकी आय ₹30,000 प्रति माह तक है।",
+      "steps": [
+        "Collect photocopies of the required documents and passport-size photos.",
+        "Visit your local block, tehsil, or district office or CSC (check details on disabilityaffairs.gov.in).",
+        "Submit the form and keep your receipt number to track approval.",
+        "Note: Contact the District Disability Rehabilitation Centre or a camp announced locally."
+      ],
+      "steps_hi": [
+        "आवश्यक दस्तावेज़ों की फ़ोटोकॉपी और पासपोर्ट फ़ोटो तैयार रखें।",
+        "नज़दीकी सरकारी/तहसील/ब्लॉक कार्यालय या जन सेवा केंद्र जाएँ (disabilityaffairs.gov.in पर जानकारी देखें)।",
+        "आवेदन जमा करें और रसीद नंबर प्राप्त करें।",
+        "विशेष ध्यान: जिला दिव्यांग पुनर्वास केंद्र या स्थानीय शिविर से संपर्क करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does ADIP Scheme (Free Aids and Appliances) provide?",
+          "a": "Free aids such as wheelchairs, hearing aids and artificial limbs.",
+          "q_hi": "एडिप योजना (निःशुल्क सहायक उपकरण) से क्या लाभ मिलता है?",
+          "a_hi": "व्हीलचेयर, श्रवण यंत्र और कृत्रिम अंग जैसे उपकरण निःशुल्क।"
+        },
+        {
+          "q": "Who can apply for ADIP Scheme (Free Aids and Appliances)?",
+          "a": "Persons with 40% or more disability, with income up to ₹30,000 a month.",
+          "q_hi": "एडिप योजना (निःशुल्क सहायक उपकरण) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "40% या अधिक दिव्यांगता वाले व्यक्ति, जिनकी आय ₹30,000 प्रति माह तक है।"
+        },
+        {
+          "q": "Which documents are needed for ADIP Scheme (Free Aids and Appliances)?",
+          "a": "Keep these ready: Disability Certificate (UDID), Aadhaar Card, Income Certificate, Passport Size Photograph.",
+          "q_hi": "एडिप योजना (निःशुल्क सहायक उपकरण) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Disability Certificate (UDID), Aadhaar Card, Income Certificate, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for ADIP Scheme (Free Aids and Appliances)?",
+          "a": "Apply only on the official portal (https://disabilityaffairs.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "एडिप योजना (निःशुल्क सहायक उपकरण) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://disabilityaffairs.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for ADIP Scheme (Free Aids and Appliances)?",
+          "a": "Check the official site (https://disabilityaffairs.gov.in) for current dates and deadlines.",
+          "q_hi": "एडिप योजना (निःशुल्क सहायक उपकरण) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://disabilityaffairs.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "pmkvy-skill-training": {
+      "id": "pmkvy-skill-training",
+      "slug": "pmkvy-skill-training",
+      "official_url": "https://www.skillindiadigital.gov.in",
+      "summary": "Free skill courses with certificates and job help for Indian youth aged 15 to 45. Apply at https://www.skillindiadigital.gov.in using Aadhaar.",
+      "summary_hi": "15 से 45 वर्ष के भारतीय युवाओं के लिए प्रमाण पत्र और नौकरी में मदद के साथ मुफ्त कौशल पाठ्यक्रम। https://www.skillindiadigital.gov.in पर आवेदन करें।",
+      "who": "Indian youth aged 15 to 45 who want job skills, including school and college dropouts.",
+      "who_hi": "15 से 45 वर्ष के भारतीय युवा जो रोजगार के कौशल सीखना चाहते हैं, जिनमें पढ़ाई छोड़ चुके युवा भी शामिल हैं।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (skillindiadigital.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Find a training centre near you on the Skill India Digital portal."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (skillindiadigital.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: स्किल इंडिया डिजिटल पोर्टल पर अपने पास का प्रशिक्षण केंद्र खोजें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM Kaushal Vikas Yojana (Free Skill Training) provide?",
+          "a": "Free short courses with a certificate and help in finding a job.",
+          "q_hi": "प्रधानमंत्री कौशल विकास योजना (निःशुल्क कौशल प्रशिक्षण) से क्या लाभ मिलता है?",
+          "a_hi": "प्रमाणपत्र के साथ निःशुल्क छोटे कोर्स और नौकरी पाने में मदद।"
+        },
+        {
+          "q": "Who can apply for PM Kaushal Vikas Yojana (Free Skill Training)?",
+          "a": "Indian youth aged 15 to 45 who want job skills, including school and college dropouts.",
+          "q_hi": "प्रधानमंत्री कौशल विकास योजना (निःशुल्क कौशल प्रशिक्षण) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "15 से 45 वर्ष के भारतीय युवा जो रोजगार के कौशल सीखना चाहते हैं, जिनमें पढ़ाई छोड़ चुके युवा भी शामिल हैं।"
+        },
+        {
+          "q": "Which documents are needed for PM Kaushal Vikas Yojana (Free Skill Training)?",
+          "a": "Keep these ready: Aadhaar Card, Academic Marksheet / Transcript, Bank Passbook / Account Details, Passport Size Photograph.",
+          "q_hi": "प्रधानमंत्री कौशल विकास योजना (निःशुल्क कौशल प्रशिक्षण) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Academic Marksheet / Transcript, Bank Passbook / Account Details, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for PM Kaushal Vikas Yojana (Free Skill Training)?",
+          "a": "Apply only on the official portal (https://www.skillindiadigital.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "प्रधानमंत्री कौशल विकास योजना (निःशुल्क कौशल प्रशिक्षण) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://www.skillindiadigital.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM Kaushal Vikas Yojana (Free Skill Training)?",
+          "a": "Check the official site (https://www.skillindiadigital.gov.in) for current dates and deadlines.",
+          "q_hi": "प्रधानमंत्री कौशल विकास योजना (निःशुल्क कौशल प्रशिक्षण) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://www.skillindiadigital.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "naps-apprenticeship": {
+      "id": "naps-apprenticeship",
+      "slug": "naps-apprenticeship",
+      "official_url": "https://www.apprenticeshipindia.gov.in",
+      "summary": "Get on-the-job training and a monthly stipend up to ₹1,500 for youth aged 14 and above. Apply at https://www.apprenticeshipindia.gov.in.",
+      "summary_hi": "14 वर्ष या उससे अधिक आयु के युवाओं को नौकरी के प्रशिक्षण के दौरान प्रतिमाह ₹1,500 तक का वजीफा मिलता है। https://www.apprenticeshipindia.gov.in पर आवेदन करें।",
+      "who": "Youth aged 14 and above who want on-the-job training in a company.",
+      "who_hi": "14 वर्ष और उससे अधिक आयु के युवा जो कंपनी में काम सीखते हुए प्रशिक्षण लेना चाहते हैं।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (apprenticeshipindia.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Register on the Apprenticeship India portal and apply to listed companies."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (apprenticeshipindia.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: अप्रेंटिसशिप इंडिया पोर्टल पर पंजीकरण करें और सूचीबद्ध कंपनियों में आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does National Apprenticeship Promotion Scheme provide?",
+          "a": "A monthly stipend while you learn; the government pays part of it (up to ₹1,500 a month).",
+          "q_hi": "राष्ट्रीय अप्रेंटिसशिप प्रोत्साहन योजना से क्या लाभ मिलता है?",
+          "a_hi": "सीखने के दौरान मासिक वजीफा; इसका एक हिस्सा सरकार देती है (₹1,500 प्रति माह तक)।"
+        },
+        {
+          "q": "Who can apply for National Apprenticeship Promotion Scheme?",
+          "a": "Youth aged 14 and above who want on-the-job training in a company.",
+          "q_hi": "राष्ट्रीय अप्रेंटिसशिप प्रोत्साहन योजना के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "14 वर्ष और उससे अधिक आयु के युवा जो कंपनी में काम सीखते हुए प्रशिक्षण लेना चाहते हैं।"
+        },
+        {
+          "q": "Which documents are needed for National Apprenticeship Promotion Scheme?",
+          "a": "Keep these ready: Aadhaar Card, Academic Marksheet / Transcript, Bank Passbook / Account Details, Passport Size Photograph.",
+          "q_hi": "राष्ट्रीय अप्रेंटिसशिप प्रोत्साहन योजना के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Academic Marksheet / Transcript, Bank Passbook / Account Details, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for National Apprenticeship Promotion Scheme?",
+          "a": "Apply only on the official portal (https://www.apprenticeshipindia.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "राष्ट्रीय अप्रेंटिसशिप प्रोत्साहन योजना के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://www.apprenticeshipindia.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for National Apprenticeship Promotion Scheme?",
+          "a": "Check the official site (https://www.apprenticeshipindia.gov.in) for current dates and deadlines.",
+          "q_hi": "राष्ट्रीय अप्रेंटिसशिप प्रोत्साहन योजना की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://www.apprenticeshipindia.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-vishwakarma": {
+      "id": "pm-vishwakarma",
+      "slug": "pm-vishwakarma",
+      "official_url": "https://pmvishwakarma.gov.in",
+      "summary": "Get free training with 500 rupees daily, 15,000 rupees for tools, and loans up to 3 lakh at 5% interest. Apply at https://pmvishwakarma.gov.in.",
+      "summary_hi": "प्रतिदिन 500 रुपये और मुफ्त प्रशिक्षण, औजारों के लिए 15,000 रुपये, तथा 5% ब्याज पर 3 लाख तक का लोन पाएं। https://pmvishwakarma.gov.in पर आवेदन करें।",
+      "who": "Artisans aged 18 and above working with their hands in one of 18 traditional trades such as carpenter, potter, tailor or barber.",
+      "who_hi": "18 वर्ष और उससे अधिक आयु के कारीगर जो बढ़ई, कुम्हार, दर्जी या नाई जैसे 18 पारंपरिक कामों में से किसी में लगे हैं।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (pmvishwakarma.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Register at a Common Service Centre. Your trade is verified locally."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (pmvishwakarma.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: जन सेवा केंद्र पर पंजीकरण करें। आपके काम का स्थानीय सत्यापन होता है।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM Vishwakarma (for Artisans and Craftspeople) provide?",
+          "a": "Free training with ₹500 a day, ₹15,000 for tools, and loans up to ₹3 lakh at 5% interest.",
+          "q_hi": "पीएम विश्वकर्मा (कारीगरों और शिल्पकारों के लिए) से क्या लाभ मिलता है?",
+          "a_hi": "₹500 प्रतिदिन के साथ निःशुल्क प्रशिक्षण, औजारों के लिए ₹15,000 और 5% ब्याज पर ₹3 लाख तक ऋण।"
+        },
+        {
+          "q": "Who can apply for PM Vishwakarma (for Artisans and Craftspeople)?",
+          "a": "Artisans aged 18 and above working with their hands in one of 18 traditional trades such as carpenter, potter, tailor or barber.",
+          "q_hi": "पीएम विश्वकर्मा (कारीगरों और शिल्पकारों के लिए) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "18 वर्ष और उससे अधिक आयु के कारीगर जो बढ़ई, कुम्हार, दर्जी या नाई जैसे 18 पारंपरिक कामों में से किसी में लगे हैं।"
+        },
+        {
+          "q": "Which documents are needed for PM Vishwakarma (for Artisans and Craftspeople)?",
+          "a": "Keep these ready: Aadhaar Card, Bank Passbook / Account Details, Ration Card, Passport Size Photograph.",
+          "q_hi": "पीएम विश्वकर्मा (कारीगरों और शिल्पकारों के लिए) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Bank Passbook / Account Details, Ration Card, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for PM Vishwakarma (for Artisans and Craftspeople)?",
+          "a": "Apply only on the official portal (https://pmvishwakarma.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "पीएम विश्वकर्मा (कारीगरों और शिल्पकारों के लिए) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://pmvishwakarma.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM Vishwakarma (for Artisans and Craftspeople)?",
+          "a": "Check the official site (https://pmvishwakarma.gov.in) for current dates and deadlines.",
+          "q_hi": "पीएम विश्वकर्मा (कारीगरों और शिल्पकारों के लिए) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://pmvishwakarma.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "stand-up-india": {
+      "id": "stand-up-india",
+      "slug": "stand-up-india",
+      "official_url": "https://www.standupmitra.in",
+      "summary": "Get bank loans from ₹10 lakh to ₹1 crore for a new business if you are a woman or SC/ST entrepreneur aged 18 or above. Visit https://www.standupmitra.in.",
+      "summary_hi": "18 वर्ष या उससे अधिक आयु की महिला, एससी या एसटी उद्यमी नया व्यवसाय शुरू करने के लिए ₹10 लाख से ₹1 करोड़ तक का बैंक ऋण ले सकते हैं। देखें https://www.standupmitra.in।",
+      "who": "Women, and SC or ST entrepreneurs aged 18 or above, starting a new business in manufacturing, services or trading.",
+      "who_hi": "18 वर्ष या अधिक आयु की महिलाएं तथा एससी या एसटी उद्यमी जो विनिर्माण, सेवा या व्यापार में नया कारोबार शुरू कर रहे हैं।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (standupmitra.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply on the Stand-Up Mitra portal or at any bank branch."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (standupmitra.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: स्टैंड-अप मित्र पोर्टल पर या किसी भी बैंक शाखा में आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does Stand-Up India (Loans for Women and SC/ST Entrepreneurs) provide?",
+          "a": "Bank loans from ₹10 lakh to ₹1 crore for a new business.",
+          "q_hi": "स्टैंड-अप इंडिया (महिला और एससी/एसटी उद्यमियों के लिए ऋण) से क्या लाभ मिलता है?",
+          "a_hi": "नए कारोबार के लिए ₹10 लाख से ₹1 करोड़ तक बैंक ऋण।"
+        },
+        {
+          "q": "Who can apply for Stand-Up India (Loans for Women and SC/ST Entrepreneurs)?",
+          "a": "Women, and SC or ST entrepreneurs aged 18 or above, starting a new business in manufacturing, services or trading.",
+          "q_hi": "स्टैंड-अप इंडिया (महिला और एससी/एसटी उद्यमियों के लिए ऋण) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "18 वर्ष या अधिक आयु की महिलाएं तथा एससी या एसटी उद्यमी जो विनिर्माण, सेवा या व्यापार में नया कारोबार शुरू कर रहे हैं।"
+        },
+        {
+          "q": "Which documents are needed for Stand-Up India (Loans for Women and SC/ST Entrepreneurs)?",
+          "a": "Keep these ready: Aadhaar Card, PAN Card, Caste / Category Certificate, Bank Passbook / Account Details, Passport Size Photograph.",
+          "q_hi": "स्टैंड-अप इंडिया (महिला और एससी/एसटी उद्यमियों के लिए ऋण) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, PAN Card, Caste / Category Certificate, Bank Passbook / Account Details, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for Stand-Up India (Loans for Women and SC/ST Entrepreneurs)?",
+          "a": "Apply only on the official portal (https://www.standupmitra.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "स्टैंड-अप इंडिया (महिला और एससी/एसटी उद्यमियों के लिए ऋण) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://www.standupmitra.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for Stand-Up India (Loans for Women and SC/ST Entrepreneurs)?",
+          "a": "Check the official site (https://www.standupmitra.in) for current dates and deadlines.",
+          "q_hi": "स्टैंड-अप इंडिया (महिला और एससी/एसटी उद्यमियों के लिए ऋण) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://www.standupmitra.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-mudra-yojana": {
+      "id": "pm-mudra-yojana",
+      "slug": "pm-mudra-yojana",
+      "official_url": "https://www.jansamarth.in",
+      "summary": "Get loans up to ₹10 lakh without collateral for small non-farm businesses in three categories. Apply at https://www.jansamarth.in.",
+      "summary_hi": "बिना गारंटी ₹10 लाख तक का ऋण छोटे गैर-कृषि व्यवसायों के लिए तीन श्रेणियों में उपलब्ध है। https://www.jansamarth.in पर आवेदन करें।",
+      "who": "Anyone aged 18 or above running or starting a small non-farm business such as a shop, workshop or service.",
+      "who_hi": "18 वर्ष या अधिक आयु का कोई भी व्यक्ति जो दुकान, कार्यशाला या सेवा जैसा छोटा गैर-कृषि कारोबार चला रहा है या शुरू कर रहा है।",
+      "steps": [
+        "Keep the required documents listed above ready.",
+        "Visit your nearest bank branch or Common Service Centre (CSC), or apply online via mudra.org.in.",
+        "Submit the application form with copies of your documents and collect the acknowledgement receipt.",
+        "Once approved, the loan or subsidy is credited to your bank account.",
+        "Note: Apply at any bank, microfinance institution, or on the JanSamarth portal."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी ज़रूरी दस्तावेज़ इकट्ठा करें।",
+        "नज़दीकी बैंक शाखा या जन सेवा केंद्र (CSC) जाएँ, या mudra.org.in पर ऑनलाइन आवेदन करें।",
+        "आवेदन फ़ॉर्म भरें और दस्तावेज़ों की कॉपी जमा करें (बैंक/CSC से रसीद ज़रूर लें)।",
+        "स्वीकृति के बाद लाभ या ऋण सीधे आपके बैंक खाते में आएगा।",
+        "विशेष ध्यान: किसी भी बैंक, माइक्रोफाइनेंस संस्था या जनसमर्थ पोर्टल पर आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM MUDRA Yojana (Small Business Loans) provide?",
+          "a": "Loans up to ₹10 lakh without collateral (Shishu up to ₹50,000, Kishor up to ₹5 lakh, Tarun up to ₹10 lakh).",
+          "q_hi": "पीएम मुद्रा योजना (छोटे कारोबार के लिए ऋण) से क्या लाभ मिलता है?",
+          "a_hi": "बिना गारंटी ₹10 लाख तक ऋण (शिशु ₹50,000 तक, किशोर ₹5 लाख तक, तरुण ₹10 लाख तक)।"
+        },
+        {
+          "q": "Who can apply for PM MUDRA Yojana (Small Business Loans)?",
+          "a": "Anyone aged 18 or above running or starting a small non-farm business such as a shop, workshop or service.",
+          "q_hi": "पीएम मुद्रा योजना (छोटे कारोबार के लिए ऋण) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "18 वर्ष या अधिक आयु का कोई भी व्यक्ति जो दुकान, कार्यशाला या सेवा जैसा छोटा गैर-कृषि कारोबार चला रहा है या शुरू कर रहा है।"
+        },
+        {
+          "q": "Which documents are needed for PM MUDRA Yojana (Small Business Loans)?",
+          "a": "Keep these ready: Aadhaar Card, PAN Card, Bank Passbook / Account Details, Passport Size Photograph.",
+          "q_hi": "पीएम मुद्रा योजना (छोटे कारोबार के लिए ऋण) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, PAN Card, Bank Passbook / Account Details, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for PM MUDRA Yojana (Small Business Loans)?",
+          "a": "Apply only on the official portal (https://www.jansamarth.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "पीएम मुद्रा योजना (छोटे कारोबार के लिए ऋण) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://www.jansamarth.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM MUDRA Yojana (Small Business Loans)?",
+          "a": "Check the official site (https://www.jansamarth.in) for current dates and deadlines.",
+          "q_hi": "पीएम मुद्रा योजना (छोटे कारोबार के लिए ऋण) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://www.jansamarth.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-svanidhi": {
+      "id": "pm-svanidhi",
+      "slug": "pm-svanidhi",
+      "official_url": "https://pmsvanidhi.mohua.gov.in",
+      "summary": "Get working capital loans starting at ₹10,000 with interest support for street vendors. Apply at https://pmsvanidhi.mohua.gov.in using Aadhaar, bank details, and photo.",
+      "summary_hi": "रेहड़ी-पटरी वालों के लिए ₹10,000 से शुरू होने वाला कार्यशील पूंजी ऋण। आधार, बैंक विवरण और फोटो के साथ https://pmsvanidhi.mohua.gov.in पर आवेदन करें।",
+      "who": "Street vendors in towns and cities who were vending before the scheme began, with a vending certificate or recommendation letter.",
+      "who_hi": "शहरों के रेहड़ी-पटरी विक्रेता जिनके पास वेंडिंग प्रमाणपत्र या सिफारिश पत्र है।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (pmsvanidhi.mohua.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply on the PM SVANidhi portal or at a CSC; your town body verifies you."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (pmsvanidhi.mohua.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: पीएम स्वनिधि पोर्टल या सीएससी पर आवेदन करें; आपकी नगर निकाय आपका सत्यापन करती है।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM SVANidhi (Loans for Street Vendors) provide?",
+          "a": "Working capital loan starting at ₹10,000, with higher loans if you repay on time, plus interest support.",
+          "q_hi": "पीएम स्वनिधि (रेहड़ी-पटरी वालों के लिए ऋण) से क्या लाभ मिलता है?",
+          "a_hi": "₹10,000 से शुरू कार्यशील पूंजी ऋण, समय पर चुकाने पर बड़े ऋण और ब्याज सहायता।"
+        },
+        {
+          "q": "Who can apply for PM SVANidhi (Loans for Street Vendors)?",
+          "a": "Street vendors in towns and cities who were vending before the scheme began, with a vending certificate or recommendation letter.",
+          "q_hi": "पीएम स्वनिधि (रेहड़ी-पटरी वालों के लिए ऋण) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "शहरों के रेहड़ी-पटरी विक्रेता जिनके पास वेंडिंग प्रमाणपत्र या सिफारिश पत्र है।"
+        },
+        {
+          "q": "Which documents are needed for PM SVANidhi (Loans for Street Vendors)?",
+          "a": "Keep these ready: Aadhaar Card, Bank Passbook / Account Details, Passport Size Photograph.",
+          "q_hi": "पीएम स्वनिधि (रेहड़ी-पटरी वालों के लिए ऋण) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Bank Passbook / Account Details, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for PM SVANidhi (Loans for Street Vendors)?",
+          "a": "Apply only on the official portal (https://pmsvanidhi.mohua.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "पीएम स्वनिधि (रेहड़ी-पटरी वालों के लिए ऋण) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://pmsvanidhi.mohua.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM SVANidhi (Loans for Street Vendors)?",
+          "a": "Check the official site (https://pmsvanidhi.mohua.gov.in) for current dates and deadlines.",
+          "q_hi": "पीएम स्वनिधि (रेहड़ी-पटरी वालों के लिए ऋण) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://pmsvanidhi.mohua.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "mgnrega-100-days-work": {
+      "id": "mgnrega-100-days-work",
+      "slug": "mgnrega-100-days-work",
+      "official_url": "https://nrega.nic.in",
+      "summary": "Get up to 100 days of paid work a year near your home for rural adults ready to do unskilled manual work. Apply with Aadhaar, bank passbook, and photo. Visit https://nrega.nic.in",
+      "summary_hi": "ग्रामीण वयस्क जो बिना हुनर का शारीरिक काम करने को तैयार हैं, उन्हें घर के पास साल में 100 दिन का सवैतनिक काम मिलता है। आधार, बैंक पासबुक और फोटो चाहिए। देखें https://nrega.nic.in",
+      "who": "Adults in rural households who are ready to do unskilled manual work.",
+      "who_hi": "ग्रामीण परिवारों के वयस्क जो अकुशल शारीरिक काम करने को तैयार हैं।",
+      "steps": [
+        "Collect photocopies of the required documents and passport-size photos.",
+        "Visit your local block, tehsil, or district office or CSC (check details on nrega.nic.in).",
+        "Submit the form and keep your receipt number to track approval.",
+        "Note: Ask your Gram Panchayat for a job card."
+      ],
+      "steps_hi": [
+        "आवश्यक दस्तावेज़ों की फ़ोटोकॉपी और पासपोर्ट फ़ोटो तैयार रखें।",
+        "नज़दीकी सरकारी/तहसील/ब्लॉक कार्यालय या जन सेवा केंद्र जाएँ (nrega.nic.in पर जानकारी देखें)।",
+        "आवेदन जमा करें और रसीद नंबर प्राप्त करें।",
+        "विशेष ध्यान: अपनी ग्राम पंचायत से जॉब कार्ड मांगें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does MGNREGA (100 Days of Work in Villages) provide?",
+          "a": "Up to 100 days of paid work a year near your home.",
+          "q_hi": "मनरेगा (गांव में 100 दिन का रोजगार) से क्या लाभ मिलता है?",
+          "a_hi": "घर के पास साल में 100 दिन तक वेतन वाला काम।"
+        },
+        {
+          "q": "Who can apply for MGNREGA (100 Days of Work in Villages)?",
+          "a": "Adults in rural households who are ready to do unskilled manual work.",
+          "q_hi": "मनरेगा (गांव में 100 दिन का रोजगार) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "ग्रामीण परिवारों के वयस्क जो अकुशल शारीरिक काम करने को तैयार हैं।"
+        },
+        {
+          "q": "Which documents are needed for MGNREGA (100 Days of Work in Villages)?",
+          "a": "Keep these ready: Aadhaar Card, Bank Passbook / Account Details, Passport Size Photograph.",
+          "q_hi": "मनरेगा (गांव में 100 दिन का रोजगार) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Bank Passbook / Account Details, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for MGNREGA (100 Days of Work in Villages)?",
+          "a": "Apply only on the official portal (https://nrega.nic.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "मनरेगा (गांव में 100 दिन का रोजगार) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://nrega.nic.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for MGNREGA (100 Days of Work in Villages)?",
+          "a": "Check the official site (https://nrega.nic.in) for current dates and deadlines.",
+          "q_hi": "मनरेगा (गांव में 100 दिन का रोजगार) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://nrega.nic.in) पर देखें।"
+        }
+      ]
+    },
+    "up-cm-yuva-loan": {
+      "id": "up-cm-yuva-loan",
+      "slug": "up-cm-yuva-loan",
+      "official_url": "https://up.gov.in",
+      "summary": "UP CM-YUVA gives interest-free loans up to 5 lakh for youth aged 21 to 40 in Uttar Pradesh to start a business. Visit https://up.gov.in",
+      "summary_hi": "उत्तर प्रदेश के 21 से 40 वर्ष के युवाओं को नया व्यवसाय शुरू करने के लिए 5 लाख तक का ब्याज मुक्त ऋण मिलता है। देखें https://up.gov.in",
+      "who": "Young people of Uttar Pradesh aged 21 to 40 who want to start their own business.",
+      "who_hi": "उत्तर प्रदेश के 21 से 40 वर्ष के युवा जो अपना कारोबार शुरू करना चाहते हैं।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (up.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply on the official UP portal. Confirm the latest rules there."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (up.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: आधिकारिक यूपी पोर्टल पर आवेदन करें। नवीनतम नियम वहीं देखें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does UP Mukhyamantri Yuva Udyami Vikas Abhiyan (CM-YUVA) provide?",
+          "a": "Loan up to ₹5 lakh without interest to start a business.",
+          "q_hi": "मुख्यमंत्री युवा उद्यमी विकास अभियान (उत्तर प्रदेश) से क्या लाभ मिलता है?",
+          "a_hi": "कारोबार शुरू करने के लिए बिना ब्याज के ₹5 लाख तक ऋण।"
+        },
+        {
+          "q": "Who can apply for UP Mukhyamantri Yuva Udyami Vikas Abhiyan (CM-YUVA)?",
+          "a": "Young people of Uttar Pradesh aged 21 to 40 who want to start their own business.",
+          "q_hi": "मुख्यमंत्री युवा उद्यमी विकास अभियान (उत्तर प्रदेश) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "उत्तर प्रदेश के 21 से 40 वर्ष के युवा जो अपना कारोबार शुरू करना चाहते हैं।"
+        },
+        {
+          "q": "Which documents are needed for UP Mukhyamantri Yuva Udyami Vikas Abhiyan (CM-YUVA)?",
+          "a": "Keep these ready: Aadhaar Card, Domicile / Residence Certificate, PAN Card, Academic Marksheet / Transcript, Bank Passbook / Account Details, Passport Size Photograph.",
+          "q_hi": "मुख्यमंत्री युवा उद्यमी विकास अभियान (उत्तर प्रदेश) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Domicile / Residence Certificate, PAN Card, Academic Marksheet / Transcript, Bank Passbook / Account Details, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for UP Mukhyamantri Yuva Udyami Vikas Abhiyan (CM-YUVA)?",
+          "a": "Apply only on the official portal (https://up.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "मुख्यमंत्री युवा उद्यमी विकास अभियान (उत्तर प्रदेश) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://up.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for UP Mukhyamantri Yuva Udyami Vikas Abhiyan (CM-YUVA)?",
+          "a": "Check the official site (https://up.gov.in) for current dates and deadlines.",
+          "q_hi": "मुख्यमंत्री युवा उद्यमी विकास अभियान (उत्तर प्रदेश) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://up.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "up-abhyuday-free-coaching": {
+      "id": "up-abhyuday-free-coaching",
+      "slug": "up-abhyuday-free-coaching",
+      "official_url": "https://up.gov.in",
+      "summary": "UP Mukhyamantri Abhyuday Yojana offers free coaching, study material, and guidance for competitive exams like UPSC, UPPSC, JEE, NEET, NDA, and CDS for Uttar Pradesh students using Aadhaar Card, Domicile Certificate, Marksheet, and Photograph. Visit https://up.gov.in",
+      "summary_hi": "यूपी मुख्यमंत्री अभ्युदय योजना उत्तर प्रदेश के छात्रों को यूपीएससी, यूपीपीएससी, जेईई, नीट, एनडीए और सीडीएस जैसी परीक्षाओं के लिए आधार कार्ड, निवास प्रमाण पत्र, मार्कशीट और फोटो के साथ मुफ्त कोचिंग देती है। देखें https://up.gov.in",
+      "who": "Students of Uttar Pradesh preparing for exams such as UPSC, UPPSC, JEE, NEET, NDA and CDS.",
+      "who_hi": "उत्तर प्रदेश के छात्र जो यूपीएससी, यूपीपीएससी, जेईई, नीट, एनडीए और सीडीएस जैसी परीक्षाओं की तैयारी कर रहे हैं।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (abhyuday.up.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Register online for the entrance screening."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (abhyuday.up.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: प्रवेश परीक्षा के लिए ऑनलाइन पंजीकरण करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does UP Mukhyamantri Abhyuday Yojana (Free Exam Coaching) provide?",
+          "a": "Free coaching, study material and guidance for competitive exams.",
+          "q_hi": "मुख्यमंत्री अभ्युदय योजना (निःशुल्क परीक्षा कोचिंग) से क्या लाभ मिलता है?",
+          "a_hi": "प्रतियोगी परीक्षाओं के लिए निःशुल्क कोचिंग, अध्ययन सामग्री और मार्गदर्शन।"
+        },
+        {
+          "q": "Who can apply for UP Mukhyamantri Abhyuday Yojana (Free Exam Coaching)?",
+          "a": "Students of Uttar Pradesh preparing for exams such as UPSC, UPPSC, JEE, NEET, NDA and CDS.",
+          "q_hi": "मुख्यमंत्री अभ्युदय योजना (निःशुल्क परीक्षा कोचिंग) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "उत्तर प्रदेश के छात्र जो यूपीएससी, यूपीपीएससी, जेईई, नीट, एनडीए और सीडीएस जैसी परीक्षाओं की तैयारी कर रहे हैं।"
+        },
+        {
+          "q": "Which documents are needed for UP Mukhyamantri Abhyuday Yojana (Free Exam Coaching)?",
+          "a": "Keep these ready: Aadhaar Card, Domicile / Residence Certificate, Academic Marksheet / Transcript, Passport Size Photograph.",
+          "q_hi": "मुख्यमंत्री अभ्युदय योजना (निःशुल्क परीक्षा कोचिंग) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Domicile / Residence Certificate, Academic Marksheet / Transcript, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for UP Mukhyamantri Abhyuday Yojana (Free Exam Coaching)?",
+          "a": "Apply only on the official portal (https://up.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "मुख्यमंत्री अभ्युदय योजना (निःशुल्क परीक्षा कोचिंग) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://up.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for UP Mukhyamantri Abhyuday Yojana (Free Exam Coaching)?",
+          "a": "Check the official site (https://up.gov.in) for current dates and deadlines.",
+          "q_hi": "मुख्यमंत्री अभ्युदय योजना (निःशुल्क परीक्षा कोचिंग) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://up.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "up-kanya-sumangala": {
+      "id": "up-kanya-sumangala",
+      "slug": "up-kanya-sumangala",
+      "official_url": "https://mksy.up.gov.in",
+      "summary": "UP Mukhyamantri Kanya Sumangala Yojana offers ₹25,000 for your daughter in stages, from birth to graduation.",
+      "summary_hi": "मुख्यमंत्री कन्या सुमंगला योजना (उत्तर प्रदेश): बेटी के लिए जन्म से स्नातक तक चरणों में ₹25,000।",
+      "who": "Families in Uttar Pradesh with a girl child, with family income up to ₹3 lakh a year (up to 2 girls per family).",
+      "who_hi": "उत्तर प्रदेश के वे परिवार जिनमें बेटी है और पारिवारिक आय ₹3 लाख सालाना तक है (परिवार में अधिकतम 2 बेटियां)।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (mksy.up.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: This is for your daughter; apply on the official portal."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (mksy.up.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: यह आपकी बेटी के लिए है; आधिकारिक पोर्टल पर आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does UP Mukhyamantri Kanya Sumangala Yojana provide?",
+          "a": "₹25,000 for your daughter in stages, from birth to graduation.",
+          "q_hi": "मुख्यमंत्री कन्या सुमंगला योजना (उत्तर प्रदेश) से क्या लाभ मिलता है?",
+          "a_hi": "बेटी के लिए जन्म से स्नातक तक चरणों में ₹25,000।"
+        },
+        {
+          "q": "Who can apply for UP Mukhyamantri Kanya Sumangala Yojana?",
+          "a": "Families in Uttar Pradesh with a girl child, with family income up to ₹3 lakh a year (up to 2 girls per family).",
+          "q_hi": "मुख्यमंत्री कन्या सुमंगला योजना (उत्तर प्रदेश) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "उत्तर प्रदेश के वे परिवार जिनमें बेटी है और पारिवारिक आय ₹3 लाख सालाना तक है (परिवार में अधिकतम 2 बेटियां)।"
+        },
+        {
+          "q": "Which documents are needed for UP Mukhyamantri Kanya Sumangala Yojana?",
+          "a": "Keep these ready: Aadhaar Card, Income Certificate, Domicile / Residence Certificate, Birth Certificate / Age Proof, Bank Passbook / Account Details, Bonafide / Admission Proof.",
+          "q_hi": "मुख्यमंत्री कन्या सुमंगला योजना (उत्तर प्रदेश) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Income Certificate, Domicile / Residence Certificate, Birth Certificate / Age Proof, Bank Passbook / Account Details, Bonafide / Admission Proof।"
+        },
+        {
+          "q": "Where do I apply for UP Mukhyamantri Kanya Sumangala Yojana?",
+          "a": "Apply only on the official portal (https://mksy.up.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "मुख्यमंत्री कन्या सुमंगला योजना (उत्तर प्रदेश) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://mksy.up.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for UP Mukhyamantri Kanya Sumangala Yojana?",
+          "a": "Check the official site (https://mksy.up.gov.in) for current dates and deadlines.",
+          "q_hi": "मुख्यमंत्री कन्या सुमंगला योजना (उत्तर प्रदेश) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://mksy.up.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-matru-vandana": {
+      "id": "pm-matru-vandana",
+      "slug": "pm-matru-vandana",
+      "official_url": "https://pmmvy.wcd.gov.in",
+      "summary": "Eligible pregnant and breastfeeding women aged 19 or above get 5000 rupees for the first child and 6000 rupees if the second child is a girl. Visit https://pmmvy.wcd.gov.in with Aadhaar card and bank passbook to apply.",
+      "summary_hi": "19 वर्ष या उससे अधिक आयु की गर्भवती और स्तनपान कराने वाली महिलाओं को पहले बच्चे पर 5000 रुपये और दूसरा बच्चा बेटी होने पर 6000 रुपये मिलते हैं। आवेदन के लिए आधार कार्ड और बैंक पासबुक के साथ https://pmmvy.wcd.gov.in पर जाएं।",
+      "who": "Pregnant and breastfeeding women aged 19 or above, for the first child (and a second child if a girl).",
+      "who_hi": "19 वर्ष या अधिक आयु की गर्भवती और स्तनपान कराने वाली महिलाएं, पहले बच्चे के लिए (और दूसरी बेटी होने पर दूसरे बच्चे के लिए)।",
+      "steps": [
+        "Visit the help desk at any government or empanelled private hospital.",
+        "Show your ID and ration card / family card for quick eligibility verification.",
+        "Once verified, cashless treatment is covered up to the scheme limit.",
+        "Note: Register at your Anganwadi centre or health facility."
+      ],
+      "steps_hi": [
+        "सरकारी या सूचीबद्ध (empanelled) निजी अस्पताल के आयुष्मान/योजना मित्र डेस्क पर जाएँ।",
+        "अपना पहचान पत्र और राशन कार्ड/पात्रता कार्ड दिखाकर सत्यापन कराएँ।",
+        "पात्र पाए जाने पर बिना नकद (कैशलेस) इलाज शुरू किया जाएगा।",
+        "विशेष ध्यान: अपने आंगनवाड़ी केंद्र या स्वास्थ्य केंद्र पर पंजीकरण करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM Matru Vandana Yojana provide?",
+          "a": "₹5,000 for the first child in instalments, and ₹6,000 if the second child is a girl.",
+          "q_hi": "प्रधानमंत्री मातृ वंदना योजना से क्या लाभ मिलता है?",
+          "a_hi": "पहले बच्चे के लिए किस्तों में ₹5,000 और दूसरी बेटी होने पर ₹6,000।"
+        },
+        {
+          "q": "Who can apply for PM Matru Vandana Yojana?",
+          "a": "Pregnant and breastfeeding women aged 19 or above, for the first child (and a second child if a girl).",
+          "q_hi": "प्रधानमंत्री मातृ वंदना योजना के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "19 वर्ष या अधिक आयु की गर्भवती और स्तनपान कराने वाली महिलाएं, पहले बच्चे के लिए (और दूसरी बेटी होने पर दूसरे बच्चे के लिए)।"
+        },
+        {
+          "q": "Which documents are needed for PM Matru Vandana Yojana?",
+          "a": "Keep these ready: Aadhaar Card, Bank Passbook / Account Details.",
+          "q_hi": "प्रधानमंत्री मातृ वंदना योजना के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for PM Matru Vandana Yojana?",
+          "a": "Apply only on the official portal (https://pmmvy.wcd.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "प्रधानमंत्री मातृ वंदना योजना के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://pmmvy.wcd.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM Matru Vandana Yojana?",
+          "a": "Check the official site (https://pmmvy.wcd.gov.in) for current dates and deadlines.",
+          "q_hi": "प्रधानमंत्री मातृ वंदना योजना की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://pmmvy.wcd.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-ujjwala-lpg": {
+      "id": "pm-ujjwala-lpg",
+      "slug": "pm-ujjwala-lpg",
+      "official_url": "https://www.pmuy.gov.in",
+      "summary": "PM Ujjwala Yojana offers a free LPG connection and refill subsidy to adult women from poor households without an LPG connection. Apply at https://www.pmuy.gov.in using Aadhaar Card, Ration Card, Bank Passbook, and a photograph.",
+      "summary_hi": "पीएम उज्ज्वला योजना गरीब परिवारों की वयस्क महिलाओं को मुफ्त एलपीजी कनेक्शन और सब्सिडी देती है। आधार कार्ड, राशन कार्ड, बैंक पासबुक और फोटो के साथ https://www.pmuy.gov.in पर आवेदन करें।",
+      "who": "Adult women from poor households who do not have an LPG connection.",
+      "who_hi": "गरीब परिवारों की वयस्क महिलाएं जिनके पास एलपीजी कनेक्शन नहीं है।",
+      "steps": [
+        "Collect photocopies of the required documents and passport-size photos.",
+        "Visit your local block, tehsil, or district office or CSC (check details on pmuy.gov.in).",
+        "Submit the form and keep your receipt number to track approval.",
+        "Note: Apply at your nearest LPG distributor."
+      ],
+      "steps_hi": [
+        "आवश्यक दस्तावेज़ों की फ़ोटोकॉपी और पासपोर्ट फ़ोटो तैयार रखें।",
+        "नज़दीकी सरकारी/तहसील/ब्लॉक कार्यालय या जन सेवा केंद्र जाएँ (pmuy.gov.in पर जानकारी देखें)।",
+        "आवेदन जमा करें और रसीद नंबर प्राप्त करें।",
+        "विशेष ध्यान: अपने नजदीकी एलपीजी वितरक के पास आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM Ujjwala Yojana (Free LPG Connection) provide?",
+          "a": "A free LPG connection and a subsidy on refills.",
+          "q_hi": "प्रधानमंत्री उज्ज्वला योजना (निःशुल्क एलपीजी कनेक्शन) से क्या लाभ मिलता है?",
+          "a_hi": "निःशुल्क एलपीजी कनेक्शन और रिफिल पर सब्सिडी।"
+        },
+        {
+          "q": "Who can apply for PM Ujjwala Yojana (Free LPG Connection)?",
+          "a": "Adult women from poor households who do not have an LPG connection.",
+          "q_hi": "प्रधानमंत्री उज्ज्वला योजना (निःशुल्क एलपीजी कनेक्शन) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "गरीब परिवारों की वयस्क महिलाएं जिनके पास एलपीजी कनेक्शन नहीं है।"
+        },
+        {
+          "q": "Which documents are needed for PM Ujjwala Yojana (Free LPG Connection)?",
+          "a": "Keep these ready: Aadhaar Card, Ration Card, Bank Passbook / Account Details, Passport Size Photograph.",
+          "q_hi": "प्रधानमंत्री उज्ज्वला योजना (निःशुल्क एलपीजी कनेक्शन) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Ration Card, Bank Passbook / Account Details, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for PM Ujjwala Yojana (Free LPG Connection)?",
+          "a": "Apply only on the official portal (https://www.pmuy.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "प्रधानमंत्री उज्ज्वला योजना (निःशुल्क एलपीजी कनेक्शन) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://www.pmuy.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM Ujjwala Yojana (Free LPG Connection)?",
+          "a": "Check the official site (https://www.pmuy.gov.in) for current dates and deadlines.",
+          "q_hi": "प्रधानमंत्री उज्ज्वला योजना (निःशुल्क एलपीजी कनेक्शन) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://www.pmuy.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "ignoaps-old-age-pension": {
+      "id": "ignoaps-old-age-pension",
+      "slug": "ignoaps-old-age-pension",
+      "official_url": "https://rural.gov.in",
+      "summary": "Senior citizens aged 60 or above from poor BPL households get a monthly pension of ₹200 or ₹500. Visit https://rural.gov.in",
+      "summary_hi": "गरीब परिवारों के 60 वर्ष या उससे अधिक उम्र के बुजुर्गों को मासिक पेंशन मिलती है। देखें https://rural.gov.in",
+      "who": "Senior citizens aged 60 or above from poor (BPL) households.",
+      "who_hi": "गरीब (बीपीएल) परिवारों के 60 वर्ष या अधिक आयु के वरिष्ठ नागरिक।",
+      "steps": [
+        "Collect photocopies of the required documents and passport-size photos.",
+        "Visit your local block, tehsil, or district office or CSC (check details on nsap.nic.in).",
+        "Submit the form and keep your receipt number to track approval.",
+        "Note: Apply at your Gram Panchayat, block office or social welfare office."
+      ],
+      "steps_hi": [
+        "आवश्यक दस्तावेज़ों की फ़ोटोकॉपी और पासपोर्ट फ़ोटो तैयार रखें।",
+        "नज़दीकी सरकारी/तहसील/ब्लॉक कार्यालय या जन सेवा केंद्र जाएँ (nsap.nic.in पर जानकारी देखें)।",
+        "आवेदन जमा करें और रसीद नंबर प्राप्त करें।",
+        "विशेष ध्यान: ग्राम पंचायत, ब्लॉक कार्यालय या समाज कल्याण कार्यालय में आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does Indira Gandhi National Old Age Pension provide?",
+          "a": "A monthly pension (central share ₹200 from age 60 and ₹500 from age 80; states may add more).",
+          "q_hi": "इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन से क्या लाभ मिलता है?",
+          "a_hi": "मासिक पेंशन (केंद्र का हिस्सा 60 वर्ष से ₹200 और 80 वर्ष से ₹500; राज्य अधिक जोड़ सकते हैं)।"
+        },
+        {
+          "q": "Who can apply for Indira Gandhi National Old Age Pension?",
+          "a": "Senior citizens aged 60 or above from poor (BPL) households.",
+          "q_hi": "इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "गरीब (बीपीएल) परिवारों के 60 वर्ष या अधिक आयु के वरिष्ठ नागरिक।"
+        },
+        {
+          "q": "Which documents are needed for Indira Gandhi National Old Age Pension?",
+          "a": "Keep these ready: Aadhaar Card, Birth Certificate / Age Proof, Ration Card, Bank Passbook / Account Details, Passport Size Photograph.",
+          "q_hi": "इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Birth Certificate / Age Proof, Ration Card, Bank Passbook / Account Details, Passport Size Photograph।"
+        },
+        {
+          "q": "Where do I apply for Indira Gandhi National Old Age Pension?",
+          "a": "Apply only on the official portal (https://rural.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://rural.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for Indira Gandhi National Old Age Pension?",
+          "a": "Check the official site (https://rural.gov.in) for current dates and deadlines.",
+          "q_hi": "इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://rural.gov.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-shram-yogi-maandhan": {
+      "id": "pm-shram-yogi-maandhan",
+      "slug": "pm-shram-yogi-maandhan",
+      "official_url": "https://maandhan.in",
+      "summary": "Get ₹3,000 a month pension after age 60. Unorganised workers aged 18 to 40 with income up to ₹15,000 can apply. Visit https://maandhan.in",
+      "summary_hi": "60 साल की उम्र के बाद हर महीने ₹3,000 पेंशन पाएं। 18 से 40 वर्ष के असंगठित कामगार जिनकी आय ₹15,000 तक है, आवेदन कर सकते हैं। देखें https://maandhan.in",
+      "who": "Unorganised workers aged 18 to 40 with a monthly income up to ₹15,000, not covered by EPFO, ESIC or NPS.",
+      "who_hi": "18 से 40 वर्ष के असंगठित श्रमिक जिनकी मासिक आय ₹15,000 तक है और जो ईपीएफओ, ईएसआईसी या एनपीएस में नहीं हैं।",
+      "steps": [
+        "Collect photocopies of the required documents and passport-size photos.",
+        "Visit your local block, tehsil, or district office or CSC (check details on maandhan.in).",
+        "Submit the form and keep your receipt number to track approval.",
+        "Note: Enrol at your nearest Common Service Centre."
+      ],
+      "steps_hi": [
+        "आवश्यक दस्तावेज़ों की फ़ोटोकॉपी और पासपोर्ट फ़ोटो तैयार रखें।",
+        "नज़दीकी सरकारी/तहसील/ब्लॉक कार्यालय या जन सेवा केंद्र जाएँ (maandhan.in पर जानकारी देखें)।",
+        "आवेदन जमा करें और रसीद नंबर प्राप्त करें।",
+        "विशेष ध्यान: नजदीकी जन सेवा केंद्र पर पंजीकरण करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM Shram Yogi Maan-Dhan (Pension for Workers) provide?",
+          "a": "₹3,000 a month pension after age 60. The government adds as much as you pay.",
+          "q_hi": "पीएम श्रम योगी मानधन (श्रमिकों के लिए पेंशन) से क्या लाभ मिलता है?",
+          "a_hi": "60 वर्ष के बाद ₹3,000 मासिक पेंशन। आप जितना देते हैं, सरकार उतना ही जोड़ती है।"
+        },
+        {
+          "q": "Who can apply for PM Shram Yogi Maan-Dhan (Pension for Workers)?",
+          "a": "Unorganised workers aged 18 to 40 with a monthly income up to ₹15,000, not covered by EPFO, ESIC or NPS.",
+          "q_hi": "पीएम श्रम योगी मानधन (श्रमिकों के लिए पेंशन) के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "18 से 40 वर्ष के असंगठित श्रमिक जिनकी मासिक आय ₹15,000 तक है और जो ईपीएफओ, ईएसआईसी या एनपीएस में नहीं हैं।"
+        },
+        {
+          "q": "Which documents are needed for PM Shram Yogi Maan-Dhan (Pension for Workers)?",
+          "a": "Keep these ready: Aadhaar Card, Bank Passbook / Account Details.",
+          "q_hi": "पीएम श्रम योगी मानधन (श्रमिकों के लिए पेंशन) के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for PM Shram Yogi Maan-Dhan (Pension for Workers)?",
+          "a": "Apply only on the official portal (https://maandhan.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "पीएम श्रम योगी मानधन (श्रमिकों के लिए पेंशन) के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://maandhan.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM Shram Yogi Maan-Dhan (Pension for Workers)?",
+          "a": "Check the official site (https://maandhan.in) for current dates and deadlines.",
+          "q_hi": "पीएम श्रम योगी मानधन (श्रमिकों के लिए पेंशन) की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://maandhan.in) पर देखें।"
+        }
+      ]
+    },
+    "pm-awas-yojana-urban": {
+      "id": "pm-awas-yojana-urban",
+      "slug": "pm-awas-yojana-urban",
+      "official_url": "https://pmay-urban.gov.in",
+      "summary": "Urban families earning up to ₹9 lakh yearly without a pucca house get financial help or home loan interest subsidy. Visit https://pmay-urban.gov.in.",
+      "summary_hi": "₹9 लाख तक सालाना कमाने वाले शहरी परिवार जिनके पास पक्का घर नहीं है, उन्हें घर बनाने या खरीदने के लिए आर्थिक मदद मिलती है। देखें https://pmay-urban.gov.in।",
+      "who": "Urban families without a pucca house, in the low and middle income groups (family income up to ₹9 lakh a year).",
+      "who_hi": "बिना पक्के मकान वाले शहरी परिवार, निम्न और मध्यम आय वर्ग (पारिवारिक आय ₹9 लाख सालाना तक)।",
+      "steps": [
+        "Keep clear scans or PDFs of the required documents ready.",
+        "Open the official website (pmay-urban.gov.in) and register with your mobile number.",
+        "Fill in the form, upload the documents, and submit.",
+        "Save the application receipt and track your status on the official portal.",
+        "Note: Apply on the PMAY-Urban portal or through your city body."
+      ],
+      "steps_hi": [
+        "ऊपर दिए गए सभी दस्तावेज़ स्कैन या साफ़ फ़ोटो के रूप में तैयार रखें।",
+        "आधिकारिक वेबसाइट (pmay-urban.gov.in) खोलें और नया पंजीकरण (Register) करें।",
+        "अपनी जानकारी और दस्तावेज़ अपलोड कर फ़ॉर्म सबमिट करें।",
+        "आवेदन रसीद डाउनलोड करें और उसी पोर्टल पर स्टेटस ट्रैक करें।",
+        "विशेष ध्यान: पीएमएवाई-शहरी पोर्टल या अपनी नगर निकाय के माध्यम से आवेदन करें।"
+      ],
+      "qas": [
+        {
+          "q": "What benefit does PM Awas Yojana - Urban 2.0 provide?",
+          "a": "Government help to build or buy a house, and interest help on a home loan.",
+          "q_hi": "प्रधानमंत्री आवास योजना - शहरी 2.0 से क्या लाभ मिलता है?",
+          "a_hi": "मकान बनाने या खरीदने में सरकारी सहायता और गृह ऋण पर ब्याज राहत।"
+        },
+        {
+          "q": "Who can apply for PM Awas Yojana - Urban 2.0?",
+          "a": "Urban families without a pucca house, in the low and middle income groups (family income up to ₹9 lakh a year).",
+          "q_hi": "प्रधानमंत्री आवास योजना - शहरी 2.0 के लिए कौन आवेदन कर सकता है?",
+          "a_hi": "बिना पक्के मकान वाले शहरी परिवार, निम्न और मध्यम आय वर्ग (पारिवारिक आय ₹9 लाख सालाना तक)।"
+        },
+        {
+          "q": "Which documents are needed for PM Awas Yojana - Urban 2.0?",
+          "a": "Keep these ready: Aadhaar Card, Income Certificate, PAN Card, Bank Passbook / Account Details.",
+          "q_hi": "प्रधानमंत्री आवास योजना - शहरी 2.0 के लिए कौन-से दस्तावेज़ चाहिए?",
+          "a_hi": "ये दस्तावेज़ तैयार रखें: Aadhaar Card, Income Certificate, PAN Card, Bank Passbook / Account Details।"
+        },
+        {
+          "q": "Where do I apply for PM Awas Yojana - Urban 2.0?",
+          "a": "Apply only on the official portal (https://pmay-urban.gov.in) or an authorised Jan Seva Kendra (CSC).",
+          "q_hi": "प्रधानमंत्री आवास योजना - शहरी 2.0 के लिए आवेदन कहाँ करें?",
+          "a_hi": "केवल आधिकारिक पोर्टल (https://pmay-urban.gov.in) या नज़दीकी जन सेवा केंद्र (CSC) पर आवेदन करें।"
+        },
+        {
+          "q": "What is the last date to apply for PM Awas Yojana - Urban 2.0?",
+          "a": "Check the official site (https://pmay-urban.gov.in) for current dates and deadlines.",
+          "q_hi": "प्रधानमंत्री आवास योजना - शहरी 2.0 की अंतिम तारीख क्या है?",
+          "a_hi": "नए आवेदन और अंतिम तारीखें हमेशा आधिकारिक वेबसाइट (https://pmay-urban.gov.in) पर देखें।"
+        }
+      ]
+    }
+  },
+  "count": 35
+}

@@ -14,17 +14,34 @@ from google.genai import types
 logger = logging.getLogger(__name__)
 
 FRIENDLY_ERROR = (
-    "The AI service is temporarily unavailable. Your documents are safe — please try again."
+    "Showing answers from our verified scheme data while live help is busy."
 )
 FRIENDLY_NO_KEY = (
-    "AI answers are not configured on this server yet. Document upload, details and the "
-    "Scheme Finder still work."
+    "Showing answers from our verified scheme data. Document upload, details and the "
+    "Scheme Finder all work normally."
 )
 
 _RESOLVED_LOCK = threading.Lock()
 _RESOLVED_MODELS: dict[str, str] = {}
 _UNAVAILABLE_MODELS: set[str] = set()
 _CACHED_TEXT_MODELS: list[str] | None = None
+_KEY_HEALTH: str = "unknown"
+_LAST_RETEST_TS: float = 0.0
+_RETEST_INTERVAL_SEC = 600.0
+
+
+def get_key_health(api_key: str) -> str:
+    if not (api_key or "").strip():
+        return "missing"
+    return _KEY_HEALTH if _KEY_HEALTH != "unknown" else "ok"
+
+
+def _is_auth_error(exc: Exception) -> bool:
+    msg = str(exc).lower()
+    return any(
+        t in msg
+        for t in ("401", "403", "api_key_invalid", "api key not valid", "permission_denied", "unauthenticated")
+    )
 
 _EXCLUDE_TOKENS = (
     "tts",
@@ -149,7 +166,17 @@ class GeminiClient:
 
     @property
     def model(self) -> str:
+        global _LAST_RETEST_TS
+        now = time.time()
         with _RESOLVED_LOCK:
+            if (
+                self.requested_model in _RESOLVED_MODELS
+                and _RESOLVED_MODELS[self.requested_model] != self.requested_model
+                and now - _LAST_RETEST_TS > _RETEST_INTERVAL_SEC
+            ):
+                _LAST_RETEST_TS = now
+                _UNAVAILABLE_MODELS.discard(self.requested_model)
+                _RESOLVED_MODELS.pop(self.requested_model, None)
             resolved = _RESOLVED_MODELS.get(self.requested_model, self.requested_model)
             if resolved in _UNAVAILABLE_MODELS and _CACHED_TEXT_MODELS:
                 alt = pick_best_flash(_CACHED_TEXT_MODELS, exclude=_UNAVAILABLE_MODELS)
@@ -160,11 +187,11 @@ class GeminiClient:
 
     def _get_client(self) -> genai.Client:
         if not self.is_configured:
-            raise GeminiUnavailableError("GEMINI_API_KEY missing", FRIENDLY_NO_KEY)
+            raise GeminiUnavailableError("Gemini key missing", FRIENDLY_NO_KEY)
         if self._client is None:
             try:
                 http_opts = types.HttpOptions(
-                    timeout=30_000,
+                    timeout=25_000,
                     retry_options=types.HttpRetryOptions(attempts=1),
                 )
                 self._client = genai.Client(api_key=self.api_key, http_options=http_opts)
@@ -268,12 +295,17 @@ class GeminiClient:
                 resp = client.models.generate_content(
                     model=current_model, contents=contents, config=config
                 )
+                global _KEY_HEALTH
+                _KEY_HEALTH = "ok"
                 with _RESOLVED_LOCK:
                     _RESOLVED_MODELS[self.requested_model] = current_model
                 logger.info("Gemini generation succeeded using model '%s'", current_model)
                 return (resp.text or "").strip()
             except Exception as exc:
                 last_err = exc
+                if _is_auth_error(exc):
+                    _KEY_HEALTH = "invalid"
+                    raise GeminiUnavailableError("Gemini auth failed", FRIENDLY_NO_KEY) from exc
                 if (
                     not disable_thinking
                     and getattr(config, "thinking_config", None) is not None
@@ -287,7 +319,7 @@ class GeminiClient:
                     if self._fallback_model(current_model):
                         continue
                     break
-                if (_is_model_overloaded_or_quota(exc) or _is_transient(exc)) and model_retries < 2:
+                if (_is_model_overloaded_or_quota(exc) or _is_transient(exc)) and model_retries < 1:
                     time.sleep(self.base_backoff * (2**model_retries))
                     model_retries += 1
                     continue
@@ -331,6 +363,8 @@ class GeminiClient:
                     if text:
                         emitted = True
                         yield text
+                global _KEY_HEALTH
+                _KEY_HEALTH = "ok"
                 with _RESOLVED_LOCK:
                     _RESOLVED_MODELS[self.requested_model] = current_model
                 logger.info("Gemini stream succeeded using model '%s'", current_model)
@@ -339,6 +373,9 @@ class GeminiClient:
                 last_err = exc
                 if emitted:
                     raise GeminiUnavailableError(str(exc)) from exc
+                if _is_auth_error(exc):
+                    _KEY_HEALTH = "invalid"
+                    raise GeminiUnavailableError("Gemini auth failed", FRIENDLY_NO_KEY) from exc
                 if (
                     not disable_thinking
                     and getattr(config, "thinking_config", None) is not None
@@ -354,7 +391,7 @@ class GeminiClient:
                     if self._fallback_model(current_model):
                         continue
                     break
-                if (_is_model_overloaded_or_quota(exc) or _is_transient(exc)) and model_retries < 2:
+                if (_is_model_overloaded_or_quota(exc) or _is_transient(exc)) and model_retries < 1:
                     if on_retry:
                         on_retry("Busy right now, trying again...")
                     time.sleep(self.base_backoff * (2**model_retries))

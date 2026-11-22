@@ -191,6 +191,9 @@ def schemes():
     )
 
 
+from app.services.verified_chat import load_explainers
+
+
 @pages_bp.route("/schemes/<slug>")
 def scheme_detail(slug: str):
     _get_session_id()
@@ -200,11 +203,13 @@ def scheme_detail(slug: str):
     if not scheme:
         return render_template("errors/404.html"), 404
     apply_steps = build_apply_steps(scheme, lang=_current_lang())
+    explainer = load_explainers().get(scheme.get("id", ""), {})
     return render_template(
         "scheme_detail.html",
         active_page="schemes",
         scheme=scheme,
         apply_steps=apply_steps,
+        explainer=explainer,
     )
 
 

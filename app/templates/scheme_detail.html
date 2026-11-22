@@ -70,9 +70,22 @@
         t.wizard.official_site }}</a>
       <a href="{{ url_for('pages.find_schemes', scheme=scheme.slug or scheme.id) }}" class="btn btn-primary">{{
         t.schemes_page.check_qualify }}</a>
-      <a href="{{ url_for('pages.ask', scheme=scheme.slug or scheme.id) }}" class="btn btn-secondary">{{
-        t.wizard.ask_sahayak }}</a>
+      <a href="{{ url_for('pages.ask', scheme=scheme.slug or scheme.id) }}" class="btn btn-secondary">{{ t.wizard.ask_sahayak }}</a>
     </div>
+
+    {% if explainer and explainer.qas %}
+    <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border);">
+      <h3>{% if lang == 'hi' %}आम सवाल{% else %}Common questions{% endif %}</h3>
+      <div class="grid" style="gap:10px;margin-top:10px;">
+        {% for qa in explainer.qas %}
+        <details class="faq-item">
+          <summary>{{ qa.q_hi if lang == 'hi' else qa.q }}</summary>
+          <p class="muted" style="margin:8px 0 0;">{{ qa.a_hi if lang == 'hi' else qa.a }}</p>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
   </article>
 </div>
 {% endblock %}

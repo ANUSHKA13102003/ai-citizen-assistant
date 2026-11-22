@@ -29,9 +29,9 @@ from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 from app.extensions import db, limiter
 from app.models import FeedbackLog, QueryLog, SessionLog
 from app.services.eligibility_engine import evaluate_eligibility, match_all_schemes
-from app.services.gemini_client import GeminiClient, GeminiUnavailableError
+from app.services.gemini_client import GeminiClient, GeminiUnavailableError, get_key_health
 from app.services.i18n import normalize_lang
-from app.services.language_service import sanitize_input
+from app.services.language_service import detect_language, sanitize_input
 from app.services.pdf_extractor import (
     PDFValidationError,
     _configure_tesseract,
@@ -42,12 +42,36 @@ from app.services.pii_redactor import redact_pii
 from app.services.rag_service import analyze_documents, answer_question, stream_question
 from app.services.sample_library import get_scheme_by_id, load_scheme_manifest
 from app.services.vector_store import get_embedder, get_embeddings_backend
+from app.services.verified_chat import (
+    answer_from_verified_data,
+    get_cached_answer,
+    put_cached_answer,
+)
 
 logger = logging.getLogger(__name__)
 api_bp = Blueprint("api", __name__)
 
 _DAILY_CAP_LOCK = threading.Lock()
 _DAILY_CAP_STATE = {"date": "", "count": 0}
+
+
+def get_budget_status() -> dict:
+    cap = int(current_app.config.get("DAILY_GEMINI_CAP", 500))
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    with _DAILY_CAP_LOCK:
+        if _DAILY_CAP_STATE["date"] != today:
+            _DAILY_CAP_STATE["date"] = today
+            _DAILY_CAP_STATE["count"] = 0
+        used = _DAILY_CAP_STATE["count"]
+    pct = round((used / cap) * 100.0, 1) if cap > 0 else 0.0
+    at_cap = cap > 0 and used >= cap
+    return {
+        "used_today": used,
+        "daily_cap": cap,
+        "pct": pct,
+        "at_cap": at_cap,
+        "high_usage": cap > 0 and used >= int(cap * 0.8),
+    }
 
 
 def _consume_daily_gemini_quota() -> bool:
@@ -173,6 +197,29 @@ def healthz():
             "retrieval_mode": current_app.config.get("RETRIEVAL_MODE", "hybrid"),
         }
     ), (200 if db_ok else 503)
+
+
+@api_bp.route("/admin/status", methods=["GET"])
+def admin_status():
+    admin_key = current_app.config.get("ADMIN_KEY", "")
+    provided = request.args.get("key", "") or request.headers.get("X-Admin-Key", "")
+    if not admin_key or provided != admin_key:
+        return jsonify({"ok": False, "code": "not_found", "message": "Page not found."}), 404
+    gemini = _build_gemini()
+    budget = get_budget_status()
+    key_health = get_key_health(current_app.config.get("GEMINI_API_KEY", ""))
+    mode = "verified_data" if (key_health != "ok" or budget["at_cap"]) else "ai"
+    return jsonify(
+        {
+            "ok": True,
+            "key_health": key_health,
+            "active_model": gemini.model,
+            "usage_today": budget["used_today"],
+            "daily_cap": budget["daily_cap"],
+            "usage_pct": budget["pct"],
+            "mode": mode,
+        }
+    )
 
 
 @api_bp.route("/api/consent", methods=["POST"])
@@ -377,8 +424,23 @@ def analyze():
 
     try:
         result = analyze_documents(state, gemini, language=language)
-    except GeminiUnavailableError as exc:
-        return jsonify({"error": exc.user_message, "retryable": True}), 503
+    except GeminiUnavailableError:
+        fields = (state.get_profile() or {}).get("fields", {})
+        personal = ", ".join(f"{f['label']}: {f['display']}" for f in fields.values()) or "Not found in uploaded documents"
+        result = {
+            "sections": [
+                {"key": "personal_information", "label": "Personal Information", "content": personal},
+                {"key": "education", "label": "Education", "content": (fields.get("course") or {}).get("display", "Not found in uploaded documents")},
+                {"key": "skills", "label": "Skills", "content": "Not found in uploaded documents"},
+                {"key": "certifications", "label": "Certifications", "content": "Not found in uploaded documents"},
+                {"key": "projects", "label": "Projects", "content": "Not found in uploaded documents"},
+                {"key": "achievements", "label": "Achievements", "content": "Not found in uploaded documents"},
+                {"key": "important_dates", "label": "Important Dates", "content": (fields.get("dob") or {}).get("display", "Not found in uploaded documents")},
+            ],
+            "sources": [{"filename": d.filename, "page": 1} for d in state.documents],
+            "total_chunks": len(state.chunks),
+            "latency_ms": 0.0,
+        }
 
     qlog_id = _log_query(
         sid=sid,
@@ -407,11 +469,7 @@ def chat():
     payload = request.get_json(silent=True) or {}
     question = sanitize_input(payload.get("question", ""))
     if not question:
-        return jsonify({"error": "Please enter a question."}), 400
-    if not _consume_daily_gemini_quota():
-        return jsonify(
-            {"error": "Daily AI helper limit reached for today. Scheme matching and document checks still work."}
-        ), 429
+        return jsonify({"ok": False, "code": "empty_question", "message": "Please enter a question.", "error": "Please enter a question."}), 400
 
     retrieval_mode = payload.get("retrieval_mode") or current_app.config["RETRIEVAL_MODE"]
     if retrieval_mode not in {"baseline", "hybrid"}:
@@ -424,51 +482,92 @@ def chat():
         Path(current_app.config["SAMPLES_DIR"]),
         schemes_path=Path(current_app.config["SCHEMES_PATH"]),
     )
-    gemini = _build_gemini()
-    try:
-        res = answer_question(
-            state,
-            question,
-            gemini,
-            retrieval_mode=retrieval_mode,
-            top_k_max=current_app.config["TOP_K_MAX"],
-            history_window=current_app.config["HISTORY_WINDOW"],
-            enable_reranker=current_app.config["ENABLE_RERANKER"],
-            reranker_model=current_app.config["RERANKER_MODEL"],
-            language_override=lang_override,
-            enable_multilingual=current_app.config["ENABLE_MULTILINGUAL"],
-            schemes=schemes,
-        )
-    except GeminiUnavailableError as exc:
-        return jsonify({"error": exc.user_message, "retryable": True}), 503
+    has_docs = bool(state.documents or state.pages_by_file)
+    lang_detected = detect_language(question, lang_override)
 
-    sources_dicts = [s.to_dict() for s in res.sources]
+    # 1. Check 24h LRU cache for non-personal queries
+    if not has_docs:
+        cached = get_cached_answer(question, lang_detected)
+        if cached:
+            cached["cached"] = True
+            return jsonify(cached)
+
+    gemini = _build_gemini()
+    use_verified_only = (not gemini.is_configured) or (not _consume_daily_gemini_quota())
+    if not use_verified_only:
+        try:
+            res = answer_question(
+                state,
+                question,
+                gemini,
+                retrieval_mode=retrieval_mode,
+                top_k_max=current_app.config["TOP_K_MAX"],
+                history_window=current_app.config["HISTORY_WINDOW"],
+                enable_reranker=current_app.config["ENABLE_RERANKER"],
+                reranker_model=current_app.config["RERANKER_MODEL"],
+                language_override=lang_override,
+                enable_multilingual=current_app.config["ENABLE_MULTILINGUAL"],
+                schemes=schemes,
+            )
+            sources_dicts = [s.to_dict() for s in res.sources]
+            qlog_id = _log_query(
+                sid=sid,
+                mode="qa",
+                category=res.category,
+                language=res.language,
+                retrieval_mode=res.retrieval_mode,
+                ret_ms=res.retrieval_latency_ms,
+                llm_ms=res.llm_latency_ms,
+                total_ms=res.total_latency_ms,
+                chunks_retrieved=res.chunks_retrieved,
+                sources=sources_dicts,
+                is_not_found=res.is_not_found,
+            )
+            out = {
+                "ok": True,
+                "answer": res.answer,
+                "sources": sources_dicts,
+                "scheme_cards": [],
+                "is_not_found": res.is_not_found,
+                "intent": res.intent,
+                "followups": res.followups,
+                "category": res.category,
+                "language": res.language,
+                "mode": "ai",
+                "query_log_id": qlog_id,
+            }
+            if not has_docs and not res.is_not_found:
+                put_cached_answer(question, res.language, out)
+            return jsonify(out)
+        except GeminiUnavailableError:
+            pass
+
+    vres = answer_from_verified_data(question, schemes, state, lang_override)
     qlog_id = _log_query(
         sid=sid,
         mode="qa",
-        category=res.category,
-        language=res.language,
-        retrieval_mode=res.retrieval_mode,
-        ret_ms=res.retrieval_latency_ms,
-        llm_ms=res.llm_latency_ms,
-        total_ms=res.total_latency_ms,
-        chunks_retrieved=res.chunks_retrieved,
-        sources=sources_dicts,
-        is_not_found=res.is_not_found,
+        category="Scholarship / Scheme",
+        language=lang_detected,
+        retrieval_mode="verified_data",
+        ret_ms=0.0,
+        llm_ms=0.0,
+        total_ms=0.0,
+        chunks_retrieved=0,
+        sources=[],
+        is_not_found=vres.is_not_found,
     )
     return jsonify(
         {
-            "answer": res.answer,
-            "sources": sources_dicts,
-            "is_not_found": res.is_not_found,
-            "intent": res.intent,
-            "followups": res.followups,
-            "category": res.category,
-            "language": res.language,
-            "retrieval_mode": res.retrieval_mode,
-            "retrieval_latency_ms": res.retrieval_latency_ms,
-            "llm_latency_ms": res.llm_latency_ms,
-            "total_latency_ms": res.total_latency_ms,
+            "ok": True,
+            "answer": vres.answer,
+            "sources": [],
+            "scheme_cards": vres.scheme_cards,
+            "is_not_found": vres.is_not_found,
+            "intent": vres.intent,
+            "followups": vres.followups,
+            "category": "Scholarship / Scheme",
+            "language": lang_detected,
+            "mode": "verified_data",
             "query_log_id": qlog_id,
         }
     )
@@ -484,11 +583,7 @@ def chat_stream():
     payload = request.get_json(silent=True) or {}
     question = sanitize_input(payload.get("question", ""))
     if not question:
-        return jsonify({"error": "Please enter a question."}), 400
-    if not _consume_daily_gemini_quota():
-        return jsonify(
-            {"error": "Daily AI helper limit reached for today. Scheme matching and document checks still work."}
-        ), 429
+        return jsonify({"ok": False, "code": "empty_question", "message": "Please enter a question.", "error": "Please enter a question."}), 400
 
     retrieval_mode = payload.get("retrieval_mode") or current_app.config["RETRIEVAL_MODE"]
     if retrieval_mode not in {"baseline", "hybrid"}:
@@ -501,42 +596,82 @@ def chat_stream():
         Path(current_app.config["SAMPLES_DIR"]),
         schemes_path=Path(current_app.config["SCHEMES_PATH"]),
     )
+    has_docs = bool(state.documents or state.pages_by_file)
+    lang_detected = detect_language(question, lang_override)
     gemini = _build_gemini()
     app_obj = current_app._get_current_object()
 
     def event_stream():
-        for evt in stream_question(
-            state,
-            question,
-            gemini,
-            retrieval_mode=retrieval_mode,
-            top_k_max=app_obj.config["TOP_K_MAX"],
-            history_window=app_obj.config["HISTORY_WINDOW"],
-            enable_reranker=app_obj.config["ENABLE_RERANKER"],
-            reranker_model=app_obj.config["RERANKER_MODEL"],
-            language_override=lang_override,
-            enable_multilingual=app_obj.config["ENABLE_MULTILINGUAL"],
-            schemes=schemes,
-        ):
-            name = evt["event"]
-            data = evt["data"]
-            if name == "done":
-                with app_obj.app_context():
-                    qlog_id = _log_query(
-                        sid=sid,
-                        mode="qa",
-                        category=data["category"],
-                        language=data["language"],
-                        retrieval_mode=data["retrieval_mode"],
-                        ret_ms=data["retrieval_latency_ms"],
-                        llm_ms=data["llm_latency_ms"],
-                        total_ms=data["total_latency_ms"],
-                        chunks_retrieved=data["chunks_retrieved"],
-                        sources=data["sources"],
-                        is_not_found=data["is_not_found"],
-                    )
-                    data["query_log_id"] = qlog_id
-            yield f"event: {name}\ndata: {json.dumps(data)}\n\n"
+        # 1. Cache hit for non-personal queries
+        if not has_docs:
+            cached = get_cached_answer(question, lang_detected)
+            if cached:
+                yield f"event: token\ndata: {json.dumps({'text': cached['answer']})}\n\n"
+                yield f"event: done\ndata: {json.dumps(cached)}\n\n"
+                return
+
+        # 2. Try Gemini if configured & within daily cap
+        if gemini.is_configured and _consume_daily_gemini_quota():
+            emitted_any = False
+            errored = False
+            for evt in stream_question(
+                state,
+                question,
+                gemini,
+                retrieval_mode=retrieval_mode,
+                top_k_max=app_obj.config["TOP_K_MAX"],
+                history_window=app_obj.config["HISTORY_WINDOW"],
+                enable_reranker=app_obj.config["ENABLE_RERANKER"],
+                reranker_model=app_obj.config["RERANKER_MODEL"],
+                language_override=lang_override,
+                enable_multilingual=app_obj.config["ENABLE_MULTILINGUAL"],
+                schemes=schemes,
+            ):
+                name = evt["event"]
+                data = evt["data"]
+                if name == "error":
+                    errored = True
+                    break
+                if name == "token":
+                    emitted_any = True
+                if name == "done":
+                    with app_obj.app_context():
+                        qlog_id = _log_query(
+                            sid=sid,
+                            mode="qa",
+                            category=data["category"],
+                            language=data["language"],
+                            retrieval_mode=data["retrieval_mode"],
+                            ret_ms=data["retrieval_latency_ms"],
+                            llm_ms=data["llm_latency_ms"],
+                            total_ms=data["total_latency_ms"],
+                            chunks_retrieved=data["chunks_retrieved"],
+                            sources=data["sources"],
+                            is_not_found=data["is_not_found"],
+                        )
+                        data["query_log_id"] = qlog_id
+                    if not has_docs and not data.get("is_not_found"):
+                        put_cached_answer(question, data["language"], data)
+                yield f"event: {name}\ndata: {json.dumps(data)}\n\n"
+            if not errored or emitted_any:
+                return
+
+        # 3. Verified-data fallback (zero errors ever reach visitor)
+        vres = answer_from_verified_data(question, schemes, state, lang_override)
+        yield f"event: token\ndata: {json.dumps({'text': vres.answer})}\n\n"
+        done_payload = {
+            "ok": True,
+            "answer": vres.answer,
+            "sources": [],
+            "scheme_cards": vres.scheme_cards,
+            "is_not_found": vres.is_not_found,
+            "intent": vres.intent,
+            "followups": vres.followups,
+            "category": "Scholarship / Scheme",
+            "language": lang_detected,
+            "mode": "verified_data",
+        }
+        yield f"event: done\ndata: {json.dumps(done_payload)}\n\n"
 
     return Response(
         stream_with_context(event_stream()),

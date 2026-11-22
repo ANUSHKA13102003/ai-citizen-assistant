@@ -95,23 +95,26 @@ def create_app(config_name: str | None = None) -> Flask:
     @app.errorhandler(CSRFError)
     def handle_csrf_error(err):
         if request.path.startswith("/api/"):
-            return jsonify({"error": f"Security token invalid or expired: {err.description}"}), 400
+            msg = f"Security token invalid or expired: {err.description}"
+            return jsonify({"ok": False, "code": "csrf_error", "message": msg, "error": msg}), 400
         return render_template("errors/500.html"), 400
 
     @app.errorhandler(404)
     def handle_404(_err):
         if request.path.startswith("/api/"):
-            return jsonify({"error": "Endpoint not found."}), 404
+            return jsonify({"ok": False, "code": "not_found", "message": "Endpoint not found.", "error": "Endpoint not found."}), 404
         return render_template("errors/404.html"), 404
 
     @app.errorhandler(429)
     def handle_429(_err):
-        return jsonify({"error": "Rate limit exceeded. Please wait a moment and retry."}), 429
+        msg = "Busy right now — please wait a moment and try again."
+        return jsonify({"ok": False, "code": "rate_limited", "message": msg, "error": msg}), 429
 
     @app.errorhandler(500)
     def handle_500(_err):
         if request.path.startswith("/api/"):
-            return jsonify({"error": "Internal server error."}), 500
+            msg = "Something went wrong. Please try again."
+            return jsonify({"ok": False, "code": "server_error", "message": msg, "error": msg}), 500
         return render_template("errors/500.html"), 500
 
     return app
