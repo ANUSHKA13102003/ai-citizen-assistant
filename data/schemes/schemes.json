@@ -1,0 +1,1615 @@
+{
+ "schemes": [
+  {
+   "id": "csss-college-scholarship",
+   "slug": "csss-college-scholarship",
+   "category": "scholarships",
+   "level": "central",
+   "name": "Central Sector Scholarship for College and University Students",
+   "name_hi": "कॉलेज और विश्वविद्यालय छात्रों के लिए केंद्रीय छात्रवृत्ति",
+   "ministry": "Ministry of Education",
+   "who": "Students above the 80th percentile in Class 12 who study a regular degree course, with family income up to ₹4.5 lakh a year.",
+   "who_hi": "कक्षा 12 में 80 पर्सेंटाइल से ऊपर वाले छात्र जो नियमित डिग्री कोर्स कर रहे हैं और जिनकी पारिवारिक आय ₹4.5 लाख सालाना तक है।",
+   "benefit": "₹12,000 a year for graduation (first 3 years) and ₹20,000 a year for post-graduation.",
+   "benefit_hi": "स्नातक में ₹12,000 सालाना और स्नातकोत्तर में ₹20,000 सालाना।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 450000,
+    "min_marks_percent": 80,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [
+     "undergraduate",
+     "technical_degree",
+     "postgraduate"
+    ],
+    "gender": null,
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Income Certificate",
+    "Academic Marksheet / Transcript",
+    "Bank Passbook / Account Details",
+    "Bonafide / Admission Proof"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "scholarships.gov.in",
+    "note": "Apply every year on the National Scholarship Portal.",
+    "note_hi": "हर साल राष्ट्रीय छात्रवृत्ति पोर्टल पर आवेदन करें।"
+   },
+   "official_url": "https://scholarships.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "post-matric-scholarship-sc",
+   "slug": "post-matric-scholarship-sc",
+   "category": "scholarships",
+   "level": "central",
+   "name": "Post-Matric Scholarship for Scheduled Caste Students",
+   "name_hi": "अनुसूचित जाति छात्रों के लिए पोस्ट-मैट्रिक छात्रवृत्ति",
+   "ministry": "Ministry of Social Justice and Empowerment",
+   "who": "Scheduled Caste students studying after Class 10, with family income up to ₹2.5 lakh a year.",
+   "who_hi": "कक्षा 10 के बाद पढ़ रहे अनुसूचित जाति के छात्र, जिनकी पारिवारिक आय ₹2.5 लाख सालाना तक है।",
+   "benefit": "Course fees paid plus a monthly allowance for study costs.",
+   "benefit_hi": "कोर्स फीस की भरपाई और पढ़ाई के खर्च के लिए मासिक भत्ता।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 250000,
+    "min_marks_percent": null,
+    "categories": [
+     "SC"
+    ],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [
+     "class_11_12",
+     "undergraduate",
+     "technical_degree",
+     "postgraduate",
+     "diploma"
+    ],
+    "gender": null,
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Caste / Category Certificate",
+    "Income Certificate",
+    "Academic Marksheet / Transcript",
+    "Bank Passbook / Account Details",
+    "Bonafide / Admission Proof",
+    "Fee Receipt"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "scholarships.gov.in",
+    "note": "Apply on the National Scholarship Portal or your state portal.",
+    "note_hi": "राष्ट्रीय छात्रवृत्ति पोर्टल या अपने राज्य के पोर्टल पर आवेदन करें।"
+   },
+   "official_url": "https://scholarships.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-yasasvi-scholarship",
+   "slug": "pm-yasasvi-scholarship",
+   "category": "scholarships",
+   "level": "central",
+   "name": "PM YASASVI Scholarship for OBC, EBC and DNT Students",
+   "name_hi": "ओबीसी, ईबीसी और डीएनटी छात्रों के लिए पीएम यशस्वी छात्रवृत्ति",
+   "ministry": "Ministry of Social Justice and Empowerment",
+   "who": "OBC, EBC and DNT students from Class 9 onwards, with family income up to ₹2.5 lakh a year.",
+   "who_hi": "कक्षा 9 से आगे पढ़ रहे ओबीसी, ईबीसी और डीएनटी छात्र, जिनकी पारिवारिक आय ₹2.5 लाख सालाना तक है।",
+   "benefit": "A yearly scholarship for school and college study; amount depends on the class or course.",
+   "benefit_hi": "स्कूल और कॉलेज की पढ़ाई के लिए सालाना छात्रवृत्ति; राशि कक्षा या कोर्स पर निर्भर है।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 250000,
+    "min_marks_percent": null,
+    "categories": [
+     "OBC"
+    ],
+    "categories_maybe": [
+     "EWS"
+    ],
+    "states": [],
+    "education_levels": [
+     "class_9_10",
+     "class_11_12",
+     "undergraduate",
+     "technical_degree",
+     "postgraduate",
+     "diploma"
+    ],
+    "gender": null,
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Caste / Category Certificate",
+    "Income Certificate",
+    "Academic Marksheet / Transcript",
+    "Bank Passbook / Account Details",
+    "Bonafide / Admission Proof"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "scholarships.gov.in",
+    "note": "Apply on the National Scholarship Portal.",
+    "note_hi": "राष्ट्रीय छात्रवृत्ति पोर्टल पर आवेदन करें।"
+   },
+   "official_url": "https://scholarships.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "aicte-pragati-scholarship",
+   "slug": "aicte-pragati-scholarship",
+   "category": "scholarships",
+   "level": "central",
+   "name": "AICTE Pragati Scholarship for Girls in Technical Education",
+   "name_hi": "तकनीकी शिक्षा में लड़कियों के लिए एआईसीटीई प्रगति छात्रवृत्ति",
+   "ministry": "AICTE",
+   "who": "Girls admitted to an AICTE-approved degree or diploma course, with family income up to ₹8 lakh a year (up to 2 girls per family).",
+   "who_hi": "एआईसीटीई से मान्य डिग्री या डिप्लोमा में प्रवेश लेने वाली लड़कियां, जिनके परिवार की आय ₹8 लाख सालाना तक है (परिवार में अधिकतम 2 लड़कियां)।",
+   "benefit": "₹50,000 a year for every year of study.",
+   "benefit_hi": "पढ़ाई के हर साल के लिए ₹50,000 सालाना।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 800000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [
+     "technical_degree",
+     "diploma"
+    ],
+    "gender": "female",
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Income Certificate",
+    "Academic Marksheet / Transcript",
+    "Bonafide / Admission Proof",
+    "Fee Receipt",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "scholarships.gov.in",
+    "note": "Apply on the National Scholarship Portal under AICTE schemes.",
+    "note_hi": "राष्ट्रीय छात्रवृत्ति पोर्टल पर एआईसीटीई योजनाओं के अंतर्गत आवेदन करें।"
+   },
+   "official_url": "https://scholarships.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "aicte-saksham-scholarship",
+   "slug": "aicte-saksham-scholarship",
+   "category": "scholarships",
+   "level": "central",
+   "name": "AICTE Saksham Scholarship for Students with Disabilities",
+   "name_hi": "दिव्यांग छात्रों के लिए एआईसीटीई सक्षम छात्रवृत्ति",
+   "ministry": "AICTE",
+   "who": "Students with 40% or more disability in an AICTE-approved degree or diploma course, with family income up to ₹8 lakh a year.",
+   "who_hi": "एआईसीटीई से मान्य डिग्री या डिप्लोमा में पढ़ने वाले 40% या अधिक दिव्यांगता वाले छात्र, जिनके परिवार की आय ₹8 लाख सालाना तक है।",
+   "benefit": "₹50,000 a year for every year of study.",
+   "benefit_hi": "पढ़ाई के हर साल के लिए ₹50,000 सालाना।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 800000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [
+     "technical_degree",
+     "diploma"
+    ],
+    "gender": null,
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": true,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Disability Certificate (UDID)",
+    "Income Certificate",
+    "Academic Marksheet / Transcript",
+    "Bonafide / Admission Proof",
+    "Fee Receipt",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "scholarships.gov.in",
+    "note": "Apply on the National Scholarship Portal under AICTE schemes.",
+    "note_hi": "राष्ट्रीय छात्रवृत्ति पोर्टल पर एआईसीटीई योजनाओं के अंतर्गत आवेदन करें।"
+   },
+   "official_url": "https://scholarships.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "nmmss-scholarship",
+   "slug": "nmmss-scholarship",
+   "category": "scholarships",
+   "level": "central",
+   "name": "National Means-cum-Merit Scholarship (Class 9 to 12)",
+   "name_hi": "राष्ट्रीय साधन-सह-मेधा छात्रवृत्ति (कक्षा 9 से 12)",
+   "ministry": "Ministry of Education",
+   "who": "Bright students of Class 9 to 12 in government or aided schools, with family income up to ₹3.5 lakh a year, selected through a state test.",
+   "who_hi": "सरकारी या सहायता प्राप्त स्कूलों में कक्षा 9 से 12 के मेधावी छात्र, जिनके परिवार की आय ₹3.5 लाख सालाना तक है और जो राज्य परीक्षा से चुने गए हों।",
+   "benefit": "₹12,000 a year (₹1,000 a month) to help you stay in school.",
+   "benefit_hi": "स्कूल में बने रहने के लिए ₹12,000 सालाना (₹1,000 प्रति माह)।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 350000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [
+     "class_9_10",
+     "class_11_12"
+    ],
+    "gender": null,
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Income Certificate",
+    "Academic Marksheet / Transcript",
+    "Bank Passbook / Account Details",
+    "Bonafide / Admission Proof"
+   ],
+   "apply": {
+    "mode": "school",
+    "portal": "scholarships.gov.in",
+    "note": "Your school tells you about the state selection test.",
+    "note_hi": "राज्य चयन परीक्षा की जानकारी आपका स्कूल देगा।"
+   },
+   "official_url": "https://scholarships.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "up-scholarship-post-matric",
+   "slug": "up-scholarship-post-matric",
+   "category": "scholarships",
+   "level": "uttar_pradesh",
+   "name": "UP Scholarship and Fee Reimbursement (Class 11 and above)",
+   "name_hi": "यूपी छात्रवृत्ति एवं शुल्क प्रतिपूर्ति (कक्षा 11 और ऊपर)",
+   "ministry": "Government of Uttar Pradesh",
+   "who": "Uttar Pradesh students studying in Class 11, 12, degree, diploma or technical courses, with a low family income as per the official limit.",
+   "who_hi": "उत्तर प्रदेश के छात्र जो कक्षा 11, 12, डिग्री, डिप्लोमा या तकनीकी कोर्स में पढ़ रहे हैं और जिनकी पारिवारिक आय सरकारी सीमा के भीतर है।",
+   "benefit": "Scholarship money and course fee reimbursement sent to your bank account.",
+   "benefit_hi": "छात्रवृत्ति की राशि और कोर्स फीस की प्रतिपूर्ति सीधे आपके बैंक खाते में।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 200000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [
+     "Uttar Pradesh"
+    ],
+    "education_levels": [
+     "class_11_12",
+     "undergraduate",
+     "technical_degree",
+     "postgraduate",
+     "diploma"
+    ],
+    "gender": null,
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Income Certificate",
+    "Domicile / Residence Certificate",
+    "Caste / Category Certificate",
+    "Academic Marksheet / Transcript",
+    "Fee Receipt",
+    "Bank Passbook / Account Details",
+    "Bonafide / Admission Proof"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "scholarship.up.gov.in",
+    "note": "Income limit differs by category; confirm on the portal.",
+    "note_hi": "आय सीमा श्रेणी के अनुसार अलग है; पोर्टल पर पुष्टि करें।"
+   },
+   "official_url": "https://up.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "up-scholarship-pre-matric",
+   "slug": "up-scholarship-pre-matric",
+   "category": "scholarships",
+   "level": "uttar_pradesh",
+   "name": "UP Pre-Matric Scholarship (Class 9 and 10)",
+   "name_hi": "यूपी प्री-मैट्रिक छात्रवृत्ति (कक्षा 9 और 10)",
+   "ministry": "Government of Uttar Pradesh",
+   "who": "Uttar Pradesh students in Class 9 or 10 from low-income families, as per the official limit.",
+   "who_hi": "कक्षा 9 या 10 में पढ़ने वाले उत्तर प्रदेश के छात्र, जिनके परिवार की आय सरकारी सीमा के भीतर है।",
+   "benefit": "A yearly scholarship sent to your bank account.",
+   "benefit_hi": "आपके बैंक खाते में सालाना छात्रवृत्ति।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 200000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [
+     "Uttar Pradesh"
+    ],
+    "education_levels": [
+     "class_9_10"
+    ],
+    "gender": null,
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Income Certificate",
+    "Domicile / Residence Certificate",
+    "Caste / Category Certificate",
+    "Academic Marksheet / Transcript",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "scholarship.up.gov.in",
+    "note": "Your school helps with the online form.",
+    "note_hi": "ऑनलाइन फॉर्म में आपका स्कूल मदद करता है।"
+   },
+   "official_url": "https://up.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-usp-interest-subsidy",
+   "slug": "pm-usp-interest-subsidy",
+   "category": "loans",
+   "level": "central",
+   "name": "Interest Subsidy on Education Loans (PM-USP CSIS)",
+   "name_hi": "शिक्षा ऋण पर ब्याज सब्सिडी (पीएम-यूएसपी सीएसआईएस)",
+   "ministry": "Ministry of Education",
+   "who": "Students taking a bank education loan for approved technical or professional courses, with family income up to ₹4.5 lakh a year.",
+   "who_hi": "मान्य तकनीकी या प्रोफेशनल कोर्स के लिए बैंक से शिक्षा ऋण लेने वाले छात्र, जिनके परिवार की आय ₹4.5 लाख सालाना तक है।",
+   "benefit": "The government pays your loan interest during the course and one year after it.",
+   "benefit_hi": "कोर्स के दौरान और उसके एक साल बाद तक ऋण का ब्याज सरकार भरती है।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 450000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [
+     "undergraduate",
+     "technical_degree",
+     "postgraduate"
+    ],
+    "gender": null,
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "PAN Card",
+    "Income Certificate",
+    "Academic Marksheet / Transcript",
+    "Bonafide / Admission Proof",
+    "Fee Receipt",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "vidyalakshmi.co.in",
+    "note": "Apply for the loan first; the subsidy is processed through your bank.",
+    "note_hi": "पहले ऋण के लिए आवेदन करें; सब्सिडी आपके बैंक के माध्यम से मिलती है।"
+   },
+   "official_url": "https://www.jansamarth.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-vidyalaxmi",
+   "slug": "pm-vidyalaxmi",
+   "category": "loans",
+   "level": "central",
+   "name": "PM Vidyalaxmi Education Loan Scheme",
+   "name_hi": "पीएम विद्यालक्ष्मी शिक्षा ऋण योजना",
+   "ministry": "Ministry of Education",
+   "who": "Students admitted to top-ranked higher education institutions. Families with income up to ₹8 lakh a year get extra interest help.",
+   "who_hi": "देश के शीर्ष उच्च शिक्षा संस्थानों में प्रवेश पाने वाले छात्र। ₹8 लाख सालाना तक की आय वाले परिवारों को ब्याज में अतिरिक्त मदद मिलती है।",
+   "benefit": "Loans without collateral or guarantor, with 3% interest help for eligible families.",
+   "benefit_hi": "बिना गारंटी और बिना जमानत ऋण, पात्र परिवारों को 3% ब्याज में राहत।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [
+     "undergraduate",
+     "technical_degree",
+     "postgraduate"
+    ],
+    "gender": null,
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "PAN Card",
+    "Income Certificate",
+    "Academic Marksheet / Transcript",
+    "Bonafide / Admission Proof",
+    "Fee Receipt",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "pmvidyalaxmi.co.in",
+    "note": "Interest help applies to family income up to ₹8 lakh; confirm on the portal.",
+    "note_hi": "ब्याज राहत ₹8 लाख तक की पारिवारिक आय पर लागू है; पोर्टल पर पुष्टि करें।"
+   },
+   "official_url": "https://pmvidyalaxmi.co.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-kisan",
+   "slug": "pm-kisan",
+   "category": "farming",
+   "level": "central",
+   "name": "PM-KISAN Samman Nidhi",
+   "name_hi": "पीएम-किसान सम्मान निधि",
+   "ministry": "Ministry of Agriculture and Farmers Welfare",
+   "who": "Farmer families who own cultivable land. Income tax payers and government employees are not eligible.",
+   "who_hi": "ऐसे किसान परिवार जिनके पास खेती की जमीन है। आयकर दाता और सरकारी कर्मचारी पात्र नहीं हैं।",
+   "benefit": "₹6,000 a year in three instalments of ₹2,000, sent to your bank account.",
+   "benefit_hi": "साल में ₹6,000, ₹2,000 की तीन किस्तों में, सीधे बैंक खाते में।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 100,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "farmer"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Land Ownership / Khatauni Record",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "pmkisan.gov.in",
+    "note": "Register under 'Farmers Corner' or at a Common Service Centre. Complete e-KYC.",
+    "note_hi": "'फार्मर्स कॉर्नर' में या जन सेवा केंद्र पर पंजीकरण करें। ई-केवाईसी पूरी करें।"
+   },
+   "official_url": "https://agriwelfare.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-fasal-bima",
+   "slug": "pm-fasal-bima",
+   "category": "farming",
+   "level": "central",
+   "name": "PM Fasal Bima Yojana (Crop Insurance)",
+   "name_hi": "प्रधानमंत्री फसल बीमा योजना",
+   "ministry": "Ministry of Agriculture and Farmers Welfare",
+   "who": "Farmers, including tenant farmers, who grow notified crops in notified areas.",
+   "who_hi": "अधिसूचित क्षेत्रों में अधिसूचित फसल उगाने वाले किसान, जिनमें बटाईदार किसान भी शामिल हैं।",
+   "benefit": "Insurance money if your crop is damaged by floods, drought, hail, pests or disease. You pay only 2% (kharif), 1.5% (rabi) or 5% (cash crops).",
+   "benefit_hi": "बाढ़, सूखा, ओले, कीट या रोग से फसल खराब होने पर बीमा राशि। आप केवल 2% (खरीफ), 1.5% (रबी) या 5% (नकदी फसल) देते हैं।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "farmer"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Land Ownership / Khatauni Record",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "pmfby.gov.in",
+    "note": "Apply before the last date for the season, at your bank, a CSC, or online.",
+    "note_hi": "सीजन की अंतिम तिथि से पहले बैंक, सीएससी या ऑनलाइन आवेदन करें।"
+   },
+   "official_url": "https://pmfby.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "kisan-credit-card",
+   "slug": "kisan-credit-card",
+   "category": "farming",
+   "level": "central",
+   "name": "Kisan Credit Card (KCC)",
+   "name_hi": "किसान क्रेडिट कार्ड (केसीसी)",
+   "ministry": "Ministry of Agriculture and Farmers Welfare",
+   "who": "Farmers, tenant farmers, sharecroppers, and people in fishing or animal rearing who need low-cost farm credit.",
+   "who_hi": "किसान, बटाईदार, पट्टेदार तथा मछली पालन या पशुपालन करने वाले लोग जिन्हें सस्ता कृषि ऋण चाहिए।",
+   "benefit": "Low-interest farm loans (up to ₹3 lakh at about 7%, lower if repaid on time).",
+   "benefit_hi": "कम ब्याज पर कृषि ऋण (₹3 लाख तक लगभग 7% पर, समय पर चुकाने पर और कम)।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 75,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "farmer"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Land Ownership / Khatauni Record",
+    "Passport Size Photograph",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "bank",
+    "portal": "pmkisan.gov.in",
+    "note": "PM-KISAN farmers can use the KCC saturation drive at their bank.",
+    "note_hi": "पीएम-किसान लाभार्थी अपने बैंक में केसीसी अभियान का लाभ ले सकते हैं।"
+   },
+   "official_url": "https://agriwelfare.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-kisan-maandhan",
+   "slug": "pm-kisan-maandhan",
+   "category": "farming",
+   "level": "central",
+   "name": "PM Kisan Maan-Dhan (Farmer Pension)",
+   "name_hi": "पीएम किसान मानधन (किसान पेंशन)",
+   "ministry": "Ministry of Labour and Employment",
+   "who": "Small and marginal farmers aged 18 to 40 with up to 2 hectares of land.",
+   "who_hi": "18 से 40 वर्ष के छोटे और सीमांत किसान, जिनके पास अधिकतम 2 हेक्टेयर जमीन है।",
+   "benefit": "₹3,000 a month pension after age 60. You pay ₹55 to ₹200 a month and the government adds the same amount.",
+   "benefit_hi": "60 वर्ष के बाद ₹3,000 मासिक पेंशन। आप ₹55 से ₹200 प्रति माह जमा करते हैं और सरकार उतनी ही राशि जोड़ती है।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 40,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "farmer"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Land Ownership / Khatauni Record",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "office",
+    "portal": "maandhan.in",
+    "note": "Enrol at your nearest Common Service Centre.",
+    "note_hi": "नजदीकी जन सेवा केंद्र पर पंजीकरण करें।"
+   },
+   "official_url": "https://maandhan.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "soil-health-card",
+   "slug": "soil-health-card",
+   "category": "farming",
+   "level": "central",
+   "name": "Soil Health Card Scheme",
+   "name_hi": "मृदा स्वास्थ्य कार्ड योजना",
+   "ministry": "Ministry of Agriculture and Farmers Welfare",
+   "who": "All farmers. Your soil is tested and you get advice on the right amount of fertiliser.",
+   "who_hi": "सभी किसान। आपकी मिट्टी की जांच होती है और खाद की सही मात्रा की सलाह मिलती है।",
+   "benefit": "Free soil testing and a card with crop-wise advice, which can lower your fertiliser cost.",
+   "benefit_hi": "मुफ्त मिट्टी जांच और फसल के अनुसार सलाह वाला कार्ड, जिससे खाद का खर्च घट सकता है।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "farmer"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Land Ownership / Khatauni Record"
+   ],
+   "apply": {
+    "mode": "office",
+    "portal": "soilhealth.dac.gov.in",
+    "note": "Contact your local agriculture office or Krishi Vigyan Kendra.",
+    "note_hi": "अपने स्थानीय कृषि कार्यालय या कृषि विज्ञान केंद्र से संपर्क करें।"
+   },
+   "official_url": "https://soilhealth.dac.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-kusum-solar-pump",
+   "slug": "pm-kusum-solar-pump",
+   "category": "farming",
+   "level": "central",
+   "name": "PM-KUSUM Solar Pump Scheme",
+   "name_hi": "पीएम-कुसुम सोलर पंप योजना",
+   "ministry": "Ministry of New and Renewable Energy",
+   "who": "Farmers who want a solar water pump for irrigation.",
+   "who_hi": "सिंचाई के लिए सोलर पंप लगवाना चाहने वाले किसान।",
+   "benefit": "Government help of about 30% from the Centre and about 30% from the state on a solar pump; you pay the rest (a loan is possible).",
+   "benefit_hi": "सोलर पंप पर केंद्र से लगभग 30% और राज्य से लगभग 30% सरकारी सहायता; बाकी आप देते हैं (ऋण संभव)।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "farmer"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Land Ownership / Khatauni Record",
+    "Bank Passbook / Account Details",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "pmkusum.mnre.gov.in",
+    "note": "Apply through your state nodal agency; the process differs by state.",
+    "note_hi": "अपने राज्य की नोडल एजेंसी के माध्यम से आवेदन करें; प्रक्रिया राज्य के अनुसार अलग है।"
+   },
+   "official_url": "https://pmkusum.mnre.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "up-krishak-durghatna-kalyan",
+   "slug": "up-krishak-durghatna-kalyan",
+   "category": "farming",
+   "level": "uttar_pradesh",
+   "name": "UP Mukhyamantri Krishak Durghatna Kalyan Yojana",
+   "name_hi": "मुख्यमंत्री कृषक दुर्घटना कल्याण योजना (उत्तर प्रदेश)",
+   "ministry": "Government of Uttar Pradesh",
+   "who": "Farmers of Uttar Pradesh aged 18 to 70, and their family members who work on the land.",
+   "who_hi": "उत्तर प्रदेश के 18 से 70 वर्ष के किसान और जमीन पर काम करने वाले उनके परिवार के सदस्य।",
+   "benefit": "Up to ₹5 lakh to the family if a farmer dies or is disabled in an accident.",
+   "benefit_hi": "दुर्घटना में किसान की मृत्यु या विकलांगता पर परिवार को ₹5 लाख तक।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 70,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [
+     "Uttar Pradesh"
+    ],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "farmer"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Land Ownership / Khatauni Record",
+    "Domicile / Residence Certificate",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "office",
+    "portal": "up.gov.in",
+    "note": "Apply at the Tehsil or District Magistrate office.",
+    "note_hi": "तहसील या जिलाधिकारी कार्यालय में आवेदन करें।"
+   },
+   "official_url": "https://up.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "ayushman-bharat-pmjay",
+   "slug": "ayushman-bharat-pmjay",
+   "category": "health",
+   "level": "central",
+   "name": "Ayushman Bharat PM-JAY (Health Cover)",
+   "name_hi": "आयुष्मान भारत पीएम-जय (स्वास्थ्य बीमा)",
+   "ministry": "National Health Authority",
+   "who": "Poor and vulnerable families listed under SECC 2011 or similar state lists. Check your name on the official site.",
+   "who_hi": "एसईसीसी 2011 या समान राज्य सूचियों में शामिल गरीब और कमजोर परिवार। आधिकारिक साइट पर अपना नाम जांचें।",
+   "benefit": "Free treatment up to ₹5 lakh per family per year in listed hospitals.",
+   "benefit_hi": "सूचीबद्ध अस्पतालों में प्रति परिवार प्रति वर्ष ₹5 लाख तक मुफ्त इलाज।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 800000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [],
+    "requires_disability": false,
+    "verify_only": true,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Ration Card",
+    "Domicile / Residence Certificate"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "beneficiary.nha.gov.in",
+    "note": "Check eligibility on the official site or at a CSC, then make your Ayushman card.",
+    "note_hi": "आधिकारिक साइट या सीएससी पर पात्रता जांचें, फिर आयुष्मान कार्ड बनवाएं।"
+   },
+   "official_url": "https://beneficiary.nha.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "ayushman-vay-vandana",
+   "slug": "ayushman-vay-vandana",
+   "category": "health",
+   "level": "central",
+   "name": "Ayushman Vay Vandana Card (Age 70 and above)",
+   "name_hi": "आयुष्मान वय वंदना कार्ड (70 वर्ष और ऊपर)",
+   "ministry": "National Health Authority",
+   "who": "Every Indian citizen aged 70 or above, whatever the income.",
+   "who_hi": "70 वर्ष या उससे अधिक आयु का हर भारतीय नागरिक, आय चाहे जो हो।",
+   "benefit": "Free treatment up to ₹5 lakh a year in listed hospitals.",
+   "benefit_hi": "सूचीबद्ध अस्पतालों में ₹5 लाख प्रति वर्ष तक मुफ्त इलाज।",
+   "rules": {
+    "min_age": 70,
+    "max_age": 120,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "beneficiary.nha.gov.in",
+    "note": "Register on the Ayushman app or portal with e-KYC.",
+    "note_hi": "ई-केवाईसी के साथ आयुष्मान ऐप या पोर्टल पर पंजीकरण करें।"
+   },
+   "official_url": "https://beneficiary.nha.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "adip-assistive-devices",
+   "slug": "adip-assistive-devices",
+   "category": "health",
+   "level": "central",
+   "name": "ADIP Scheme (Free Aids and Appliances)",
+   "name_hi": "एडिप योजना (निःशुल्क सहायक उपकरण)",
+   "ministry": "Department of Empowerment of Persons with Disabilities",
+   "who": "Persons with 40% or more disability, with income up to ₹30,000 a month.",
+   "who_hi": "40% या अधिक दिव्यांगता वाले व्यक्ति, जिनकी आय ₹30,000 प्रति माह तक है।",
+   "benefit": "Free aids such as wheelchairs, hearing aids and artificial limbs.",
+   "benefit_hi": "व्हीलचेयर, श्रवण यंत्र और कृत्रिम अंग जैसे उपकरण निःशुल्क।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 360000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [],
+    "requires_disability": true,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Disability Certificate (UDID)",
+    "Aadhaar Card",
+    "Income Certificate",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "office",
+    "portal": "disabilityaffairs.gov.in",
+    "note": "Contact the District Disability Rehabilitation Centre or a camp announced locally.",
+    "note_hi": "जिला दिव्यांग पुनर्वास केंद्र या स्थानीय शिविर से संपर्क करें।"
+   },
+   "official_url": "https://disabilityaffairs.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pmkvy-skill-training",
+   "slug": "pmkvy-skill-training",
+   "category": "skills",
+   "level": "central",
+   "name": "PM Kaushal Vikas Yojana (Free Skill Training)",
+   "name_hi": "प्रधानमंत्री कौशल विकास योजना (निःशुल्क कौशल प्रशिक्षण)",
+   "ministry": "Ministry of Skill Development and Entrepreneurship",
+   "who": "Indian youth aged 15 to 45 who want job skills, including school and college dropouts.",
+   "who_hi": "15 से 45 वर्ष के भारतीय युवा जो रोजगार के कौशल सीखना चाहते हैं, जिनमें पढ़ाई छोड़ चुके युवा भी शामिल हैं।",
+   "benefit": "Free short courses with a certificate and help in finding a job.",
+   "benefit_hi": "प्रमाणपत्र के साथ निःशुल्क छोटे कोर्स और नौकरी पाने में मदद।",
+   "rules": {
+    "min_age": 15,
+    "max_age": 45,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Academic Marksheet / Transcript",
+    "Bank Passbook / Account Details",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "skillindiadigital.gov.in",
+    "note": "Find a training centre near you on the Skill India Digital portal.",
+    "note_hi": "स्किल इंडिया डिजिटल पोर्टल पर अपने पास का प्रशिक्षण केंद्र खोजें।"
+   },
+   "official_url": "https://www.skillindiadigital.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "naps-apprenticeship",
+   "slug": "naps-apprenticeship",
+   "category": "skills",
+   "level": "central",
+   "name": "National Apprenticeship Promotion Scheme",
+   "name_hi": "राष्ट्रीय अप्रेंटिसशिप प्रोत्साहन योजना",
+   "ministry": "Ministry of Skill Development and Entrepreneurship",
+   "who": "Youth aged 14 and above who want on-the-job training in a company.",
+   "who_hi": "14 वर्ष और उससे अधिक आयु के युवा जो कंपनी में काम सीखते हुए प्रशिक्षण लेना चाहते हैं।",
+   "benefit": "A monthly stipend while you learn; the government pays part of it (up to ₹1,500 a month).",
+   "benefit_hi": "सीखने के दौरान मासिक वजीफा; इसका एक हिस्सा सरकार देती है (₹1,500 प्रति माह तक)।",
+   "rules": {
+    "min_age": 14,
+    "max_age": 60,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Academic Marksheet / Transcript",
+    "Bank Passbook / Account Details",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "apprenticeshipindia.gov.in",
+    "note": "Register on the Apprenticeship India portal and apply to listed companies.",
+    "note_hi": "अप्रेंटिसशिप इंडिया पोर्टल पर पंजीकरण करें और सूचीबद्ध कंपनियों में आवेदन करें।"
+   },
+   "official_url": "https://www.apprenticeshipindia.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-vishwakarma",
+   "slug": "pm-vishwakarma",
+   "category": "skills",
+   "level": "central",
+   "name": "PM Vishwakarma (for Artisans and Craftspeople)",
+   "name_hi": "पीएम विश्वकर्मा (कारीगरों और शिल्पकारों के लिए)",
+   "ministry": "Ministry of MSME",
+   "who": "Artisans aged 18 and above working with their hands in one of 18 traditional trades such as carpenter, potter, tailor or barber.",
+   "who_hi": "18 वर्ष और उससे अधिक आयु के कारीगर जो बढ़ई, कुम्हार, दर्जी या नाई जैसे 18 पारंपरिक कामों में से किसी में लगे हैं।",
+   "benefit": "Free training with ₹500 a day, ₹15,000 for tools, and loans up to ₹3 lakh at 5% interest.",
+   "benefit_hi": "₹500 प्रतिदिन के साथ निःशुल्क प्रशिक्षण, औजारों के लिए ₹15,000 और 5% ब्याज पर ₹3 लाख तक ऋण।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 100,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "worker"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Bank Passbook / Account Details",
+    "Ration Card",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "pmvishwakarma.gov.in",
+    "note": "Register at a Common Service Centre. Your trade is verified locally.",
+    "note_hi": "जन सेवा केंद्र पर पंजीकरण करें। आपके काम का स्थानीय सत्यापन होता है।"
+   },
+   "official_url": "https://pmvishwakarma.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "stand-up-india",
+   "slug": "stand-up-india",
+   "category": "skills",
+   "level": "central",
+   "name": "Stand-Up India (Loans for Women and SC/ST Entrepreneurs)",
+   "name_hi": "स्टैंड-अप इंडिया (महिला और एससी/एसटी उद्यमियों के लिए ऋण)",
+   "ministry": "Department of Financial Services",
+   "who": "Women, and SC or ST entrepreneurs aged 18 or above, starting a new business in manufacturing, services or trading.",
+   "who_hi": "18 वर्ष या अधिक आयु की महिलाएं तथा एससी या एसटी उद्यमी जो विनिर्माण, सेवा या व्यापार में नया कारोबार शुरू कर रहे हैं।",
+   "benefit": "Bank loans from ₹10 lakh to ₹1 crore for a new business.",
+   "benefit_hi": "नए कारोबार के लिए ₹10 लाख से ₹1 करोड़ तक बैंक ऋण।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 100,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "entrepreneur"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": [
+     {
+      "gender": "female"
+     },
+     {
+      "categories": [
+       "SC",
+       "ST"
+      ]
+     }
+    ]
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "PAN Card",
+    "Caste / Category Certificate",
+    "Bank Passbook / Account Details",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "standupmitra.in",
+    "note": "Apply on the Stand-Up Mitra portal or at any bank branch.",
+    "note_hi": "स्टैंड-अप मित्र पोर्टल पर या किसी भी बैंक शाखा में आवेदन करें।"
+   },
+   "official_url": "https://www.standupmitra.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-mudra-yojana",
+   "slug": "pm-mudra-yojana",
+   "category": "skills",
+   "level": "central",
+   "name": "PM MUDRA Yojana (Small Business Loans)",
+   "name_hi": "पीएम मुद्रा योजना (छोटे कारोबार के लिए ऋण)",
+   "ministry": "Department of Financial Services",
+   "who": "Anyone aged 18 or above running or starting a small non-farm business such as a shop, workshop or service.",
+   "who_hi": "18 वर्ष या अधिक आयु का कोई भी व्यक्ति जो दुकान, कार्यशाला या सेवा जैसा छोटा गैर-कृषि कारोबार चला रहा है या शुरू कर रहा है।",
+   "benefit": "Loans up to ₹10 lakh without collateral (Shishu up to ₹50,000, Kishor up to ₹5 lakh, Tarun up to ₹10 lakh).",
+   "benefit_hi": "बिना गारंटी ₹10 लाख तक ऋण (शिशु ₹50,000 तक, किशोर ₹5 लाख तक, तरुण ₹10 लाख तक)।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 100,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "entrepreneur",
+     "worker"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "PAN Card",
+    "Bank Passbook / Account Details",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "bank",
+    "portal": "mudra.org.in",
+    "note": "Apply at any bank, microfinance institution, or on the JanSamarth portal.",
+    "note_hi": "किसी भी बैंक, माइक्रोफाइनेंस संस्था या जनसमर्थ पोर्टल पर आवेदन करें।"
+   },
+   "official_url": "https://www.jansamarth.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-svanidhi",
+   "slug": "pm-svanidhi",
+   "category": "skills",
+   "level": "central",
+   "name": "PM SVANidhi (Loans for Street Vendors)",
+   "name_hi": "पीएम स्वनिधि (रेहड़ी-पटरी वालों के लिए ऋण)",
+   "ministry": "Ministry of Housing and Urban Affairs",
+   "who": "Street vendors in towns and cities who were vending before the scheme began, with a vending certificate or recommendation letter.",
+   "who_hi": "शहरों के रेहड़ी-पटरी विक्रेता जिनके पास वेंडिंग प्रमाणपत्र या सिफारिश पत्र है।",
+   "benefit": "Working capital loan starting at ₹10,000, with higher loans if you repay on time, plus interest support.",
+   "benefit_hi": "₹10,000 से शुरू कार्यशील पूंजी ऋण, समय पर चुकाने पर बड़े ऋण और ब्याज सहायता।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 100,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "worker",
+     "entrepreneur"
+    ],
+    "requires_disability": false,
+    "verify_only": true,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Bank Passbook / Account Details",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "pmsvanidhi.mohua.gov.in",
+    "note": "Apply on the PM SVANidhi portal or at a CSC; your town body verifies you.",
+    "note_hi": "पीएम स्वनिधि पोर्टल या सीएससी पर आवेदन करें; आपकी नगर निकाय आपका सत्यापन करती है।"
+   },
+   "official_url": "https://pmsvanidhi.mohua.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "mgnrega-100-days-work",
+   "slug": "mgnrega-100-days-work",
+   "category": "skills",
+   "level": "central",
+   "name": "MGNREGA (100 Days of Work in Villages)",
+   "name_hi": "मनरेगा (गांव में 100 दिन का रोजगार)",
+   "ministry": "Ministry of Rural Development",
+   "who": "Adults in rural households who are ready to do unskilled manual work.",
+   "who_hi": "ग्रामीण परिवारों के वयस्क जो अकुशल शारीरिक काम करने को तैयार हैं।",
+   "benefit": "Up to 100 days of paid work a year near your home.",
+   "benefit_hi": "घर के पास साल में 100 दिन तक वेतन वाला काम।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 100,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [],
+    "requires_disability": false,
+    "verify_only": true,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Bank Passbook / Account Details",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "office",
+    "portal": "nrega.nic.in",
+    "note": "Ask your Gram Panchayat for a job card.",
+    "note_hi": "अपनी ग्राम पंचायत से जॉब कार्ड मांगें।"
+   },
+   "official_url": "https://nrega.nic.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "up-cm-yuva-loan",
+   "slug": "up-cm-yuva-loan",
+   "category": "skills",
+   "level": "uttar_pradesh",
+   "name": "UP Mukhyamantri Yuva Udyami Vikas Abhiyan (CM-YUVA)",
+   "name_hi": "मुख्यमंत्री युवा उद्यमी विकास अभियान (उत्तर प्रदेश)",
+   "ministry": "Government of Uttar Pradesh",
+   "who": "Young people of Uttar Pradesh aged 21 to 40 who want to start their own business.",
+   "who_hi": "उत्तर प्रदेश के 21 से 40 वर्ष के युवा जो अपना कारोबार शुरू करना चाहते हैं।",
+   "benefit": "Loan up to ₹5 lakh without interest to start a business.",
+   "benefit_hi": "कारोबार शुरू करने के लिए बिना ब्याज के ₹5 लाख तक ऋण।",
+   "rules": {
+    "min_age": 21,
+    "max_age": 40,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [
+     "Uttar Pradesh"
+    ],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "entrepreneur",
+     "worker",
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Domicile / Residence Certificate",
+    "PAN Card",
+    "Academic Marksheet / Transcript",
+    "Bank Passbook / Account Details",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "up.gov.in",
+    "note": "Apply on the official UP portal. Confirm the latest rules there.",
+    "note_hi": "आधिकारिक यूपी पोर्टल पर आवेदन करें। नवीनतम नियम वहीं देखें।"
+   },
+   "official_url": "https://up.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "up-abhyuday-free-coaching",
+   "slug": "up-abhyuday-free-coaching",
+   "category": "skills",
+   "level": "uttar_pradesh",
+   "name": "UP Mukhyamantri Abhyuday Yojana (Free Exam Coaching)",
+   "name_hi": "मुख्यमंत्री अभ्युदय योजना (निःशुल्क परीक्षा कोचिंग)",
+   "ministry": "Government of Uttar Pradesh",
+   "who": "Students of Uttar Pradesh preparing for exams such as UPSC, UPPSC, JEE, NEET, NDA and CDS.",
+   "who_hi": "उत्तर प्रदेश के छात्र जो यूपीएससी, यूपीपीएससी, जेईई, नीट, एनडीए और सीडीएस जैसी परीक्षाओं की तैयारी कर रहे हैं।",
+   "benefit": "Free coaching, study material and guidance for competitive exams.",
+   "benefit_hi": "प्रतियोगी परीक्षाओं के लिए निःशुल्क कोचिंग, अध्ययन सामग्री और मार्गदर्शन।",
+   "rules": {
+    "min_age": 16,
+    "max_age": 40,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [
+     "Uttar Pradesh"
+    ],
+    "education_levels": [
+     "class_11_12",
+     "undergraduate",
+     "technical_degree",
+     "postgraduate"
+    ],
+    "gender": null,
+    "occupations": [
+     "student"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Domicile / Residence Certificate",
+    "Academic Marksheet / Transcript",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "abhyuday.up.gov.in",
+    "note": "Register online for the entrance screening.",
+    "note_hi": "प्रवेश परीक्षा के लिए ऑनलाइन पंजीकरण करें।"
+   },
+   "official_url": "https://up.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "up-kanya-sumangala",
+   "slug": "up-kanya-sumangala",
+   "category": "women",
+   "level": "uttar_pradesh",
+   "name": "UP Mukhyamantri Kanya Sumangala Yojana",
+   "name_hi": "मुख्यमंत्री कन्या सुमंगला योजना (उत्तर प्रदेश)",
+   "ministry": "Government of Uttar Pradesh",
+   "who": "Families in Uttar Pradesh with a girl child, with family income up to ₹3 lakh a year (up to 2 girls per family).",
+   "who_hi": "उत्तर प्रदेश के वे परिवार जिनमें बेटी है और पारिवारिक आय ₹3 लाख सालाना तक है (परिवार में अधिकतम 2 बेटियां)।",
+   "benefit": "₹25,000 for your daughter in stages, from birth to graduation.",
+   "benefit_hi": "बेटी के लिए जन्म से स्नातक तक चरणों में ₹25,000।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 300000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [
+     "Uttar Pradesh"
+    ],
+    "education_levels": [],
+    "gender": "female",
+    "occupations": [],
+    "requires_disability": false,
+    "verify_only": true,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Income Certificate",
+    "Domicile / Residence Certificate",
+    "Birth Certificate / Age Proof",
+    "Bank Passbook / Account Details",
+    "Bonafide / Admission Proof"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "mksy.up.gov.in",
+    "note": "This is for your daughter; apply on the official portal.",
+    "note_hi": "यह आपकी बेटी के लिए है; आधिकारिक पोर्टल पर आवेदन करें।"
+   },
+   "official_url": "https://mksy.up.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-matru-vandana",
+   "slug": "pm-matru-vandana",
+   "category": "women",
+   "level": "central",
+   "name": "PM Matru Vandana Yojana",
+   "name_hi": "प्रधानमंत्री मातृ वंदना योजना",
+   "ministry": "Ministry of Women and Child Development",
+   "who": "Pregnant and breastfeeding women aged 19 or above, for the first child (and a second child if a girl).",
+   "who_hi": "19 वर्ष या अधिक आयु की गर्भवती और स्तनपान कराने वाली महिलाएं, पहले बच्चे के लिए (और दूसरी बेटी होने पर दूसरे बच्चे के लिए)।",
+   "benefit": "₹5,000 for the first child in instalments, and ₹6,000 if the second child is a girl.",
+   "benefit_hi": "पहले बच्चे के लिए किस्तों में ₹5,000 और दूसरी बेटी होने पर ₹6,000।",
+   "rules": {
+    "min_age": 19,
+    "max_age": 49,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": "female",
+    "occupations": [],
+    "requires_disability": false,
+    "verify_only": true,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "hospital",
+    "portal": "pmmvy.wcd.gov.in",
+    "note": "Register at your Anganwadi centre or health facility.",
+    "note_hi": "अपने आंगनवाड़ी केंद्र या स्वास्थ्य केंद्र पर पंजीकरण करें।"
+   },
+   "official_url": "https://pmmvy.wcd.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-ujjwala-lpg",
+   "slug": "pm-ujjwala-lpg",
+   "category": "women",
+   "level": "central",
+   "name": "PM Ujjwala Yojana (Free LPG Connection)",
+   "name_hi": "प्रधानमंत्री उज्ज्वला योजना (निःशुल्क एलपीजी कनेक्शन)",
+   "ministry": "Ministry of Petroleum and Natural Gas",
+   "who": "Adult women from poor households who do not have an LPG connection.",
+   "who_hi": "गरीब परिवारों की वयस्क महिलाएं जिनके पास एलपीजी कनेक्शन नहीं है।",
+   "benefit": "A free LPG connection and a subsidy on refills.",
+   "benefit_hi": "निःशुल्क एलपीजी कनेक्शन और रिफिल पर सब्सिडी।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 100,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": "female",
+    "occupations": [],
+    "requires_disability": false,
+    "verify_only": true,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Ration Card",
+    "Bank Passbook / Account Details",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "office",
+    "portal": "pmuy.gov.in",
+    "note": "Apply at your nearest LPG distributor.",
+    "note_hi": "अपने नजदीकी एलपीजी वितरक के पास आवेदन करें।"
+   },
+   "official_url": "https://www.pmuy.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "ignoaps-old-age-pension",
+   "slug": "ignoaps-old-age-pension",
+   "category": "pension",
+   "level": "central",
+   "name": "Indira Gandhi National Old Age Pension",
+   "name_hi": "इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन",
+   "ministry": "Ministry of Rural Development",
+   "who": "Senior citizens aged 60 or above from poor (BPL) households.",
+   "who_hi": "गरीब (बीपीएल) परिवारों के 60 वर्ष या अधिक आयु के वरिष्ठ नागरिक।",
+   "benefit": "A monthly pension (central share ₹200 from age 60 and ₹500 from age 80; states may add more).",
+   "benefit_hi": "मासिक पेंशन (केंद्र का हिस्सा 60 वर्ष से ₹200 और 80 वर्ष से ₹500; राज्य अधिक जोड़ सकते हैं)।",
+   "rules": {
+    "min_age": 60,
+    "max_age": 120,
+    "max_family_income_inr": null,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [],
+    "requires_disability": false,
+    "verify_only": true,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Birth Certificate / Age Proof",
+    "Ration Card",
+    "Bank Passbook / Account Details",
+    "Passport Size Photograph"
+   ],
+   "apply": {
+    "mode": "office",
+    "portal": "nsap.nic.in",
+    "note": "Apply at your Gram Panchayat, block office or social welfare office.",
+    "note_hi": "ग्राम पंचायत, ब्लॉक कार्यालय या समाज कल्याण कार्यालय में आवेदन करें।"
+   },
+   "official_url": "https://rural.gov.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-shram-yogi-maandhan",
+   "slug": "pm-shram-yogi-maandhan",
+   "category": "pension",
+   "level": "central",
+   "name": "PM Shram Yogi Maan-Dhan (Pension for Workers)",
+   "name_hi": "पीएम श्रम योगी मानधन (श्रमिकों के लिए पेंशन)",
+   "ministry": "Ministry of Labour and Employment",
+   "who": "Unorganised workers aged 18 to 40 with a monthly income up to ₹15,000, not covered by EPFO, ESIC or NPS.",
+   "who_hi": "18 से 40 वर्ष के असंगठित श्रमिक जिनकी मासिक आय ₹15,000 तक है और जो ईपीएफओ, ईएसआईसी या एनपीएस में नहीं हैं।",
+   "benefit": "₹3,000 a month pension after age 60. The government adds as much as you pay.",
+   "benefit_hi": "60 वर्ष के बाद ₹3,000 मासिक पेंशन। आप जितना देते हैं, सरकार उतना ही जोड़ती है।",
+   "rules": {
+    "min_age": 18,
+    "max_age": 40,
+    "max_family_income_inr": 180000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [
+     "worker"
+    ],
+    "requires_disability": false,
+    "verify_only": false,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "office",
+    "portal": "maandhan.in",
+    "note": "Enrol at your nearest Common Service Centre.",
+    "note_hi": "नजदीकी जन सेवा केंद्र पर पंजीकरण करें।"
+   },
+   "official_url": "https://maandhan.in",
+   "last_verified": "2026-11-19"
+  },
+  {
+   "id": "pm-awas-yojana-urban",
+   "slug": "pm-awas-yojana-urban",
+   "category": "housing",
+   "level": "central",
+   "name": "PM Awas Yojana - Urban 2.0",
+   "name_hi": "प्रधानमंत्री आवास योजना - शहरी 2.0",
+   "ministry": "Ministry of Housing and Urban Affairs",
+   "who": "Urban families without a pucca house, in the low and middle income groups (family income up to ₹9 lakh a year).",
+   "who_hi": "बिना पक्के मकान वाले शहरी परिवार, निम्न और मध्यम आय वर्ग (पारिवारिक आय ₹9 लाख सालाना तक)।",
+   "benefit": "Government help to build or buy a house, and interest help on a home loan.",
+   "benefit_hi": "मकान बनाने या खरीदने में सरकारी सहायता और गृह ऋण पर ब्याज राहत।",
+   "rules": {
+    "min_age": null,
+    "max_age": null,
+    "max_family_income_inr": 900000,
+    "min_marks_percent": null,
+    "categories": [],
+    "categories_maybe": [],
+    "states": [],
+    "education_levels": [],
+    "gender": null,
+    "occupations": [],
+    "requires_disability": false,
+    "verify_only": true,
+    "any_of": []
+   },
+   "required_documents": [
+    "Aadhaar Card",
+    "Income Certificate",
+    "PAN Card",
+    "Bank Passbook / Account Details"
+   ],
+   "apply": {
+    "mode": "portal",
+    "portal": "pmay-urban.gov.in",
+    "note": "Apply on the PMAY-Urban portal or through your city body.",
+    "note_hi": "पीएमएवाई-शहरी पोर्टल या अपनी नगर निकाय के माध्यम से आवेदन करें।"
+   },
+   "official_url": "https://pmay-urban.gov.in",
+   "last_verified": "2026-11-19"
+  }
+ ]
+}

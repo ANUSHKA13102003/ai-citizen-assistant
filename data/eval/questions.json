@@ -1,0 +1,1648 @@
+{
+  "metadata": {
+    "description": "105 benchmark questions across 32 fictional citizen documents with distractors",
+    "document_count": 32,
+    "question_count": 105
+  },
+  "questions": [
+    {
+      "type": "answerable",
+      "question": "What is Aarav Sharma's roll number and aggregate percentage on the marksheet?",
+      "expected_substrings": [
+        "VIT2026CS042",
+        "86.0"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q001"
+    },
+    {
+      "type": "answerable",
+      "question": "How many marks did Aarav Sharma score in subject CS601 and what is their CGPA?",
+      "expected_substrings": [
+        "89",
+        "8.84"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q002"
+    },
+    {
+      "type": "answerable",
+      "question": "What is Priya Verma's roll number and aggregate percentage on the marksheet?",
+      "expected_substrings": [
+        "LU2026EC108",
+        "81.5"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q003"
+    },
+    {
+      "type": "answerable",
+      "question": "How many marks did Priya Verma score in subject EC502 and what is their CGPA?",
+      "expected_substrings": [
+        "85",
+        "8.4"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q004"
+    },
+    {
+      "type": "answerable",
+      "question": "What is Rohan Gupta's roll number and aggregate percentage on the marksheet?",
+      "expected_substrings": [
+        "HBTU2025ME019",
+        "74.2"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_rohan_gupta.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q005"
+    },
+    {
+      "type": "answerable",
+      "question": "How many marks did Rohan Gupta score in subject ME404 and what is their CGPA?",
+      "expected_substrings": [
+        "77",
+        "7.8"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_rohan_gupta.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q006"
+    },
+    {
+      "type": "answerable",
+      "question": "What is Ananya Singh's roll number and aggregate percentage on the marksheet?",
+      "expected_substrings": [
+        "BHU2026BS311",
+        "88.4"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_ananya_singh.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q007"
+    },
+    {
+      "type": "answerable",
+      "question": "How many marks did Ananya Singh score in subject PH301 and what is their CGPA?",
+      "expected_substrings": [
+        "93",
+        "9.1"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_ananya_singh.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q008"
+    },
+    {
+      "type": "answerable",
+      "question": "What is Mohd Zaid's roll number and aggregate percentage on the marksheet?",
+      "expected_substrings": [
+        "AMU2025CE077",
+        "79.0"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_mohd_zaid.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q009"
+    },
+    {
+      "type": "answerable",
+      "question": "How many marks did Mohd Zaid score in subject CE209 and what is their CGPA?",
+      "expected_substrings": [
+        "82",
+        "8.15"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_mohd_zaid.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q010"
+    },
+    {
+      "type": "answerable",
+      "question": "What is Kavya Mishra's roll number and aggregate percentage on the marksheet?",
+      "expected_substrings": [
+        "MMMUT2026IT054",
+        "84.6"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_kavya_mishra.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q011"
+    },
+    {
+      "type": "answerable",
+      "question": "How many marks did Kavya Mishra score in subject IT603 and what is their CGPA?",
+      "expected_substrings": [
+        "90",
+        "8.7"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_kavya_mishra.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q012"
+    },
+    {
+      "type": "answerable",
+      "question": "What is Dev Paswan's roll number and aggregate percentage on the marksheet?",
+      "expected_substrings": [
+        "BBAU2026BA142",
+        "68.5"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_dev_paswan.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q013"
+    },
+    {
+      "type": "answerable",
+      "question": "How many marks did Dev Paswan score in subject EC201 and what is their CGPA?",
+      "expected_substrings": [
+        "71",
+        "7.2"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_dev_paswan.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q014"
+    },
+    {
+      "type": "answerable",
+      "question": "What is Neha Yadav's roll number and aggregate percentage on the marksheet?",
+      "expected_substrings": [
+        "IET2026EE088",
+        "77.8"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_neha_yadav.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q015"
+    },
+    {
+      "type": "answerable",
+      "question": "How many marks did Neha Yadav score in subject EE509 and what is their CGPA?",
+      "expected_substrings": [
+        "81",
+        "8.05"
+      ],
+      "expected_sources": [
+        {
+          "filename": "marksheet_neha_yadav.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q016"
+    },
+    {
+      "type": "answerable",
+      "question": "Which key project and certification are listed on Aarav Sharma's resume?",
+      "expected_substrings": [
+        "CivicDoc Search",
+        "NPTEL"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q017"
+    },
+    {
+      "type": "answerable",
+      "question": "Which key project and certification are listed on Priya Verma's resume?",
+      "expected_substrings": [
+        "IoT Smart Meter Grid",
+        "Cisco"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q018"
+    },
+    {
+      "type": "answerable",
+      "question": "Which key project and certification are listed on Rohan Gupta's resume?",
+      "expected_substrings": [
+        "Solar Thermal Desalination",
+        "Autodesk"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_rohan_gupta.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q019"
+    },
+    {
+      "type": "answerable",
+      "question": "Which key project and certification are listed on Ananya Singh's resume?",
+      "expected_substrings": [
+        "Quantum Optics Simulator",
+        "IIT"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_ananya_singh.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q020"
+    },
+    {
+      "type": "answerable",
+      "question": "Which key project and certification are listed on Mohd Zaid's resume?",
+      "expected_substrings": [
+        "Rural Road GIS Mapper",
+        "NSDC"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_mohd_zaid.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q021"
+    },
+    {
+      "type": "answerable",
+      "question": "Which key project and certification are listed on Kavya Mishra's resume?",
+      "expected_substrings": [
+        "FinGuard Fraud Detector",
+        "AWS"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_kavya_mishra.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q022"
+    },
+    {
+      "type": "answerable",
+      "question": "What is the income certificate number and annual family income for Aarav Sharma?",
+      "expected_substrings": [
+        "UP-INC-2026-884120",
+        "180,000"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q023"
+    },
+    {
+      "type": "answerable",
+      "question": "What is the income certificate number and annual family income for Priya Verma?",
+      "expected_substrings": [
+        "UP-INC-2026-331045",
+        "145,000"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q024"
+    },
+    {
+      "type": "answerable",
+      "question": "What is the income certificate number and annual family income for Rohan Gupta?",
+      "expected_substrings": [
+        "UP-INC-2026-559210",
+        "520,000"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_rohan_gupta.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q025"
+    },
+    {
+      "type": "answerable",
+      "question": "What is the income certificate number and annual family income for Ananya Singh?",
+      "expected_substrings": [
+        "UP-INC-2026-774009",
+        "290,000"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_ananya_singh.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q026"
+    },
+    {
+      "type": "answerable",
+      "question": "What is the income certificate number and annual family income for Mohd Zaid?",
+      "expected_substrings": [
+        "UP-INC-2026-612398",
+        "195,000"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_mohd_zaid.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q027"
+    },
+    {
+      "type": "answerable",
+      "question": "What is the income certificate number and annual family income for Kavya Mishra?",
+      "expected_substrings": [
+        "UP-INC-2026-908112",
+        "740,000"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_kavya_mishra.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q028"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Check Aarav Sharma's income certificate UP-INC-2026-884120."
+        },
+        {
+          "role": "model",
+          "content": "Aarav Sharma's income certificate UP-INC-2026-884120 shows annual family income of Rs. 180,000."
+        }
+      ],
+      "question": "When was that certificate (UP-INC-2026-884120) issued and until what date is it valid?",
+      "expected_substrings": [
+        "12-07-2026",
+        "11-07-2029"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q029"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Check Priya Verma's income certificate UP-INC-2026-331045."
+        },
+        {
+          "role": "model",
+          "content": "Priya Verma's income certificate UP-INC-2026-331045 shows annual family income of Rs. 145,000."
+        }
+      ],
+      "question": "When was that certificate (UP-INC-2026-331045) issued and until what date is it valid?",
+      "expected_substrings": [
+        "04-06-2026",
+        "03-06-2029"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q030"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Check Rohan Gupta's income certificate UP-INC-2026-559210."
+        },
+        {
+          "role": "model",
+          "content": "Rohan Gupta's income certificate UP-INC-2026-559210 shows annual family income of Rs. 520,000."
+        }
+      ],
+      "question": "When was that certificate (UP-INC-2026-559210) issued and until what date is it valid?",
+      "expected_substrings": [
+        "18-05-2026",
+        "17-05-2029"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_rohan_gupta.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q031"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Check Ananya Singh's income certificate UP-INC-2026-774009."
+        },
+        {
+          "role": "model",
+          "content": "Ananya Singh's income certificate UP-INC-2026-774009 shows annual family income of Rs. 290,000."
+        }
+      ],
+      "question": "When was that certificate (UP-INC-2026-774009) issued and until what date is it valid?",
+      "expected_substrings": [
+        "21-04-2026",
+        "20-04-2029"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_ananya_singh.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q032"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Check Mohd Zaid's income certificate UP-INC-2026-612398."
+        },
+        {
+          "role": "model",
+          "content": "Mohd Zaid's income certificate UP-INC-2026-612398 shows annual family income of Rs. 195,000."
+        }
+      ],
+      "question": "When was that certificate (UP-INC-2026-612398) issued and until what date is it valid?",
+      "expected_substrings": [
+        "09-03-2026",
+        "08-03-2029"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_mohd_zaid.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q033"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Check Kavya Mishra's income certificate UP-INC-2026-908112."
+        },
+        {
+          "role": "model",
+          "content": "Kavya Mishra's income certificate UP-INC-2026-908112 shows annual family income of Rs. 740,000."
+        }
+      ],
+      "question": "When was that certificate (UP-INC-2026-908112) issued and until what date is it valid?",
+      "expected_substrings": [
+        "14-08-2026",
+        "13-08-2029"
+      ],
+      "expected_sources": [
+        {
+          "filename": "income_kavya_mishra.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q034"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Tell me about Aarav Sharma's resume and project CivicDoc Search."
+        },
+        {
+          "role": "model",
+          "content": "Aarav Sharma built CivicDoc Search."
+        }
+      ],
+      "question": "Which achievement or award did Aarav Sharma win and when do they graduate?",
+      "expected_substrings": [
+        "Smart",
+        "30-06-2026"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q035"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Tell me about Priya Verma's resume and project IoT Smart Meter Grid."
+        },
+        {
+          "role": "model",
+          "content": "Priya Verma built IoT Smart Meter Grid."
+        }
+      ],
+      "question": "Which achievement or award did Priya Verma win and when do they graduate?",
+      "expected_substrings": [
+        "State",
+        "15-07-2026"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q036"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Tell me about Rohan Gupta's resume and project Solar Thermal Desalination."
+        },
+        {
+          "role": "model",
+          "content": "Rohan Gupta built Solar Thermal Desalination."
+        }
+      ],
+      "question": "Which achievement or award did Rohan Gupta win and when do they graduate?",
+      "expected_substrings": [
+        "National",
+        "20-05-2025"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_rohan_gupta.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q037"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Tell me about Ananya Singh's resume and project Quantum Optics Simulator."
+        },
+        {
+          "role": "model",
+          "content": "Ananya Singh built Quantum Optics Simulator."
+        }
+      ],
+      "question": "Which achievement or award did Ananya Singh win and when do they graduate?",
+      "expected_substrings": [
+        "INSPIRE",
+        "10-06-2026"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_ananya_singh.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q038"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Tell me about Mohd Zaid's resume and project Rural Road GIS Mapper."
+        },
+        {
+          "role": "model",
+          "content": "Mohd Zaid built Rural Road GIS Mapper."
+        }
+      ],
+      "question": "Which achievement or award did Mohd Zaid win and when do they graduate?",
+      "expected_substrings": [
+        "District",
+        "31-05-2025"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_mohd_zaid.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q039"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "Tell me about Kavya Mishra's resume and project FinGuard Fraud Detector."
+        },
+        {
+          "role": "model",
+          "content": "Kavya Mishra built FinGuard Fraud Detector."
+        }
+      ],
+      "question": "Which achievement or award did Kavya Mishra win and when do they graduate?",
+      "expected_substrings": [
+        "Women",
+        "25-06-2026"
+      ],
+      "expected_sources": [
+        {
+          "filename": "resume_kavya_mishra.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q040"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "What is Aarav Sharma's masked Aadhaar number?"
+        },
+        {
+          "role": "model",
+          "content": "Aarav Sharma's masked Aadhaar number is XXXX-XXXX-4912."
+        }
+      ],
+      "question": "Which bank IFSC code and PIN code are linked to Aarav Sharma's Aadhaar (XXXX-XXXX-4912)?",
+      "expected_substrings": [
+        "SBIN0001234",
+        "201308"
+      ],
+      "expected_sources": [
+        {
+          "filename": "aadhaar_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q041"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "What is Priya Verma's masked Aadhaar number?"
+        },
+        {
+          "role": "model",
+          "content": "Priya Verma's masked Aadhaar number is XXXX-XXXX-7823."
+        }
+      ],
+      "question": "Which bank IFSC code and PIN code are linked to Priya Verma's Aadhaar (XXXX-XXXX-7823)?",
+      "expected_substrings": [
+        "BARB0LUCKNW",
+        "226010"
+      ],
+      "expected_sources": [
+        {
+          "filename": "aadhaar_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q042"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "What is Ananya Singh's masked Aadhaar number?"
+        },
+        {
+          "role": "model",
+          "content": "Ananya Singh's masked Aadhaar number is XXXX-XXXX-6154."
+        }
+      ],
+      "question": "Which bank IFSC code and PIN code are linked to Ananya Singh's Aadhaar (XXXX-XXXX-6154)?",
+      "expected_substrings": [
+        "PUNB0044100",
+        "221005"
+      ],
+      "expected_sources": [
+        {
+          "filename": "aadhaar_ananya_singh.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q043"
+    },
+    {
+      "type": "followup",
+      "prior_history": [
+        {
+          "role": "user",
+          "content": "What is Kavya Mishra's masked Aadhaar number?"
+        },
+        {
+          "role": "model",
+          "content": "Kavya Mishra's masked Aadhaar number is XXXX-XXXX-9301."
+        }
+      ],
+      "question": "Which bank IFSC code and PIN code are linked to Kavya Mishra's Aadhaar (XXXX-XXXX-9301)?",
+      "expected_substrings": [
+        "CNRB0002890",
+        "273001"
+      ],
+      "expected_sources": [
+        {
+          "filename": "aadhaar_kavya_mishra.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q044"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Aarav Sharma's Indian Passport number?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q045"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Priya Verma's blood group?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q046"
+    },
+    {
+      "type": "not_found",
+      "question": "What score did Rohan Gupta get in GATE 2026?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q047"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Ananya Singh's driving license number?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q048"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Mohd Zaid's voter ID EPIC number?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q049"
+    },
+    {
+      "type": "not_found",
+      "question": "Which hostel room number does Kavya Mishra live in?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q050"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Dev Paswan's JEE Advanced All India Rank?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q051"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Neha Yadav's mother's maiden name?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q052"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Aarav Sharma's savings bank account balance in rupees?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q053"
+    },
+    {
+      "type": "not_found",
+      "question": "Which hospital was Priya Verma born in?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q054"
+    },
+    {
+      "type": "not_found",
+      "question": "What was Rohan Gupta's Class X Sanskrit score?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q055"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Ananya Singh's TOEFL score?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q056"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Mohd Zaid's ration card number?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q057"
+    },
+    {
+      "type": "not_found",
+      "question": "Which international airline ticket is booked for Kavya Mishra?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q058"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Ramesh Kumar's tractor registration number?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q059"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Arjun Rathore's NEET UG percentile?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q060"
+    },
+    {
+      "type": "not_found",
+      "question": "What is Rajesh Sharma's personal email address?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q061"
+    },
+    {
+      "type": "not_found",
+      "question": "What is the credit card limit of Aarav Sharma?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q062"
+    },
+    {
+      "type": "not_found",
+      "question": "Which foreign university admitted Priya Verma for MS?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q063"
+    },
+    {
+      "type": "not_found",
+      "question": "What is the electricity consumer number on the marksheet?",
+      "expected_substrings": [],
+      "expected_sources": [],
+      "id": "Q064"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "nsp_central_sector",
+      "citizen_docs": [
+        "marksheet_aarav_sharma.pdf",
+        "income_aarav_sharma.pdf",
+        "aadhaar_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme nsp_central_sector given marksheet_aarav_sharma.pdf, income_aarav_sharma.pdf, aadhaar_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q065"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "nsp_central_sector",
+      "citizen_docs": [
+        "marksheet_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme nsp_central_sector given marksheet_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q066"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "nsp_central_sector",
+      "citizen_docs": [
+        "income_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme nsp_central_sector given income_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "income_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q067"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "nsp_central_sector",
+      "citizen_docs": [
+        "marksheet_ananya_singh.pdf",
+        "income_ananya_singh.pdf",
+        "aadhaar_ananya_singh.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme nsp_central_sector given marksheet_ananya_singh.pdf, income_ananya_singh.pdf, aadhaar_ananya_singh.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_ananya_singh.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q068"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pms_sc_central",
+      "citizen_docs": [
+        "marksheet_priya_verma.pdf",
+        "income_priya_verma.pdf",
+        "caste_priya_verma.pdf",
+        "aadhaar_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pms_sc_central given marksheet_priya_verma.pdf, income_priya_verma.pdf, caste_priya_verma.pdf, aadhaar_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q069"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pms_sc_central",
+      "citizen_docs": [
+        "marksheet_priya_verma.pdf",
+        "caste_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pms_sc_central given marksheet_priya_verma.pdf, caste_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q070"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pms_sc_central",
+      "citizen_docs": [
+        "marksheet_dev_paswan.pdf",
+        "caste_dev_paswan.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pms_sc_central given marksheet_dev_paswan.pdf, caste_dev_paswan.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_dev_paswan.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q071"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_yasasvi",
+      "citizen_docs": [
+        "marksheet_aarav_sharma.pdf",
+        "income_aarav_sharma.pdf",
+        "caste_aarav_sharma.pdf",
+        "aadhaar_aarav_sharma.pdf",
+        "fee_receipt_aarav.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_yasasvi given marksheet_aarav_sharma.pdf, income_aarav_sharma.pdf, caste_aarav_sharma.pdf, aadhaar_aarav_sharma.pdf, fee_receipt_aarav.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q072"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_yasasvi",
+      "citizen_docs": [
+        "marksheet_neha_yadav.pdf",
+        "caste_neha_yadav.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_yasasvi given marksheet_neha_yadav.pdf, caste_neha_yadav.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_neha_yadav.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q073"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_yasasvi",
+      "citizen_docs": [
+        "marksheet_mohd_zaid.pdf",
+        "income_mohd_zaid.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_yasasvi given marksheet_mohd_zaid.pdf, income_mohd_zaid.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_mohd_zaid.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q074"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "aicte_pragati",
+      "citizen_docs": [
+        "marksheet_priya_verma.pdf",
+        "income_priya_verma.pdf",
+        "aadhaar_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme aicte_pragati given marksheet_priya_verma.pdf, income_priya_verma.pdf, aadhaar_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q075"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "aicte_pragati",
+      "citizen_docs": [
+        "marksheet_kavya_mishra.pdf",
+        "income_kavya_mishra.pdf",
+        "aadhaar_kavya_mishra.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme aicte_pragati given marksheet_kavya_mishra.pdf, income_kavya_mishra.pdf, aadhaar_kavya_mishra.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_kavya_mishra.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q076"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "aicte_pragati",
+      "citizen_docs": [
+        "marksheet_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme aicte_pragati given marksheet_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q077"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "aicte_saksham",
+      "citizen_docs": [
+        "udid_disability_arjun.pdf",
+        "marksheet_aarav_sharma.pdf",
+        "income_aarav_sharma.pdf",
+        "aadhaar_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme aicte_saksham given udid_disability_arjun.pdf, marksheet_aarav_sharma.pdf, income_aarav_sharma.pdf, aadhaar_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "udid_disability_arjun.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q078"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "aicte_saksham",
+      "citizen_docs": [
+        "udid_disability_arjun.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme aicte_saksham given udid_disability_arjun.pdf.",
+      "expected_sources": [
+        {
+          "filename": "udid_disability_arjun.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q079"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "nmmss_central",
+      "citizen_docs": [
+        "marksheet_aarav_sharma.pdf",
+        "income_aarav_sharma.pdf",
+        "aadhaar_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme nmmss_central given marksheet_aarav_sharma.pdf, income_aarav_sharma.pdf, aadhaar_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q080"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "nmmss_central",
+      "citizen_docs": [
+        "income_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme nmmss_central given income_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "income_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q081"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_usp_csis",
+      "citizen_docs": [
+        "marksheet_aarav_sharma.pdf",
+        "income_aarav_sharma.pdf",
+        "aadhaar_aarav_sharma.pdf",
+        "fee_receipt_aarav.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_usp_csis given marksheet_aarav_sharma.pdf, income_aarav_sharma.pdf, aadhaar_aarav_sharma.pdf, fee_receipt_aarav.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q082"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_usp_csis",
+      "citizen_docs": [
+        "marksheet_rohan_gupta.pdf",
+        "income_rohan_gupta.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_usp_csis given marksheet_rohan_gupta.pdf, income_rohan_gupta.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_rohan_gupta.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q083"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_vidyalaxmi",
+      "citizen_docs": [
+        "marksheet_aarav_sharma.pdf",
+        "income_aarav_sharma.pdf",
+        "aadhaar_aarav_sharma.pdf",
+        "fee_receipt_aarav.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_vidyalaxmi given marksheet_aarav_sharma.pdf, income_aarav_sharma.pdf, aadhaar_aarav_sharma.pdf, fee_receipt_aarav.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q084"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_vidyalaxmi",
+      "citizen_docs": [
+        "marksheet_kavya_mishra.pdf",
+        "income_kavya_mishra.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_vidyalaxmi given marksheet_kavya_mishra.pdf, income_kavya_mishra.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_kavya_mishra.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q085"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pmkvy_skill_india",
+      "citizen_docs": [
+        "marksheet_mohd_zaid.pdf",
+        "aadhaar_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pmkvy_skill_india given marksheet_mohd_zaid.pdf, aadhaar_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_mohd_zaid.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q086"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pmkvy_skill_india",
+      "citizen_docs": [
+        "marksheet_dev_paswan.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pmkvy_skill_india given marksheet_dev_paswan.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_dev_paswan.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q087"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "naps_apprenticeship",
+      "citizen_docs": [
+        "marksheet_rohan_gupta.pdf",
+        "aadhaar_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme naps_apprenticeship given marksheet_rohan_gupta.pdf, aadhaar_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_rohan_gupta.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q088"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_vishwakarma",
+      "citizen_docs": [
+        "aadhaar_aarav_sharma.pdf",
+        "domicile_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_vishwakarma given aadhaar_aarav_sharma.pdf, domicile_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "aadhaar_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q089"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_kisan",
+      "citizen_docs": [
+        "khatauni_ramesh_kisan.pdf",
+        "aadhaar_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_kisan given khatauni_ramesh_kisan.pdf, aadhaar_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "khatauni_ramesh_kisan.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q090"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_kisan",
+      "citizen_docs": [
+        "khatauni_ramesh_kisan.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_kisan given khatauni_ramesh_kisan.pdf.",
+      "expected_sources": [
+        {
+          "filename": "khatauni_ramesh_kisan.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q091"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_kisan",
+      "citizen_docs": [
+        "marksheet_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_kisan given marksheet_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q092"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_fasal_bima",
+      "citizen_docs": [
+        "khatauni_ramesh_kisan.pdf",
+        "aadhaar_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_fasal_bima given khatauni_ramesh_kisan.pdf, aadhaar_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "khatauni_ramesh_kisan.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q093"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_fasal_bima",
+      "citizen_docs": [
+        "aadhaar_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_fasal_bima given aadhaar_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "aadhaar_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q094"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "ayushman_pmjay",
+      "citizen_docs": [
+        "aadhaar_priya_verma.pdf",
+        "domicile_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme ayushman_pmjay given aadhaar_priya_verma.pdf, domicile_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "aadhaar_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q095"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "ayushman_pmjay",
+      "citizen_docs": [
+        "marksheet_aarav_sharma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme ayushman_pmjay given marksheet_aarav_sharma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q096"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "pm_mudra_yojana",
+      "citizen_docs": [
+        "aadhaar_aarav_sharma.pdf",
+        "domicile_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme pm_mudra_yojana given aadhaar_aarav_sharma.pdf, domicile_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "aadhaar_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q097"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "up_post_matric_dashmottar",
+      "citizen_docs": [
+        "marksheet_priya_verma.pdf",
+        "income_priya_verma.pdf",
+        "caste_priya_verma.pdf",
+        "domicile_priya_verma.pdf",
+        "aadhaar_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme up_post_matric_dashmottar given marksheet_priya_verma.pdf, income_priya_verma.pdf, caste_priya_verma.pdf, domicile_priya_verma.pdf, aadhaar_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q098"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "up_post_matric_dashmottar",
+      "citizen_docs": [
+        "marksheet_aarav_sharma.pdf",
+        "income_aarav_sharma.pdf",
+        "caste_aarav_sharma.pdf",
+        "aadhaar_aarav_sharma.pdf",
+        "fee_receipt_aarav.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme up_post_matric_dashmottar given marksheet_aarav_sharma.pdf, income_aarav_sharma.pdf, caste_aarav_sharma.pdf, aadhaar_aarav_sharma.pdf, fee_receipt_aarav.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q099"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "up_pre_matric_scholarship",
+      "citizen_docs": [
+        "marksheet_priya_verma.pdf",
+        "income_priya_verma.pdf",
+        "caste_priya_verma.pdf",
+        "domicile_priya_verma.pdf",
+        "aadhaar_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme up_pre_matric_scholarship given marksheet_priya_verma.pdf, income_priya_verma.pdf, caste_priya_verma.pdf, domicile_priya_verma.pdf, aadhaar_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q100"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "up_kanya_sumangala",
+      "citizen_docs": [
+        "marksheet_priya_verma.pdf",
+        "income_priya_verma.pdf",
+        "domicile_priya_verma.pdf",
+        "aadhaar_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme up_kanya_sumangala given marksheet_priya_verma.pdf, income_priya_verma.pdf, domicile_priya_verma.pdf, aadhaar_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_priya_verma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q101"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "up_abhyuday_coaching",
+      "citizen_docs": [
+        "marksheet_ananya_singh.pdf",
+        "aadhaar_ananya_singh.pdf",
+        "domicile_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme up_abhyuday_coaching given marksheet_ananya_singh.pdf, aadhaar_ananya_singh.pdf, domicile_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_ananya_singh.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q102"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "up_swami_vivekananda_tablet",
+      "citizen_docs": [
+        "marksheet_aarav_sharma.pdf",
+        "income_aarav_sharma.pdf",
+        "aadhaar_aarav_sharma.pdf",
+        "fee_receipt_aarav.pdf",
+        "domicile_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme up_swami_vivekananda_tablet given marksheet_aarav_sharma.pdf, income_aarav_sharma.pdf, aadhaar_aarav_sharma.pdf, fee_receipt_aarav.pdf, domicile_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_aarav_sharma.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q103"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "up_cm_yuva_udyami",
+      "citizen_docs": [
+        "marksheet_mohd_zaid.pdf",
+        "aadhaar_aarav_sharma.pdf",
+        "domicile_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme up_cm_yuva_udyami given marksheet_mohd_zaid.pdf, aadhaar_aarav_sharma.pdf, domicile_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "marksheet_mohd_zaid.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q104"
+    },
+    {
+      "type": "scheme",
+      "scheme_id": "up_krishak_durghatna_kalyan",
+      "citizen_docs": [
+        "khatauni_ramesh_kisan.pdf",
+        "aadhaar_aarav_sharma.pdf",
+        "domicile_priya_verma.pdf"
+      ],
+      "question": "Check available vs missing documents for scheme up_krishak_durghatna_kalyan given khatauni_ramesh_kisan.pdf, aadhaar_aarav_sharma.pdf, domicile_priya_verma.pdf.",
+      "expected_sources": [
+        {
+          "filename": "khatauni_ramesh_kisan.pdf",
+          "page": 1
+        }
+      ],
+      "id": "Q105"
+    }
+  ]
+}
