@@ -1,0 +1,227 @@
+{
+  "app_name": "AI Citizen Assistant",
+  "tagline": "Find government schemes you qualify for. Free, private, in Hindi and English.",
+  "nav": {
+    "home": "Home",
+    "find_schemes": "Find Schemes",
+    "documents": "My Documents",
+    "ask": "Ask Sahayak",
+    "schemes": "All Schemes",
+    "help": "Help",
+    "privacy": "Privacy",
+    "lang_toggle": "हिन्दी",
+    "theme_toggle": "Dark mode",
+    "contrast_toggle": "High contrast"
+  },
+  "trust": {
+    "free": "100% Free",
+    "private": "IDs & phones hidden automatically",
+    "official": "Official portals only",
+    "bilingual": "English & हिन्दी"
+  },
+  "home": {
+    "hero_title": "Find the government schemes built for your family.",
+    "hero_subtitle": "Answer a few simple questions or upload your papers. In under 2 minutes, see which schemes match you, which documents you need, and where to apply.",
+    "cta_find": "Find schemes for me",
+    "cta_upload": "Upload my documents",
+    "cta_example": "See an example (Priya, 19, B.Sc student)",
+    "audience_heading": "I am a...",
+    "audiences": [
+      {
+        "role": "student",
+        "label": "Student",
+        "desc": "Scholarships & education loans"
+      },
+      {
+        "role": "farmer",
+        "label": "Farmer",
+        "desc": "Income support, insurance & solar"
+      },
+      {
+        "role": "homemaker",
+        "label": "Woman",
+        "desc": "Maternity, LPG & daughter support"
+      },
+      {
+        "role": "artisan",
+        "label": "Worker or artisan",
+        "desc": "Toolkits, training & daily wages"
+      },
+      {
+        "role": "senior",
+        "label": "Senior citizen",
+        "desc": "Monthly pension & health cover"
+      },
+      {
+        "role": "entrepreneur",
+        "label": "Business owner",
+        "desc": "Mudra, vendor & startup loans"
+      },
+      {
+        "role": "disability",
+        "label": "Person with disability",
+        "desc": "Assistive devices & scholarships"
+      }
+    ],
+    "steps_heading": "How it works",
+    "step1_title": "1. Share basic details",
+    "step1_desc": "Tap through 6 to 8 simple questions, or upload a marksheet or income certificate.",
+    "step2_title": "2. See clear matches",
+    "step2_desc": "We check every verified rule and highlight the top schemes with exact rupee benefits.",
+    "step3_title": "3. Prepare & apply",
+    "step3_desc": "Tick off your documents, read numbered steps, and open the official website directly.",
+    "categories_heading": "Browse by need",
+    "faq_heading": "Common questions",
+    "fraud_title": "Stay safe from fraud",
+    "fraud_body": "Apply only on official .gov.in websites or at an authorised Jan Seva Kendra (CSC). Never pay an agent for a free government form, and never share your OTP.",
+    "faq": [
+      {
+        "q": "Is AI Citizen Assistant free?",
+        "a": "Yes. Checking schemes, reading your documents, and asking Sahayak are completely free."
+      },
+      {
+        "q": "Do I need to enter my Aadhaar or PAN number?",
+        "a": "No. We never ask for Aadhaar, PAN, or bank account numbers. If your uploaded paper has them, we hide them automatically before AI reads anything."
+      },
+      {
+        "q": "Can I use it without uploading any document?",
+        "a": "Yes. Use Find Schemes to answer simple tap questions — no PDF needed."
+      },
+      {
+        "q": "What if I only have photos on my phone?",
+        "a": "You can upload PDFs or clear JPG/PNG photos, and edit any detail we read."
+      },
+      {
+        "q": "Which states are covered?",
+        "a": "All Central Government schemes (all India) plus Uttar Pradesh state schemes. Citizens from any state can check all Central schemes."
+      },
+      {
+        "q": "Can I apply directly on this website?",
+        "a": "No. We are an independent helper. We help you check eligibility and prepare papers, then send you to the official .gov.in portal."
+      }
+    ]
+  },
+  "categories": {
+    "scholarships": "Scholarships & Education",
+    "loans": "Loans & Business",
+    "farming": "Farming & Rural",
+    "health": "Health & Care",
+    "skills": "Skills & Jobs",
+    "women": "Women & Family",
+    "pension": "Pension & Savings",
+    "housing": "Housing & Basics"
+  },
+  "wizard": {
+    "title": "Find Schemes for Me",
+    "subtitle": "One quick question at a time. No Aadhaar or ID number needed.",
+    "back": "Back",
+    "next": "Next",
+    "skip": "Skip",
+    "see_results": "See matching schemes",
+    "start_over": "Start over",
+    "step_of": "Step",
+    "q_state": "Which state or Union Territory do you live in?",
+    "why_state": "Why we ask: Central schemes cover all of India; state schemes depend on your residence.",
+    "q_age": "How old are you?",
+    "why_age": "Why we ask: Many scholarships, loans, and pensions have minimum or maximum age limits.",
+    "q_role": "Which best describes you?",
+    "why_role": "Why we ask: Helps us highlight schemes meant for students, farmers, workers, or seniors.",
+    "q_category": "What is your social category?",
+    "why_category": "Why we ask: Several scholarships and business loans reserve extra support by category.",
+    "q_gender": "Gender",
+    "why_gender": "Why we ask: Some scholarships and family schemes are specifically for women and girls.",
+    "q_income": "Approximate yearly family income",
+    "why_income": "Why we ask: Most welfare schemes check whether family income is below a yearly limit.",
+    "q_education": "Current or highest education level",
+    "why_education": "Why we ask: Pre-matric, Class 12, and college scholarships have different rules.",
+    "q_marks": "Latest exam marks percentage",
+    "why_marks": "Why we ask: Merit scholarships require minimum marks (such as 50%, 60%, or 80%).",
+    "q_disability": "Do you have a benchmark disability (UDID)?",
+    "why_disability": "Why we ask: Unlocks assistive device grants and dedicated disability scholarships.",
+    "state_note": "State-specific schemes are currently covered for Uttar Pradesh. For all other states and UTs, Central Government schemes are shown below.",
+    "group_qualify": "Top matches for you",
+    "group_check": "Check these too",
+    "group_not": "Not for you right now",
+    "show_not": "Show schemes that don't match",
+    "hide_not": "Hide schemes that don't match",
+    "doc_checklist": "Document checklist",
+    "how_to_apply": "How to apply",
+    "official_site": "Official website",
+    "ask_sahayak": "Ask Sahayak",
+    "download_pdf": "Print / PDF",
+    "share_whatsapp": "WhatsApp",
+    "last_verified": "Last verified",
+    "no_results": "No schemes matched those filters. Try clearing one filter or browsing All Schemes."
+  },
+  "docs": {
+    "title": "My Documents",
+    "subtitle": "Upload PDFs or clear photos of your certificates. ID numbers, phones, and emails are hidden automatically before AI reads anything.",
+    "step1": "1. Upload documents",
+    "step2": "2. Check what we found",
+    "step3": "3. See matching schemes",
+    "drop_title": "Choose a PDF or photo (JPG, PNG)",
+    "drop_hint": "Up to 10 files, 15 MB each. Kept only for this visit.",
+    "select_btn": "Select files",
+    "camera_btn": "Take a photo",
+    "sample_link": "Load sample documents (Demo)",
+    "see_where": "See where",
+    "save_check": "Save & find my schemes",
+    "ask_docs": "Ask Sahayak about my documents",
+    "summarize_btn": "Summarize my documents",
+    "missing_marks_hint": "Marksheet not uploaded yet — upload one to check marks-based scholarships.",
+    "missing_income_hint": "Income certificate not uploaded yet — upload one to check income limits."
+  },
+  "ask": {
+    "title": "Ask Sahayak",
+    "subtitle": "Ask in English, हिन्दी, or Hinglish. Grounded in your documents and verified scheme rules.",
+    "placeholder": "Type your question here...",
+    "send": "Send",
+    "stop": "Stop",
+    "regen": "Try again",
+    "copy": "Copy",
+    "copied": "Copied",
+    "whatsapp": "WhatsApp",
+    "voice_start": "Speak",
+    "voice_stop": "Listening...",
+    "read_aloud": "Listen",
+    "stop_reading": "Stop",
+    "helpful": "Helpful",
+    "not_helpful": "Not helpful",
+    "clear_chat": "Clear chat",
+    "floating_label": "Ask Sahayak"
+  },
+  "schemes_page": {
+    "title": "All Verified Schemes",
+    "subtitle": "Every link below was checked and leads directly to an official government portal. Check the official site for application dates.",
+    "search_placeholder": "Search by scheme name, benefit, or keyword...",
+    "all_categories": "All categories",
+    "all_levels": "All India + UP",
+    "central_only": "Central (All India)",
+    "up_only": "Uttar Pradesh",
+    "view_details": "View details",
+    "check_qualify": "Check if I qualify",
+    "who_can_apply": "Who can apply",
+    "benefit": "Benefit",
+    "docs_needed": "Documents needed"
+  },
+  "help": {
+    "title": "Help & Common Questions",
+    "subtitle": "Simple answers on using AI Citizen Assistant safely."
+  },
+  "privacy": {
+    "title": "Your Privacy & Safety",
+    "subtitle": "How we protect your documents and personal details.",
+    "clear_btn": "Clear my data now",
+    "cleared_msg": "Your uploaded files, answers, and chat history have been cleared."
+  },
+  "footer": {
+    "not_legal": "Independent helper, not a government website. Always apply on the official site and confirm dates there.",
+    "clear_data": "Clear my data"
+  },
+  "errors": {
+    "not_found_title": "Page not found",
+    "not_found_body": "The page you are looking for does not exist or has moved.",
+    "back_home": "Go back Home",
+    "retry": "Retry"
+  }
+}
