@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+{% block title %}Usage Insights — AI Citizen Assistant{% endblock %}
+
+{% block head_extra %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="space-y-1">
+      <h1 class="text-2xl sm:text-3xl font-bold text-civic-navy dark:text-white">Usage Insights</h1>
+      <p class="text-sm text-slate-600 dark:text-slate-400">Real operational metrics from session, query category, and feedback logs (never document text).</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <span id="demo-data-badge" class="hidden px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-300">
+        Sample Demo Data Active
+      </span>
+      <button id="toggle-demo-data-btn" type="button"
+              class="px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">
+        Load sample data
+      </button>
+    </div>
+  </div>
+
+  <!-- KPI Cards -->
+  <div class="grid grid-cols-2 lg:grid-cols-6 gap-4">
+    {% set kpis = [
+      ('kpi-sessions', 'Total Sessions'),
+      ('kpi-docs', 'Documents Processed'),
+      ('kpi-queries', 'Questions Asked'),
+      ('kpi-latency', 'Avg Latency (ms)'),
+      ('kpi-grounding', 'Grounded Answer Rate'),
+      ('kpi-thumbs', 'Helpful Rating')
+    ] %}
+    {% for elem_id, label in kpis %}
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
+      <p class="text-xs font-medium text-slate-500">{{ label }}</p>
+      <p id="{{ elem_id }}" class="text-2xl font-extrabold text-civic-navy dark:text-white mt-1">--</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Empty State when 0 queries -->
+  <div id="insights-empty-state" class="hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 text-center space-y-3">
+    <p class="text-base font-bold text-slate-800 dark:text-slate-200">No questions logged yet</p>
+    <p class="text-sm text-slate-500">Ask a question in the Workspace or click <strong>Load sample data</strong> above to preview charts with demo records.</p>
+  </div>
+
+  <!-- Bar Charts -->
+  <div id="insights-charts-grid" class="grid lg:grid-cols-2 gap-6">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+      <h2 class="font-bold text-sm mb-3 text-slate-800 dark:text-slate-200">Questions Per Day (Bar Chart)</h2>
+      <canvas id="chart-daily" height="140"></canvas>
+    </div>
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+      <h2 class="font-bold text-sm mb-3 text-slate-800 dark:text-slate-200">Top Question Categories</h2>
+      <canvas id="chart-categories" height="140"></canvas>
+    </div>
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+      <h2 class="font-bold text-sm mb-3 text-slate-800 dark:text-slate-200">Search Latency vs. AI Response Latency (ms)</h2>
+      <canvas id="chart-latency" height="140"></canvas>
+    </div>
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+      <h2 class="font-bold text-sm mb-3 text-slate-800 dark:text-slate-200">Most-Cited Documents</h2>
+      <ul id="cited-docs-list" class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+        <li class="text-slate-400 italic">Loading...</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Recent Activity Table -->
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+    <h2 class="font-bold text-base mb-3 text-slate-900 dark:text-white">Recent Activity (Metadata Only)</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-left">
+        <thead class="text-xs uppercase text-slate-500 border-b border-slate-200 dark:border-slate-800">
+          <tr>
+            <th class="py-2 pr-4">Timestamp (UTC)</th>
+            <th class="py-2 pr-4">Mode</th>
+            <th class="py-2 pr-4">Category</th>
+            <th class="py-2 pr-4">Lang</th>
+            <th class="py-2 pr-4">Search Mode</th>
+            <th class="py-2 pr-4">Latency</th>
+            <th class="py-2">Outcome</th>
+          </tr>
+        </thead>
+        <tbody id="recent-activity-tbody" class="divide-y divide-slate-100 dark:divide-slate-800"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { apiFetch, showToast, escapeHtml } = window.CitizenApp;
+  const toggleBtn = document.getElementById("toggle-demo-data-btn");
+  const demoBadge = document.getElementById("demo-data-badge");
+  const emptyState = document.getElementById("insights-empty-state");
+  const chartsGrid = document.getElementById("insights-charts-grid");
+  let dailyChart = null, catChart = null, latChart = null;
+  let hasDemo = false;
+
+  async function loadInsights() {
+    const resp = await fetch("/api/analytics");
+    if (!resp.ok) return;
+    const data = await resp.json();
+    const k = data.kpis;
+    hasDemo = Boolean(k.has_demo_data);
+
+    document.getElementById("kpi-sessions").textContent = k.total_sessions;
+    document.getElementById("kpi-docs").textContent = k.documents_processed;
+    document.getElementById("kpi-queries").textContent = k.questions_asked;
+    document.getElementById("kpi-latency").textContent = `${k.avg_latency_ms}`;
+    document.getElementById("kpi-grounding").textContent = `${k.grounding_rate}%`;
+    document.getElementById("kpi-thumbs").textContent = k.total_feedback ? `${k.thumbs_up_ratio}%` : "N/A";
+
+    demoBadge.classList.toggle("hidden", !hasDemo);
+    toggleBtn.textContent = hasDemo ? "Clear sample data" : "Load sample data";
+
+    emptyState.classList.toggle("hidden", k.questions_asked > 0);
+    chartsGrid.classList.toggle("hidden", k.questions_asked === 0);
+
+    if (dailyChart) dailyChart.destroy();
+    dailyChart = new Chart(document.getElementById("chart-daily"), {
+      type: "bar",
+      data: {
+        labels: data.questions_per_day.labels,
+        datasets: [{ label: "Questions", data: data.questions_per_day.counts, backgroundColor: "#F97316" }]
+      },
+      options: { responsive: true, plugins: { legend: { display: false } } }
+    });
+
+    if (catChart) catChart.destroy();
+    catChart = new Chart(document.getElementById("chart-categories"), {
+      type: "bar",
+      data: {
+        labels: data.top_categories.labels,
+        datasets: [{ label: "Count", data: data.top_categories.counts, backgroundColor: "#0F2942" }]
+      },
+      options: { responsive: true, plugins: { legend: { display: false } } }
+    });
+
+    const lat = data.latency_series || [];
+    if (latChart) latChart.destroy();
+    latChart = new Chart(document.getElementById("chart-latency"), {
+      type: "bar",
+      data: {
+        labels: lat.map((_, i) => `Q${i + 1}`),
+        datasets: [
+          { label: "Search (ms)", data: lat.map((x) => x.retrieval_ms), backgroundColor: "#15803D" },
+          { label: "AI Response (ms)", data: lat.map((x) => x.llm_ms), backgroundColor: "#F97316" }
+        ]
+      },
+      options: { responsive: true, scales: { x: { stacked: true }, y: { stacked: true } } }
+    });
+
+    const citedList = document.getElementById("cited-docs-list");
+    if (!data.most_cited_docs.length) {
+      citedList.innerHTML = '<li class="text-slate-400 italic">No citations recorded yet.</li>';
+    } else {
+      citedList.innerHTML = data.most_cited_docs
+        .map((d) => `<li class="flex justify-between items-center p-2 rounded-lg bg-slate-50 dark:bg-slate-800/60"><span class="font-mono text-xs truncate">${escapeHtml(d.filename)}</span><span class="px-2 py-0.5 rounded-full bg-civic-navy text-white text-xs font-semibold">${d.count}</span></li>`)
+        .join("");
+    }
+
+    const tbody = document.getElementById("recent-activity-tbody");
+    if (!data.recent_activity.length) {
+      tbody.innerHTML = '<tr><td colspan="7" class="py-4 text-center text-slate-400 italic">No query logs yet.</td></tr>';
+    } else {
+      tbody.innerHTML = data.recent_activity
+        .map((r) => `
+          <tr>
+            <td class="py-2 pr-4 font-mono text-xs">${escapeHtml(r.timestamp)}</td>
+            <td class="py-2 pr-4 uppercase text-xs font-semibold">${escapeHtml(r.mode)}</td>
+            <td class="py-2 pr-4">${escapeHtml(r.category)}</td>
+            <td class="py-2 pr-4 uppercase text-xs">${escapeHtml(r.language)}</td>
+            <td class="py-2 pr-4 text-xs">${escapeHtml(r.retrieval_mode)}</td>
+            <td class="py-2 pr-4 text-xs">${r.total_latency_ms} ms</td>
+            <td class="py-2 text-xs">
+              <span class="px-2 py-0.5 rounded-full ${r.is_not_found ? "bg-amber-100 text-amber-800" : "bg-emerald-100 text-emerald-800"}">
+                ${r.is_not_found ? "Not Found" : "Grounded"}
+              </span>
+              ${r.is_demo ? '<span class="ml-1 text-[10px] text-slate-400">(sample)</span>' : ''}
+            </td>
+          </tr>`)
+        .join("");
+    }
+  }
+
+  toggleBtn.addEventListener("click", async () => {
+    const action = hasDemo ? "clear" : "seed";
+    const resp = await apiFetch("/api/demo-insights", {
+      method: "POST",
+      body: JSON.stringify({ action }),
+    });
+    if (resp.ok) {
+      showToast(action === "seed" ? "Sample usage data loaded." : "Sample usage data cleared.", "success");
+      loadInsights();
+    }
+  });
+
+  loadInsights();
+});
+</script>
+{% endblock %}

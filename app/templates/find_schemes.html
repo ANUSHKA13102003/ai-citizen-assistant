@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}{{ t.wizard.title }} — {{ t.app_name }}{% endblock %}
+{% block content %}
+<div class="wizard-fullscreen" id="wizardFullscreen">
+  <div id="wizardContainer" class="wizard-card">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px;">
+      <span id="wizardStepLabel" class="muted" style="font-weight:600;"></span>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span id="liveMatchPill" class="badge badge-info"></span>
+        <button type="button" id="wizardSkipBtn" class="btn btn-secondary btn-sm">{{ t.wizard.skip }}</button>
+      </div>
+    </div>
+    <div class="progress-track">
+      <div id="wizardProgressFill" class="progress-fill" style="width:15%;"></div>
+    </div>
+    <h1 id="wizardQuestionTitle" style="font-size:clamp(1.55rem,2.8vw,2.1rem);margin-bottom:6px;"></h1>
+    <p id="wizardWhyAsk" class="muted" style="font-size:0.94rem;margin-bottom:20px;"></p>
+    <div id="wizardQuestionBody"></div>
+    <div class="wizard-bar">
+      <button type="button" id="wizardBackBtn" class="btn btn-secondary">{{ t.wizard.back }}</button>
+      <button type="button" id="wizardNextBtn" class="btn btn-cta">{{ t.wizard.next }}</button>
+    </div>
+  </div>
+
+  <div id="wizardResults" style="display:none;max-width:1040px;margin:0 auto;width:100%;">
+    {% if is_example %}
+    <div class="alert-info" style="margin-bottom:18px;">
+      <strong>{% if lang == 'hi' %}उदाहरण परिणाम:{% else %}Example result:{% endif %}</strong>
+      {% if lang == 'hi' %}प्रिया (19 वर्ष, B.Sc छात्रा, उत्तर प्रदेश, पारिवारिक आय ₹2,40,000){% else %}Priya (19, B.Sc student, Uttar Pradesh, family income ₹2,40,000/year){% endif %}
+    </div>
+    {% endif %}
+
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;">
+      <div>
+        <h1 id="resultsHeadline" style="font-size:clamp(1.65rem,3vw,2.3rem);margin-bottom:6px;"></h1>
+        <div id="resultsSummaryBadges" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+      </div>
+      <div class="btn-row">
+        <button type="button" id="myListToggleBtn" class="btn btn-secondary btn-sm">My list (<span id="myListCount">0</span>)</button>
+        <button type="button" id="wizardStartOverBtn" class="btn btn-secondary btn-sm">{{ t.wizard.start_over }}</button>
+      </div>
+    </div>
+
+    <div id="myListDrawer" class="card-soft" style="display:none;margin-bottom:20px;"></div>
+    <div id="missingFieldPrompt" class="alert-info" style="display:none;margin-bottom:16px;"></div>
+    <div id="stateScopeNote" class="alert-info" style="display:none;margin-bottom:16px;">{{ t.wizard.state_note }}</div>
+
+    <div id="groupQualifySection" style="margin-bottom:32px;">
+      <h2>{{ t.wizard.group_qualify }}</h2>
+      <div id="groupQualifyList" class="grid-2"></div>
+    </div>
+
+    <div id="groupCheckSection" style="margin-bottom:32px;">
+      <h2>{{ t.wizard.group_check }}</h2>
+      <div id="groupCheckList" class="grid-2"></div>
+    </div>
+
+    <div id="groupNotSection" style="margin-bottom:28px;">
+      <button type="button" id="toggleNotEligibleBtn" class="btn btn-secondary btn-sm" style="margin-bottom:12px;">
+        {{ t.wizard.show_not }}
+      </button>
+      <div id="groupNotList" class="grid-2" style="display:none;"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.WIZARD_INITIAL = {
+    answers: {{ initial_answers | tojson }},
+    checkedDocs: {{ checked_docs | tojson }},
+    autoResults: {{ auto_results | tojson }},
+    preselectedScheme: {{ preselected_scheme | tojson }},
+    allStates: {{ all_states | tojson }}
+  };
+</script>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/find_schemes.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block title %}{{ t.docs.title }} — {{ t.app_name }}{% endblock %}
+{% block content %}
+<div style="margin-bottom:24px;">
+  <h1>{{ t.docs.title }}</h1>
+  <p class="muted" style="max-width:66ch;">{{ t.docs.subtitle }}</p>
+</div>
+
+<div class="grid" style="gap:24px;">
+  <!-- Step 1: Upload -->
+  <section class="card" aria-labelledby="step1-h">
+    <h2 id="step1-h">{{ t.docs.step1 }}</h2>
+    <div id="docDropzone" class="dropzone" tabindex="0">
+      <p style="font-weight:700;margin-bottom:6px;">{{ t.docs.drop_title }}</p>
+      <p class="muted" style="font-size:0.92rem;margin-bottom:16px;">{{ t.docs.drop_hint }}</p>
+      <div class="btn-row" style="justify-content:center;">
+        <label class="btn btn-cta btn-sm" style="cursor:pointer;">
+          <span>{{ t.docs.select_btn }}</span>
+          <input id="docFileInput" type="file" accept=".pdf,.jpg,.jpeg,.png" multiple hidden>
+        </label>
+        <label class="btn btn-secondary btn-sm" style="cursor:pointer;">
+          <span>{{ t.docs.camera_btn }}</span>
+          <input id="cameraFileInput" type="file" accept="image/*" capture="environment" hidden>
+        </label>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+      <button type="button" id="loadDemoDocsBtn" class="link-quiet">{{ t.docs.sample_link }}</button>
+      <span id="uploadStatusText" class="muted" style="font-size:0.92rem;"></span>
+    </div>
+
+    <div id="privacyRedactionChip" class="badge badge-info" style="display:none;margin-top:12px;"></div>
+    <div id="uploadedDocsList" class="grid" style="margin-top:16px;"></div>
+  </section>
+
+  <!-- Step 2: Check what we found -->
+  <section id="step2Section" class="card" aria-labelledby="step2-h">
+    <h2 id="step2-h">{{ t.docs.step2 }}</h2>
+    <div id="missingDocHints" style="margin-bottom:16px;"></div>
+    <div id="foundCardsGrid" class="grid-2" style="margin-bottom:18px;"></div>
+
+    <details id="manualEditDetails">
+      <summary style="font-weight:600;cursor:pointer;">{% if lang == 'hi' %}सभी विवरण देखें या बदलें{% else %}Edit or add details manually{% endif %}</summary>
+      <form id="profileDetailsForm" class="grid-2" style="margin-top:14px;">
+        <div>
+          <label for="pfState">{{ t.wizard.q_state }}</label>
+          <input id="pfState" name="state" type="text" placeholder="e.g. Uttar Pradesh">
+        </div>
+        <div>
+          <label for="pfAge">{{ t.wizard.q_age }}</label>
+          <input id="pfAge" name="age" type="number" min="1" max="110" placeholder="e.g. 20">
+        </div>
+        <div>
+          <label for="pfOccupation">{{ t.wizard.q_role }}</label>
+          <select id="pfOccupation" name="occupation">
+            <option value="">—</option>
+            <option value="student">Student</option>
+            <option value="farmer">Farmer</option>
+            <option value="artisan">Artisan / Craftsperson</option>
+            <option value="worker">Worker</option>
+            <option value="entrepreneur">Small Business / Vendor</option>
+            <option value="job_seeker">Job Seeker</option>
+            <option value="homemaker">Homemaker</option>
+            <option value="senior">Senior Citizen</option>
+          </select>
+        </div>
+        <div>
+          <label for="pfCategory">{{ t.wizard.q_category }}</label>
+          <select id="pfCategory" name="category">
+            <option value="">—</option>
+            <option value="General">General</option>
+            <option value="OBC">OBC</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="EWS">EWS</option>
+            <option value="Minority">Minority</option>
+          </select>
+        </div>
+        <div>
+          <label for="pfGender">{{ t.wizard.q_gender }}</label>
+          <select id="pfGender" name="gender">
+            <option value="">—</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="pfIncome">{{ t.wizard.q_income }} (₹)</label>
+          <input id="pfIncome" name="annual_income_inr" type="number" min="0" step="1000" placeholder="e.g. 240000">
+        </div>
+        <div>
+          <label for="pfMarks">{{ t.wizard.q_marks }}</label>
+          <input id="pfMarks" name="marks_percent" type="number" min="0" max="100" step="0.1" placeholder="e.g. 78.2">
+        </div>
+        <div>
+          <label for="pfEdu">{{ t.wizard.q_education }}</label>
+          <select id="pfEdu" name="education_level">
+            <option value="">—</option>
+            <option value="class_9_10">Class 9–10</option>
+            <option value="class_11_12">Class 11–12 / Diploma</option>
+            <option value="diploma">Diploma / ITI</option>
+            <option value="undergraduate">College / Degree (UG)</option>
+            <option value="technical_degree">Technical Degree (B.Tech / M.Tech)</option>
+            <option value="postgraduate">Postgraduate (PG)</option>
+          </select>
+        </div>
+      </form>
+    </details>
+  </section>
+
+  <!-- Step 3: See results / Summarize / Ask -->
+  <section class="card" aria-labelledby="step3-h">
+    <h2 id="step3-h">{{ t.docs.step3 }}</h2>
+    <div class="btn-row">
+      <button type="button" id="saveAndFindBtn" class="btn btn-cta">{{ t.docs.save_check }}</button>
+      <a href="{{ url_for('pages.ask') }}" class="btn btn-secondary">{{ t.docs.ask_docs }}</a>
+      <button type="button" id="summarizeDocsBtn" class="btn btn-secondary">{{ t.docs.summarize_btn }}</button>
+    </div>
+    <div id="summaryOutput" style="display:none;margin-top:18px;"></div>
+  </section>
+</div>
+
+<script>
+  window.DOCS_INITIAL = {
+    docs: {{ initial_docs | tojson }},
+    insights: {{ initial_insights | tojson }},
+    profile: {{ initial_profile | tojson }},
+    summary: {{ initial_summary | tojson }}
+  };
+</script>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/documents.js') }}"></script>
+{% endblock %}

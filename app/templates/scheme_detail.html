@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}{{ scheme.name_hi if lang == 'hi' else scheme.name }} — {{ t.app_name }}{% endblock %}
+{% block content %}
+<div style="max-width:900px;margin:0 auto;">
+  <p style="margin-bottom:14px;"><a href="{{ url_for('pages.schemes') }}">&larr; {{ t.nav.schemes }}</a></p>
+  <article class="card">
+    <div
+      style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px;">
+      <span class="badge cat-bg-{{ scheme.category }}">{{ t.categories.get(scheme.category, scheme.category | title)
+        }}</span>
+      <span class="muted" style="font-size:0.88rem;">{{ t.wizard.last_verified }}: {{ scheme.last_verified }}</span>
+    </div>
+    <h1>{{ scheme.name_hi if lang == 'hi' else scheme.name }}</h1>
+    <p class="muted">{{ scheme.ministry }}</p>
+
+    <div class="card-soft" style="margin:18px 0;">
+      <h2 style="font-size:1.1rem;margin-bottom:6px;">{{ t.schemes_page.benefit }}</h2>
+      <div class="benefit-figure" style="margin:0;">{{ scheme.benefit_hi if lang == 'hi' else scheme.benefit }}</div>
+    </div>
+
+    <div style="margin:20px 0;">
+      <h3>{{ t.schemes_page.who_can_apply }}</h3>
+      <p>{{ scheme.who_hi if lang == 'hi' else scheme.who }}</p>
+    </div>
+
+    <div style="margin:20px 0;">
+      <h3>{{ t.schemes_page.docs_needed }}</h3>
+      <ul style="padding-left:20px;margin:8px 0;">
+        {% for doc in scheme.required_documents %}
+        <li style="margin-bottom:8px;">
+          <strong>{{ doc }}</strong>
+          <span class="muted" style="font-size:0.88rem;">
+            {% if 'Income' in doc or 'Caste' in doc or 'Domicile' in doc %}
+            — {% if lang == 'hi' %}(कहाँ बनवाएँ: नज़दीकी जन सेवा केंद्र / तहसील / e-District पोर्टल){% else %}(Where to
+            get it: Local Tehsil / Jan Seva Kendra CSC / State e-District portal){% endif %}
+            {% elif 'Aadhaar' in doc %}
+            — {% if lang == 'hi' %}(कहाँ बनवाएँ: नज़दीकी आधार केंद्र या बैंक/डाकघर){% else %}(Where to get it: Nearest
+            Aadhaar Seva Kendra, bank, or post office){% endif %}
+            {% elif 'Disability' in doc or 'UDID' in doc %}
+            — {% if lang == 'hi' %}(कहाँ बनवाएँ: जिला अस्पताल / स्वावलंबन पोर्टल){% else %}(Where to get it: District
+            Medical Board / Swavlamban UDID portal){% endif %}
+            {% elif 'Bank' in doc %}
+            — {% if lang == 'hi' %}(कहाँ बनवाएँ: नज़दीकी बैंक शाखा, आधार से लिंक कराएँ){% else %}(Where to get it:
+            Nearest bank branch; ensure Aadhaar is seeded){% endif %}
+            {% elif 'Bonafide' in doc or 'Marksheet' in doc or 'Fee' in doc %}
+            — {% if lang == 'hi' %}(कहाँ से लें: अपने स्कूल या कॉलेज कार्यालय से){% else %}(Where to get it: Your school
+            or college office){% endif %}
+            {% endif %}
+          </span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div style="margin:20px 0;">
+      <h3>{{ t.wizard.how_to_apply }}</h3>
+      <ol style="padding-left:20px;margin:8px 0;">
+        {% for st in apply_steps %}
+        <li style="margin-bottom:8px;">{{ st }}</li>
+        {% endfor %}
+      </ol>
+      <p class="muted" style="font-size:0.9rem;margin-top:8px;">
+        {% if lang == 'hi' %}आवेदन की अंतिम तारीख और नए नियम हमेशा आधिकारिक वेबसाइट पर जाँचें।{% else %}Check the
+        official site for application dates and current deadlines.{% endif %}
+      </p>
+    </div>
+
+    <div class="btn-row" style="margin-top:24px;">
+      <a href="{{ scheme.official_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-cta">{{
+        t.wizard.official_site }}</a>
+      <a href="{{ url_for('pages.find_schemes', scheme=scheme.slug or scheme.id) }}" class="btn btn-primary">{{
+        t.schemes_page.check_qualify }}</a>
+      <a href="{{ url_for('pages.ask', scheme=scheme.slug or scheme.id) }}" class="btn btn-secondary">{{
+        t.wizard.ask_sahayak }}</a>
+    </div>
+  </article>
+</div>
+{% endblock %}

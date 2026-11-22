@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" data-theme="light" data-scale="md" data-contrast="normal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>{% block title %}{{ t.app_name }} — {{ t.tagline }}{% endblock %}</title>
+  <meta name="description" content="{{ t.tagline }}">
+  <meta property="og:title" content="{{ t.app_name }}">
+  <meta property="og:description" content="{{ t.tagline }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ url_for('static', filename='img/banner.svg', _external=True) }}">
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/favicon.svg') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+  <script>
+    (function () {
+      var theme = localStorage.getItem("citizen_theme");
+      if (theme === "dark" || theme === "light") document.documentElement.setAttribute("data-theme", theme);
+      var scale = localStorage.getItem("citizen_scale");
+      if (scale === "sm" || scale === "md" || scale === "lg") document.documentElement.setAttribute("data-scale", scale);
+      var contrast = localStorage.getItem("citizen_contrast");
+      if (contrast === "high" || contrast === "normal") document.documentElement.setAttribute("data-contrast", contrast);
+    })();
+  </script>
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="{{ url_for('pages.index') }}" class="brand" aria-label="{{ t.app_name }}">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect width="36" height="36" rx="10" fill="var(--primary)"/>
+          <path d="M9 17.5L18 10L27 17.5V26.5C27 27.3 26.3 28 25.5 28H10.5C9.7 28 9 27.3 9 26.5V17.5Z" fill="#FBF7F0"/>
+          <circle cx="18" cy="19.5" r="4" fill="var(--saffron)"/>
+          <path d="M14 27.5C14 25.3 15.8 24 18 24C20.2 24 22 25.3 22 27.5" fill="var(--primary)"/>
+        </svg>
+        <span>{{ t.app_name }}</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="{{ url_for('pages.index') }}" class="{% if active_page == 'home' %}active{% endif %}">{{ t.nav.home }}</a>
+        <a href="{{ url_for('pages.find_schemes') }}" class="{% if active_page == 'find_schemes' %}active{% endif %}">{{ t.nav.find_schemes }}</a>
+        <a href="{{ url_for('pages.documents') }}" class="{% if active_page == 'documents' %}active{% endif %}">{{ t.nav.documents }}</a>
+        <a href="{{ url_for('pages.ask') }}" class="{% if active_page == 'ask' %}active{% endif %}">{{ t.nav.ask }}</a>
+        <a href="{{ url_for('pages.schemes') }}" class="{% if active_page == 'schemes' %}active{% endif %}">{{ t.nav.schemes }}</a>
+        <a href="{{ url_for('pages.help_page') }}" class="{% if active_page == 'help' %}active{% endif %}">{{ t.nav.help }}</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="a11y-group" role="group" aria-label="Text size">
+          <button type="button" class="a11y-btn scale-btn" data-scale="sm" aria-label="Smaller text">A-</button>
+          <button type="button" class="a11y-btn scale-btn active" data-scale="md" aria-label="Default text">A</button>
+          <button type="button" class="a11y-btn scale-btn" data-scale="lg" aria-label="Larger text">A+</button>
+        </div>
+        <button type="button" id="contrastToggleBtn" class="icon-btn" aria-label="{{ t.nav.contrast_toggle }}" title="{{ t.nav.contrast_toggle }}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18z" fill="currentColor"/></svg>
+        </button>
+        <button type="button" id="langToggleBtn" class="lang-btn" data-next-lang="{{ 'hi' if lang == 'en' else 'en' }}" aria-label="Switch language">
+          <span>{{ t.nav.lang_toggle }}</span>
+        </button>
+        <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="{{ t.nav.theme_toggle }}" title="{{ t.nav.theme_toggle }}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    {% block full_bleed_top %}{% endblock %}
+    <div class="container {% block main_pad_class %}page-pad{% endblock %}">
+      {% block content %}{% endblock %}
+    </div>
+    {% block full_bleed_bottom %}{% endblock %}
+  </main>
+
+  {% if active_page != 'ask' %}
+  <a href="{{ url_for('pages.ask') }}" class="floating-sahayak" aria-label="{{ t.ask.floating_label }}">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span>{{ t.ask.floating_label }}</span>
+  </a>
+  {% endif %}
+
+  <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+    <a href="{{ url_for('pages.index') }}" class="{% if active_page == 'home' %}active{% endif %}">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <span>{{ t.nav.home }}</span>
+    </a>
+    <a href="{{ url_for('pages.find_schemes') }}" class="{% if active_page == 'find_schemes' %}active{% endif %}">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <span>{{ t.nav.find_schemes }}</span>
+    </a>
+    <a href="{{ url_for('pages.documents') }}" class="{% if active_page == 'documents' %}active{% endif %}">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <span>{{ t.nav.documents }}</span>
+    </a>
+    <a href="{{ url_for('pages.ask') }}" class="{% if active_page == 'ask' %}active{% endif %}">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span>{{ t.nav.ask }}</span>
+    </a>
+    <a href="{{ url_for('pages.schemes') }}" class="{% if active_page == 'schemes' %}active{% endif %}">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      <span>{{ t.nav.schemes }}</span>
+    </a>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>{{ t.app_name }}</strong>
+        <p class="muted" style="margin: 4px 0 0;">{{ t.footer.not_legal }}</p>
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('pages.privacy') }}">{{ t.nav.privacy }}</a>
+        <a href="{{ url_for('pages.help_page') }}">{{ t.nav.help }}</a>
+        <button type="button" id="footerClearDataBtn" class="link-quiet">{{ t.footer.clear_data }}</button>
+      </div>
+    </div>
+  </footer>
+
+  <div id="appToast" class="toast" role="status" aria-live="polite"></div>
+
+  <div id="pageViewerModal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="pageViewerTitle">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;">
+        <h3 id="pageViewerTitle" style="margin:0;">Document Page</h3>
+        <button type="button" id="closePageViewerBtn" class="btn btn-secondary btn-sm">Close</button>
+      </div>
+      <pre id="pageViewerText" style="white-space:pre-wrap;font-family:inherit;background:var(--surface-alt);padding:14px;border-radius:12px;border:1px solid var(--border);max-height:55vh;overflow-y:auto;margin:0;"></pre>
+    </div>
+  </div>
+
+  <script>
+    window.APP_LANG = {{ lang | tojson }};
+    window.APP_I18N = {{ t | tojson }};
+  </script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block title %}{{ t.schemes_page.title }} — {{ t.app_name }}{% endblock %}
+{% block content %}
+<div style="margin-bottom:22px;">
+  <h1>{{ t.schemes_page.title }}</h1>
+  <p class="muted" style="max-width:68ch;">{{ t.schemes_page.subtitle }}</p>
+</div>
+
+<div class="card" style="margin-bottom:22px;">
+  <div class="grid-3">
+    <div>
+      <label for="schemeSearchInput" class="sr-only">{{ t.schemes_page.search_placeholder }}</label>
+      <input id="schemeSearchInput" type="search" value="{{ current_query }}" placeholder="{{ t.schemes_page.search_placeholder }}">
+    </div>
+    <div>
+      <label for="schemeCategorySelect" class="sr-only">Category</label>
+      <select id="schemeCategorySelect">
+        <option value="all" {% if current_category == 'all' %}selected{% endif %}>{{ t.schemes_page.all_categories }}</option>
+        {% for cat in categories %}
+        <option value="{{ cat }}" {% if current_category == cat %}selected{% endif %}>{{ t.categories.get(cat, cat | title) }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label for="schemeLevelSelect" class="sr-only">Scope</label>
+      <select id="schemeLevelSelect">
+        <option value="all" {% if current_level == 'all' %}selected{% endif %}>{{ t.schemes_page.all_levels }}</option>
+        <option value="central" {% if current_level == 'central' %}selected{% endif %}>{{ t.schemes_page.central_only }}</option>
+        <option value="uttar_pradesh" {% if current_level == 'uttar_pradesh' %}selected{% endif %}>{{ t.schemes_page.up_only }}</option>
+      </select>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;">
+    <span id="schemeResultCount" class="muted" style="font-weight:600;"></span>
+    <button type="button" id="clearSchemeFiltersBtn" class="btn btn-secondary btn-sm" style="display:none;">
+      {% if lang == 'hi' %}फ़िल्टर हटाएँ ✕{% else %}Clear filters ✕{% endif %}
+    </button>
+  </div>
+</div>
+
+<div id="schemesGrid" class="grid-2">
+  {% for s in schemes %}
+  <article class="card scheme-item"
+    data-category="{{ s.category }}"
+    data-level="{{ s.level }}"
+    data-search="{{ (s.name ~ ' ' ~ s.name_hi ~ ' ' ~ s.benefit ~ ' ' ~ s.benefit_hi ~ ' ' ~ s.who ~ ' ' ~ s.who_hi ~ ' ' ~ s.ministry ~ ' ' ~ s.category) | lower }}">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;">
+      <span class="badge cat-bg-{{ s.category }}">{{ t.categories.get(s.category, s.category | title) }}</span>
+      <span class="muted" style="font-size:0.85rem;">{{ 'Uttar Pradesh' if s.level == 'uttar_pradesh' else 'Central (All India)' }}</span>
+    </div>
+    <h2 style="font-size:1.25rem;margin-bottom:4px;">
+      <a href="{{ url_for('pages.scheme_detail', slug=s.slug or s.id) }}">{{ s.name_hi if lang == 'hi' else s.name }}</a>
+    </h2>
+    <div class="benefit-figure">{{ s.benefit_hi if lang == 'hi' else s.benefit }}</div>
+    <p class="muted" style="font-size:0.92rem;margin-bottom:10px;">{{ s.who_hi if lang == 'hi' else s.who }}</p>
+    <div class="chip-row">
+      <span class="elig-chip">{{ t.wizard.last_verified }}: {{ s.last_verified }}</span>
+      <span class="elig-chip">{{ s.required_documents | length }} {% if lang == 'hi' %}दस्तावेज़{% else %}docs needed{% endif %}</span>
+    </div>
+    <div class="btn-row" style="margin-top:14px;">
+      <a href="{{ url_for('pages.scheme_detail', slug=s.slug or s.id) }}" class="btn btn-primary btn-sm">{{ t.schemes_page.view_details }}</a>
+      <a href="{{ s.official_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">{{ t.wizard.official_site }}</a>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+<div id="noSchemesMsg" class="card" style="display:none;"><p class="muted" style="margin:0;">{{ t.wizard.no_results }}</p></div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var searchEl = document.getElementById("schemeSearchInput");
+    var catEl = document.getElementById("schemeCategorySelect");
+    var lvlEl = document.getElementById("schemeLevelSelect");
+    var clearBtn = document.getElementById("clearSchemeFiltersBtn");
+    var countEl = document.getElementById("schemeResultCount");
+    var emptyEl = document.getElementById("noSchemesMsg");
+    var cards = Array.prototype.slice.call(document.querySelectorAll(".scheme-item"));
+
+    function applyFilters() {
+      var q = (searchEl.value || "").trim().toLowerCase();
+      var cat = catEl.value || "all";
+      var lvl = lvlEl.value || "all";
+      var shown = 0;
+      cards.forEach(function (c) {
+        var okQ = !q || (c.getAttribute("data-search") || "").indexOf(q) !== -1;
+        var okC = cat === "all" || c.getAttribute("data-category") === cat;
+        var okL = lvl === "all" || c.getAttribute("data-level") === lvl;
+        var show = okQ && okC && okL;
+        c.style.display = show ? "" : "none";
+        if (show) shown += 1;
+      });
+      var hasFilter = Boolean(q || cat !== "all" || lvl !== "all");
+      clearBtn.style.display = hasFilter ? "inline-flex" : "none";
+      countEl.textContent = (window.APP_LANG === "hi")
+        ? shown + " / " + cards.length + " योजनाएँ दिख रही हैं"
+        : "Showing " + shown + " of " + cards.length + " verified schemes";
+      emptyEl.style.display = shown === 0 ? "block" : "none";
+    }
+
+    searchEl.addEventListener("input", applyFilters);
+    catEl.addEventListener("change", applyFilters);
+    lvlEl.addEventListener("change", applyFilters);
+    clearBtn.addEventListener("click", function () {
+      searchEl.value = "";
+      catEl.value = "all";
+      lvlEl.value = "all";
+      applyFilters();
+    });
+    applyFilters();
+  });
+</script>
+{% endblock %}

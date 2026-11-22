@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}{{ t.ask.title }} — {{ t.app_name }}{% endblock %}
+{% block content %}
+<div class="chat-shell">
+  <div class="chat-header">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="20" fill="#FBF7F0"/>
+        <circle cx="20" cy="15" r="6" fill="var(--primary)"/>
+        <path d="M10 32C10 26.5 14.5 23 20 23C25.5 23 30 26.5 30 32" fill="var(--saffron)"/>
+      </svg>
+      <div>
+        <strong style="font-size:1.08rem;display:block;">{{ t.ask.title }}</strong>
+        <span style="font-size:0.84rem;opacity:0.9;">{{ t.ask.subtitle }}</span>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <button type="button" id="clearChatBtn" class="btn btn-secondary btn-sm">{{ t.ask.clear_chat }}</button>
+    </div>
+  </div>
+
+  {% if ask_scheme %}
+  <div class="alert-info" style="border-radius:0;border-left:none;border-right:none;">
+    <strong>{{ ask_scheme.name_hi if lang == 'hi' else ask_scheme.name }}</strong> — {{ ask_scheme.benefit_hi if lang == 'hi' else ask_scheme.benefit }}
+  </div>
+  {% endif %}
+
+  <div id="chatMessages" class="chat-box" aria-live="polite">
+    {% if not chat_history %}
+    <div class="msg msg-bot">
+      {% if lang == 'hi' %}
+      नमस्ते! मैं <strong>सहायक</strong> हूँ। नीचे किसी भी सवाल पर टैप करें या अपना प्रश्न लिखें।
+      {% else %}
+      Namaste! I am <strong>Sahayak</strong>. Tap a starter question below or type your own in English, हिन्दी, or Hinglish.
+      {% endif %}
+    </div>
+    <div id="starterCardsGrid" class="grid-2" style="margin-top:6px;">
+      {% if lang == 'hi' %}
+      <button type="button" class="card-soft quick-chip" style="text-align:left;border:1.5px solid var(--border);"><strong>छात्रवृत्ति</strong><br><span class="muted">मुझे कौन-सी छात्रवृत्ति या योजना मिल सकती है?</span></button>
+      <button type="button" class="card-soft quick-chip" style="text-align:left;border:1.5px solid var(--border);"><strong>खेती और किसान</strong><br><span class="muted">पीएम किसान योजना के लिए कौन-से कागज़ चाहिए?</span></button>
+      <button type="button" class="card-soft quick-chip" style="text-align:left;border:1.5px solid var(--border);"><strong>स्वास्थ्य सुरक्षा</strong><br><span class="muted">आयुष्मान भारत योजना का लाभ किसे मिलता है?</span></button>
+      <button type="button" class="card-soft quick-chip" style="text-align:left;border:1.5px solid var(--border);"><strong>मेरे दस्तावेज़</strong><br><span class="muted">मेरे अपलोड किए गए दस्तावेज़ों का सारांश बताओ</span></button>
+      {% else %}
+      <button type="button" class="card-soft quick-chip" style="text-align:left;border:1.5px solid var(--border);"><strong>Scholarships</strong><br><span class="muted">Which scholarships can I qualify for?</span></button>
+      <button type="button" class="card-soft quick-chip" style="text-align:left;border:1.5px solid var(--border);"><strong>Farming</strong><br><span class="muted">What documents do I need for PM-KISAN?</span></button>
+      <button type="button" class="card-soft quick-chip" style="text-align:left;border:1.5px solid var(--border);"><strong>Health cover</strong><br><span class="muted">Who can apply for Ayushman Bharat PM-JAY?</span></button>
+      <button type="button" class="card-soft quick-chip" style="text-align:left;border:1.5px solid var(--border);"><strong>My papers</strong><br><span class="muted">Summarize my uploaded documents</span></button>
+      {% endif %}
+    </div>
+    {% else %}
+      {% for m in chat_history %}
+      <div class="msg {{ 'msg-user' if m.role == 'user' else 'msg-bot' }}">{{ m.content }}</div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="chat-compose">
+    <div id="followupChips" class="btn-row" style="margin-bottom:8px;"></div>
+    <form id="askForm" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+      <label for="askInput" class="sr-only">{{ t.ask.placeholder }}</label>
+      <input id="askInput" type="text" placeholder="{{ t.ask.placeholder }}" style="flex:1;min-width:200px;"
+        value="{% if ask_scheme %}{% if lang == 'hi' %}{{ ask_scheme.name_hi }} के लिए पात्रता और ज़रूरी दस्तावेज़ बताइए{% else %}Am I eligible for {{ ask_scheme.name }} and what documents do I need?{% endif %}{% endif %}">
+      <button type="button" id="voiceInputBtn" class="btn btn-secondary" style="display:none;" aria-label="{{ t.ask.voice_start }}">&#127908; {{ t.ask.voice_start }}</button>
+      <button type="submit" id="sendChatBtn" class="btn btn-cta">{{ t.ask.send }}</button>
+      <button type="button" id="stopChatBtn" class="btn btn-secondary" style="display:none;">{{ t.ask.stop }}</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/ask.js') }}"></script>
+{% endblock %}
