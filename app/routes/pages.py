@@ -26,6 +26,7 @@ from app.services.sample_library import (
     get_scheme_by_slug,
     search_schemes,
 )
+from app.services.verified_chat import load_explainers
 
 pages_bp = Blueprint("pages", __name__)
 
@@ -189,9 +190,6 @@ def schemes():
         current_category=cat,
         current_level=lvl,
     )
-
-
-from app.services.verified_chat import load_explainers
 
 
 @pages_bp.route("/schemes/<slug>")
