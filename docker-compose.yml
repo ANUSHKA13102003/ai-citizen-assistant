@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    container_name: ai-citizen-assistant
+    ports:
+      - "7860:7860"
+    env_file:
+      - .env
+    environment:
+      - FLASK_ENV=production
+      - PORT=7860
+    volumes:
+      - citizen_instance:/app/instance
+    restart: unless-stopped
+
+volumes:
+  citizen_instance:

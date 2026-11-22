@@ -1,0 +1,15 @@
+name: Keepalive Ping
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    if: ${{ vars.LIVE_URL != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping live /healthz endpoint
+        run: |
+          curl -fsSL --max-time 60 "${{ vars.LIVE_URL }}/healthz"
