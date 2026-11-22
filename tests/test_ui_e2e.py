@@ -118,13 +118,17 @@ def test_playwright_full_journeys_and_responsive(live_server_url):
         assert page.locator(".option-pill").count() >= 1
         page.fill("#stateSearchInput", "")
         for _ in range(10):
-            if page.is_visible("#wizardResults"):
+            if page.is_visible("#checkAnswersCard") or page.is_visible("#wizardResults"):
                 break
             if page.locator(".option-pill").count() > 0:
                 page.locator(".option-pill").first.click()
             else:
                 break
             page.wait_for_timeout(150)
+
+        if page.is_visible("#checkAnswersCard"):
+            page.screenshot(path=str(SCREENSHOT_DIR / "1440_check_answers.png"), full_page=True)
+            page.click("#confirmSeeResultsBtn")
 
         page.wait_for_selector("#wizardResults", state="visible", timeout=15000)
         page.locator(".save-list-btn").first.click()

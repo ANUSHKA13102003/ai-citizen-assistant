@@ -25,15 +25,24 @@
   --max-w: 1240px;
   --font-sans: "Inter", "Noto Sans Devanagari", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-serif: "Newsreader", "Noto Serif Devanagari", Georgia, serif;
-  /* Category soft accents */
-  --cat-scholarships: #e5eefb;
-  --cat-loans: #fdecd9;
-  --cat-farming: #e2f2e4;
-  --cat-health: #fae5ea;
-  --cat-skills: #ece7fb;
+  /* Category brand colours (exact spec) */
+  --clr-scholarships: #2563eb;
+  --clr-farming: #15803d;
+  --clr-health: #0f766e;
+  --clr-loans: #ea580c;
+  --clr-skills: #7c3aed;
+  --clr-women: #db2777;
+  --clr-pension: #b45309;
+  --clr-housing: #92400e;
+  /* Category soft backgrounds */
+  --cat-scholarships: #e8effe;
+  --cat-loans: #ffedd5;
+  --cat-farming: #dcfce7;
+  --cat-health: #ccfbf1;
+  --cat-skills: #ede9fe;
   --cat-women: #fce7f3;
-  --cat-pension: #e6f3f5;
-  --cat-housing: #f4ece1;
+  --cat-pension: #fef3c7;
+  --cat-housing: #fef0db;
 }
 
 [data-theme="dark"] {
@@ -314,6 +323,12 @@ p { margin: 0 0 12px; }
 /* Full-bleed bands */
 .band { padding: 40px 0; }
 .band-sand { background: var(--surface-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.band-soft-teal { background: #e8f4f2; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.band-soft-yellow { background: #fef8e7; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.band-soft-blue { background: #eef4fd; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+[data-theme="dark"] .band-soft-teal { background: #132825; }
+[data-theme="dark"] .band-soft-yellow { background: #262012; }
+[data-theme="dark"] .band-soft-blue { background: #151f2e; }
 .band-teal { background: var(--primary); color: #ffffff; }
 .band-teal h2, .band-teal h3, .band-teal p { color: #ffffff; }
 [data-theme="dark"] .band-teal { background: #143a35; }
@@ -332,13 +347,14 @@ p { margin: 0 0 12px; }
   align-items: center;
 }
 .hero-grid > * { min-width: 0; }
-@media (min-width: 860px) {
+@media (min-width: 1024px) {
   .hero-grid { grid-template-columns: 1.3fr 0.9fr; }
 }
 .hero-title {
-  font-size: clamp(2.15rem, 4.2vw, 3.3rem);
+  font-size: clamp(2.15rem, 4.1vw, 3.15rem);
   line-height: 1.1;
   margin-bottom: 16px;
+  text-wrap: balance;
 }
 
 /* Cards & Grids */
@@ -388,17 +404,43 @@ p { margin: 0 0 12px; }
   gap: 14px;
   padding: 18px;
   border-radius: var(--radius);
-  background: var(--surface);
-  border: 1.5px solid var(--border);
-  color: var(--ink);
+  background: var(--tile-bg, var(--primary));
+  border: 1.5px solid transparent;
+  color: #ffffff;
   text-decoration: none;
-  transition: border-color 0.15s ease, transform 0.12s ease;
+  box-shadow: var(--shadow);
+  transition: filter 0.15s ease, transform 0.12s ease;
 }
 .audience-tile:hover {
-  border-color: var(--primary);
+  filter: brightness(0.94);
   transform: translateY(-2px);
   text-decoration: none;
 }
+.audience-tile .muted { color: rgba(255, 255, 255, 0.9); }
+.audience-icon-white {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(255, 255, 255, 0.18);
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.tile-student { --tile-bg: #2563eb; }
+.tile-farmer { --tile-bg: #15803d; }
+.tile-homemaker { --tile-bg: #db2777; }
+.tile-artisan { --tile-bg: #7c3aed; }
+.tile-senior { --tile-bg: #b45309; }
+.tile-entrepreneur { --tile-bg: #ea580c; }
+.tile-disability { --tile-bg: #0f766e; }
+
+.scheme-top-strip {
+  border-top: 4px solid var(--strip-clr, var(--primary));
+}
+.strip-scholarships { --strip-clr: #2563eb; }
+.strip-farming { --strip-clr: #15803d; }
+.strip-health { --strip-clr: #0f766e; }
+.strip-loans { --strip-clr: #ea580c; }
+.strip-skills { --strip-clr: #7c3aed; }
+.strip-women { --strip-clr: #db2777; }
+.strip-pension { --strip-clr: #d97706; }
+.strip-housing { --strip-clr: #b45309; }
 
 .cat-card {
   display: flex;

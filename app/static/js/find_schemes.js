@@ -148,6 +148,39 @@
     return steps;
   }
 
+  function showCheckAnswers() {
+    var steps = getSteps();
+    document.getElementById("wizardContainer").style.display = "none";
+    var card = document.getElementById("checkAnswersCard");
+    var list = document.getElementById("checkAnswersList");
+    list.innerHTML = "";
+    steps.forEach(function (st, idx) {
+      var val = state.answers[st.key];
+      var displayVal = val === undefined || val === null || val === "" ? (lang === "hi" ? "छोड़ा गया" : "Skipped") : String(val);
+      if (st.options && st.options.length) {
+        var foundOpt = st.options.find(function (o) { return o.value === val; });
+        if (foundOpt) displayVal = foundOpt.label;
+      }
+      var row = document.createElement("div");
+      row.className = "card-soft";
+      row.style.display = "flex";
+      row.style.justifyContent = "space-between";
+      row.style.alignItems = "center";
+      row.style.gap = "12px";
+      row.innerHTML =
+        '<div><div class="muted" style="font-size:0.86rem;">' + st.title + '</div><strong>' + displayVal + "</strong></div>" +
+        '<button type="button" class="btn btn-secondary btn-sm change-ans-btn">' + (lang === "hi" ? "बदलें" : "Change") + "</button>";
+      row.querySelector(".change-ans-btn").addEventListener("click", function () {
+        card.style.display = "none";
+        document.getElementById("wizardContainer").style.display = "block";
+        state.stepIdx = idx;
+        renderStep();
+      });
+      list.appendChild(row);
+    });
+    card.style.display = "block";
+  }
+
   function advanceOrFinish() {
     window.apiFetch("/api/wizard/save", {
       method: "POST",
@@ -158,7 +191,7 @@
       state.stepIdx += 1;
       renderStep();
     } else {
-      runMatch();
+      showCheckAnswers();
     }
   }
 
@@ -295,7 +328,7 @@
     var benefit = isHi ? (m.benefit_hi || m.benefit) : m.benefit;
     var who = isHi ? (m.who_hi || m.who) : m.who;
     var card = document.createElement("article");
-    card.className = "card";
+    card.className = "card scheme-top-strip strip-" + (m.category || "scholarships");
 
     var badgeClass = m.group === "qualify" ? "badge-qualify" : (m.group === "check" ? "badge-check" : "badge-not");
     var badgeLabel = m.group === "qualify" ? (wText.group_qualify || "Top match") : (m.group === "check" ? (wText.group_check || "Check these too") : (wText.group_not || "Not for you right now"));
@@ -411,6 +444,7 @@
 
     document.getElementById("wizardFullscreen").classList.remove("wizard-fullscreen");
     document.getElementById("wizardContainer").style.display = "none";
+    document.getElementById("checkAnswersCard").style.display = "none";
     document.getElementById("wizardResults").style.display = "block";
     document.getElementById("stateScopeNote").style.display =
       state.answers.state && state.answers.state !== "Uttar Pradesh" ? "block" : "none";
@@ -468,9 +502,18 @@
       state.answers = {};
       state.stepIdx = 0;
       document.getElementById("wizardResults").style.display = "none";
+      document.getElementById("checkAnswersCard").style.display = "none";
       document.getElementById("wizardContainer").style.display = "block";
       document.getElementById("wizardFullscreen").classList.add("wizard-fullscreen");
       renderStep();
+    });
+    document.getElementById("checkAnswersBackBtn").addEventListener("click", function () {
+      document.getElementById("checkAnswersCard").style.display = "none";
+      document.getElementById("wizardContainer").style.display = "block";
+      renderStep();
+    });
+    document.getElementById("confirmSeeResultsBtn").addEventListener("click", function () {
+      runMatch();
     });
     document.getElementById("toggleNotEligibleBtn").addEventListener("click", function () {
       var list = document.getElementById("groupNotList");

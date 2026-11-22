@@ -40,7 +40,7 @@
 
 <div id="schemesGrid" class="grid-2">
   {% for s in schemes %}
-  <article class="card scheme-item"
+  <article class="card scheme-item scheme-top-strip strip-{{ s.category }}"
     data-category="{{ s.category }}"
     data-level="{{ s.level }}"
     data-search="{{ (s.name ~ ' ' ~ s.name_hi ~ ' ' ~ s.benefit ~ ' ' ~ s.benefit_hi ~ ' ' ~ s.who ~ ' ' ~ s.who_hi ~ ' ' ~ s.ministry ~ ' ' ~ s.category) | lower }}">

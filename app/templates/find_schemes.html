@@ -22,6 +22,16 @@
     </div>
   </div>
 
+  <div id="checkAnswersCard" class="wizard-card" style="display:none;">
+    <h1 style="font-size:clamp(1.55rem,2.8vw,2.1rem);margin-bottom:8px;">{% if lang == 'hi' %}अपने उत्तर जाँचें{% else %}Check your answers{% endif %}</h1>
+    <p class="muted" style="margin-bottom:18px;">{% if lang == 'hi' %}कुछ भी बदलना हो तो 'बदलें' दबाएँ, फिर मिलती हुई योजनाएँ देखें।{% else %}Review your answers below. Tap Change to update any item before seeing your results.{% endif %}</p>
+    <div id="checkAnswersList" class="grid" style="gap:10px;margin-bottom:20px;"></div>
+    <div class="wizard-bar">
+      <button type="button" id="checkAnswersBackBtn" class="btn btn-secondary">{{ t.wizard.back }}</button>
+      <button type="button" id="confirmSeeResultsBtn" class="btn btn-cta">{{ t.wizard.see_results }}</button>
+    </div>
+  </div>
+
   <div id="wizardResults" style="display:none;max-width:1040px;margin:0 auto;width:100%;">
     {% if is_example %}
     <div class="alert-info" style="margin-bottom:18px;">
@@ -60,6 +70,13 @@
         {{ t.wizard.show_not }}
       </button>
       <div id="groupNotList" class="grid-2" style="display:none;"></div>
+    </div>
+
+    <div class="card-soft" style="margin-top:24px;">
+      <h3>{% if lang == 'hi' %}आगे क्या होगा?{% else %}What happens next{% endif %}</h3>
+      <p class="muted" style="margin:0;">
+        {% if lang == 'hi' %}अपनी पसंदीदा योजना सहेजें, दस्तावेज़ सूची पर टिक करें और आवेदन के लिए सीधे आधिकारिक .gov.in पोर्टल खोलें। कोई शुल्क या एजेंट ज़रूरी नहीं है।{% else %}Save the schemes you want to apply for, tick off your documents, and open the official .gov.in website directly. You never need to pay an agent.{% endif %}
+      </p>
     </div>
   </div>
 </div>
