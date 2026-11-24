@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import threading
 import time
 from pathlib import Path
@@ -19,6 +20,10 @@ SCREENSHOT_DIR = Path(
 
 @pytest.fixture(scope="module")
 def live_server_url():
+    override = os.getenv("LIVE_TEST_URL", "").strip()
+    if override:
+        yield override.rstrip("/")
+        return
     app = create_app("development")
     server = make_server("127.0.0.1", 7873, app, threaded=True)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
