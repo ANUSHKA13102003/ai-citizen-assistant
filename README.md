@@ -2,7 +2,7 @@
 
 A free bilingual (English & हिन्दी) web helper that lets Indian citizens check government scheme eligibility, inspect their documents, and get grounded guidance in under 2 minutes.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-0D5C53?style=flat-square)](https://ai-citizen-assistant.onrender.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-0D5C53?style=flat-square)](https://ai-citizen-assistant-7wzg.onrender.com)
 [![CI](https://github.com/ANUSHKA13102003/ai-citizen-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/ANUSHKA13102003/ai-citizen-assistant/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-D96B18?style=flat-square)](LICENSE)
 
@@ -20,7 +20,7 @@ Millions of eligible citizens miss scholarships, pensions, and welfare benefits 
 
 ## Try it in 30 seconds
 
-Open the live app at **https://ai-citizen-assistant.onrender.com** (or run locally):
+Open the live app at **https://ai-citizen-assistant-7wzg.onrender.com** (or run locally):
 
 1. Click **Check what you qualify for**, pick a profile, review **Check your answers**, and view matched schemes.
 2. Open **My Documents**, load the demo documents, and see auto-filled marks/income with page citations.
