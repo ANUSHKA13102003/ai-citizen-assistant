@@ -11,3 +11,7 @@ ignore = ["B008", "E501"]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 addopts = "-v --tb=short"
+markers = [
+    "live: tests that call external live APIs",
+    "integration: integration tests",
+]

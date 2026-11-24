@@ -19,6 +19,7 @@ from tests.conftest import make_pdf_bytes
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 
+@pytest.mark.live
 @pytest.mark.skipif(
     not os.getenv("GEMINI_API_KEY", "").strip(),
     reason="GEMINI_API_KEY not configured",
