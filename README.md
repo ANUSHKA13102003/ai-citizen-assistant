@@ -86,7 +86,3 @@ cp .env.example .env
 - Add offline-installable PWA support for low-connectivity rural areas.
 - Add WhatsApp / Telegram bot adapter using the same verified rules and explainer engine.
 - Support regional voice output in additional Indian languages.
-
-## Project background
-
-Originated as **BT-90 Capstone Project** (*AI-Powered Intelligent Citizen Assistant using Retrieval-Augmented Generation and Personal Document Intelligence*) at **IILM University** (accompanied by an IEEE research paper), and evolved into an open-source, production-ready public welfare assistant.
